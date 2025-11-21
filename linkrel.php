@@ -1,0 +1,8 @@
+<link rel="start" title="Forsiden" href="https://kastdegutitilgjengelighet.no/" />
+<link rel="contents" title="Innholdsfortegnelse" href="innholdsfortegnelse" />
+<link rel="help" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport" />
+<link rel="author" title="Send tilbakemelding" href="mailto:kontakt@kastdegutitilgjengelighet.no" />
+<link rel="copyright" title="Betingelser for bruk (engelsk)" href="betingelser_for_bruk" />
+<link rel="up" title="Innholdsfortegnelse" href="innholdsfortegnelse" />
+<link rel="first" title="Dag 1: Anne" href="dag_1_anne" />
+<link rel="last" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport" />

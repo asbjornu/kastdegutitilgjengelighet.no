@@ -1,0 +1,237 @@
+<?php include("global.php"); ?>
+
+<head>
+<title>Dag 26: Bruke relative fontstørrelser - Kast deg ut i tilgjengelighet</title>
+
+<?php include("linkrel.php"); ?>
+
+<?php include("stilcharset.php"); ?>
+
+<link rel="prev" href="dag_25_bruke_ekte_horisontale_linjer" title="Dag 25: Bruke ekte horisontale linjer (eller etterlikne dem skikkelig)" />
+<link rel="next" href="dag_27_bruke_ekte_overskrifter" title="Dag 27: Bruke ekte overskrifter" />
+</head>
+<body>
+
+<?php include("logo.php"); ?>
+
+<p></p>
+
+<div id="main"><div class="inner">
+<div class="entry">
+<h2 class="entrysubject">Dag 26: Bruke relative fontstørrelser</h2>
+<p class="firstparagraph">Med få unntak dreier nettsteder seg om ord. Nyheter, meninger, tanker, idéer, historier, originale tekster, netthandel; alt dette er ord. Visuelt design og bilder er viktig, det er sikkert og visst, men hvis folk ikke kan lese dine ord, hva er så vitsen?</p>
+<p>Høsten 2000 sa Jeffrey Zeldman så berømt at <a href="http://www.alistapart.com/stories/fear4/">relativ fontstørrelse var umulig</a> («piksler, baby ... eller ingenting») på grunn av den overveldende andelen av bugs som var i nettleserene, i alle fra Netscape 4 til de mest moderne nettleserene. Siden den gang har fortsatt ikke Netscape 4 blitt noe bedre, og den er fortsatt i bruk, men vi har i hvert fall lært én ting eller to om å temme nettlesere og gjøre relative fontstørrelser mulig. (Det har Zeldman også; hans nylige reinkarnasjon av <a href="http://www.webstandards.org/">Web Standards Project</a> bruker teknikken beskrevet nedenfor.)</p>
+<p>Bruk relative fontstørrelser i nettlesere som kan takle dem, og bruk absolutte fontstørrelser i Netscape 4 som ikke har en pålitelig støtte for relative fontstørrelser. Du kan til og med gjøre dette uten at du trenger mer enn ett stilark. Straks vil jeg gi deg en kopier-og-lim-inn løsning til Movable Type sin standard-mal og for <em>alle</em> standard-temaene til Radio. Samt en lengre forklaring til å hjelpe deg å implementere selve teknikken i andre maler, også.</p>
+
+<h3>Hvem har nytte av det?</h3>
+
+<ol>
+<li><p><a href="dag_4_lillian">Lillian</a> har nytte av det. Lillian har vanskeligheter med å se nettsider tydelig, hun bruker Internet Explorer for Windows som ikke støtter endring av tekststørrelse med mindre webdesigneren bevisst har valgt å spesifisere relative fontstørrelser. Lillian har endret standard tekststørrelse i nettleseren (under «Vis»-menyen, «Tekststørrelse»), men det hjelper henne ikke på nettsteder som bruker absolutte fontstørrelser. Dette inkluderer så og si hver eneste weblogg-mal som finnes. For eksempel så er dette hvordan Movable Types standard-mal ser ut for Lillian:</p>
+<p><a href="images/abs_sizing.gif" title="Klikk for stor versjon (35K)"><img alt="Skjermskudd av Movable Types standard mal slik det ser ut gjennom Lillians øyner; tekst er fullstendig uklar og umulig å lese." title="" src="images/abs_sizing_thumb.gif" width="300" height="300" /></a></p>
+<p>Hvis malen hadde brukt relative fontstørrelser, så ville det se <strong><em>nøyaktig likt ut</em></strong> for majoriteten av leserne som ikke trenger (eller bryr seg) å endre tekststørrelsen. Men dette er slik det ville sett ut for Lillian:</p>
+<p><a href="images/rel_sizing.gif" title="Klikk for stor versjon (79K)"><img alt="Skjermskudd av den samme malen men med relativ fontstørrelse; teksten er fortsatt uklar men stor nok til å kunne leses." title="" src="images/rel_sizing_thumb.gif" width="300" height="300" /></a></p>
+<p>Igjen; hvis folk ikke kan lese dine ord, <em>hva er da vitsen?</em></p>
+</li>
+</ol>
+
+<h3>Hvordan gjøre det: Radio</h3>
+
+<p>I din Home Page-mal, se etter en CSS-regel i <code>&lt;style&gt;</code>-seksjonen nær toppen som ser slik ut:</p>
+
+<blockquote>
+<pre><code>body, td, th, p {
+  font-family: verdana, sans-serif;
+  font-size: 12px;
+}</code></pre>
+</blockquote>
+
+<p><em>Dette skal du ikke endre</em>, men legg til følgende rett etter det:</p>
+
+<blockquote>
+<pre><code>/*/*/a{}
+body,
+body td,
+body th,
+body p {
+  font-size: x-small;
+  voice-family: "\"}\"";
+  voice-family: inherit;
+  font-size: small;
+}
+html>body,
+html>body td,
+html>body th
+html>body p {
+  font-size: small;
+}
+/* */</code></pre>
+</blockquote>
+
+<p>Sørg for å inkludere kommentarene på begynnelsen og slutten. De er nøkkelen til det hele, som forklart nedenfor.</p>
+
+<h3>Hvordan gjøre det: Movable Type</h3>
+
+<p>Standard-malen til Movable Type er mer kompleks enn Radio-malen, men vi skal gjøre akkurat det samme, bare mer av det. I din stilark-mal (<code>styles-site.css</code>) legger du dette til på slutten:</p>
+
+<blockquote>
+<pre><code>/*/*/a{}
+body,
+body a,
+body .calendar,
+body .calendarhead,
+body .title,
+body .sidetitle,
+body .syndicate,
+body .powered,
+body .comments-post,
+body .posted {
+  font-size: xx-small;
+  voice-family: "\"}\"";
+  voice-family: inherit;
+  font-size: x-small;
+}
+html>body,
+html>body a,
+html>body .calendar,
+html>body .calendarhead,
+html>body .title,
+html>body .sidetitle,
+html>body .syndicate,
+html>body .powered,
+html>body .comments-post,
+html>body .posted {
+  font-size: x-small;
+}
+
+body .date {
+  font-size: x-small;
+  voice-family: "\"}\"";
+  voice-family: inherit;
+  font-size: small;
+}
+html>body .date {
+  font-size: small;
+}
+
+body #banner {
+  font-size: 200%;
+}
+
+body .description {
+  font-size: 60%;
+}
+
+body .blogbody {
+  font-size: 110%;
+}
+
+body .blogbody,
+body .calendar,
+body .calendarhead,
+body .side,
+body .title,
+body .sidetitle,
+body .syndicate,
+body .powered,
+body .comments-body {
+  line-height: 128%;
+}
+/* */</code></pre>
+</blockquote>
+
+<p>Igjen, sørg for å inkludere kommentarene på begynnelsen og slutten.</p>
+
+<h3>Hvordan gjøre det: Detaljert forklaring</h3>
+
+<p>Generelt er idéen at vi nå skal bruke nøkkelord til å sette fontstørrelsene. Disse er lite brukt (på grunn av bugs i eldre nettlesere), men de har tre interessante egenskaper:</p>
+
+<ol>
+<li>De er ikke forbundet med hverandre. Hvis du har en «main»-seksjon med <code>90%</code> størrelse, og innen den har en «post»-seksjon med <code>90%</code> størrelse, så vil noen nettlesere vise posten i 81% (90% x 90%), mens andre vil vise den i 90%. Med mer enn ett nestenivå (vanlig i maler som bruker tabeller til layout), blir teksten fort for liten og uleselig da prosentene binder seg med hverandre. Dog, hvis din «main»-seksjon har størrelsen <code>small</code>, og «post»-seksjonen innenfor har størrelsen <code>small</code>, så vil alle nettlesere vise «post»-seksjonen som <code>small</code>.</li>
+<li>De endrer størrelse riktig i Internet Explorer for Windows. Det er rart, for <code>small</code> høres ut som en absolutt størrelse (spesielt i lys av det faktum at <code>small</code> nestet innen <code>small</code> fortsatt er small, se ovenfor), men det virker. Hva kan jeg si? IE/Win endrer tekststørrelse med fontstørrelse-nøkkelord. Jeg sverger.</li>
+<li>De blir aldri <em>for</em> små. «Tekststørrelse»-innstillingen som Lillian bruker i Internet Explorer kan bli brukt til både å gjøre tekst mindre og større. Folk flest som har et godt syn foretrekker all teksten ett, og til og med to, hakk mindre enn normalt. Tekst med størrelsen satt i prosenter har det med å bli mikroskopisk og uklar når den er kombinert med den minste standard tekststørrelse-innstillingen. Dog, tekst med størrelsen satt ved å bruke nøkkelord for fontstørrelser er alltid minst 9px, noe som er leselig i alle type fonter (forutsatt godt syn).</li>
+</ol>
+
+<p>Så skal vi bruke nøkkelord til å spesifisere fontstørrelsen til våre grunnleggende størrelser. Og hvis vi trenger bedre kontroll enn det, da skal vi bruke prosenter, men bare på mindre klasser (class) med tekst (på «post», men ikke på «main») for å unngå at prosentene binder seg med hverandre, og ikke for små, for å unngå at tekst blir mikroskopisk når den kombineres med brukere som bruker mindre enn standard tekststørrelse.</p>
+<p>Her er den generelle idéen om nøkkelord for fontstørrelser:</p>
+
+<blockquote>
+<pre><code>p {
+  font-size: 12px;
+}
+
+/*/*/a{}
+body p {
+  font-size: x-small;
+  voice-family: "\"}\"";
+  voice-family: inherit;
+  font-size: small;
+}
+html>body p {
+  font-size: small;
+}
+/* */</code></pre>
+</blockquote>
+
+<p>Det er mye som skjer samtidig nå, og det er alt sammen viktig, så følg nøye med.</p>
+
+<ol>
+<li>Først definerer vi en absolutt størrelse (12px) for alle &lt;p&gt;-ene. Alle nettlesere bruker denne stilen, inkludert Netscape 4.</li>
+<li>Deretter inkluderer vi kommentaren med så rart utseende, «/*/*/». På grunn av bugs i Netscape 4, så vil alt mellom denne kommentaren og den neste bli ignorert. Det stemmer, all følgende stil vil kun bli brukt i ikke-Netscape-4-nettlesere.</li>
+<li>Rett etter kommentaren med så rart utseende legger vi til en tom regel «a {}». Opera 5 for Mac er buggete og ignorerer denne regelen (og kun denne regelen), men den bruker alt annet.</li>
+<li>Vi har nå skåret ut et område hvor vi kan definere regler som blir brukt i alle nettlesere bortsett fra i Netscape 4. Nå kan vi starte å definere relative fontstørrelser (som Netscape 4 ikke takler). Det første vi gjøre er å bruke «body p»-selektoren til å re-definere atferden til p-taggen. Som en årsak av hvordan CSS virker så vil dette overskrive vår tidligere p-selektor. (i teknisk terminologi er «body p» en <em>mer spesifikk selektor</em> enn «p».)</li>
+<li>Vi re-definerer fontstørrelsen til alle &lt;p&gt;-taggene til å bli <code>x-small</code>. Dette er et nøkkelord for fontstørrelse som, med standard innstillinger, Internet Explorer 5 for Windows vil oversette til å bli 12px. Dog, hvis brukeren endrer sin «Tekststørrelse» (i «Vis»-menyen) vil denne teksten kunne skalere til større og mindre, avhengig av brukerens innstillinger. Det er dette vi ønsker. (Merk: Vi har nå definert fontstørrelsen <em>to</em> ganger for IE5/Win, men det er OK, for den mest spesifikke selektoren vinner alltid, og den forrige selektoren blir enkelt og greit oversett.)</li>
+<li>Uheldigvis, IE5/Win en off-by-1 bug med dets nøkkelord for fontstørrelse; alle andre nettlesere i verden (IE5/Mac, Netscape 6, Mozilla, IE6/Win) vil oversette x-small til å bli 10px, ikke 12px. Heldigvis for oss har IE5/Win en egen bug som vi kan utnytte; den ser på den rart-utseende voice-family og tror feilaktig at hele «body p»-selektoren er over, så den ignorerer alle linjene frem til «}».</li>
+<li><em>Nå</em> som vi har skåret ut et mindre område hvor vi kan definere regler som blir brukt av alle nettlesere unntatt IE5/Win (og Netscape 4 som lykksalig ignorerer alt dette). Så re-definerer vi fontstørrelsen til *small, noe som moderne ikke-IE5/Win-nettlesere (den eneste som fortsatt lytter) korrekt tolker som 12px (med standard-innstillinger). Igjen, hvis brukerne setter sin «Tekststørrelse» til å bli større, så vil denne teksten skalere som større, akkurat som vi ønsker.</li>
+<li>Men vent! Opera 5 har den samme buggen som IE5/Win, så den ble også forvirret over voice-family-hacket, men den tolker nøkkelordene til fontstørrelsen korrekt, så nå vil teksten vår se for liten ut i Opera 5. Heldigvis støtter Opera 5 en tredje type selektor, «html&gt;body p». (Igjen, dette er «mer spesifikt» enn «body p», så den får forrang over den tidligere selektoren.) IE5/Win støtter ikke denne type selektor og vil enkelt ignorere den, noe som er akkurat det vi ønsker (fordi vi allerede har kompensert for dets off-by-1 bug og ikke ønsker å gå og skitne det til nå). Heller ikke IE6/Win støtter den, men det er OK for vi tok oss av det med «font-size: small» etter «voice-family: inherit»-hacket i «body p»-selektoren. All andre nettlesere støtter «html&gt;body»-selektoren, så for de så ender vi opp med å definere fontstørrelsen fire ganger. Igjen, det er ikke noe problem fordi den mest spesifikke selektoren alltid vinner, og resten av dem blir enkelt og greit ignorert.</li>
+<li>Til slutt så har vi et sett med tomme kommentarer: <code>/* */</code>. Dette trigger Netscape 4 sin parser til å starte å lytte igjen. Hvis vi videre definerer andre regler etter disse tomme kommentarene så vil alle nettlesere (inkludert Netscape 4) bruke dem.</li>
+</ol>
+
+<p>For å oppsummere:</p>
+
+<ol>
+<li>Netscape 4 viser <code>&lt;p&gt;</code>-tekst som 12px, uavhengig av brukerenes innstillinger.</li>
+<li>Internet Explorer 5 for Windows viser <code>&lt;p&gt;</code>-tekst som <code>x-small</code>, noe som ender opp med å bli 12px med standard innstilling, men den vil skalere til større hvis brukeren setter sin innstilling for «Tekststørrelse» større i «Vis»-menyen.</li>
+<li>Internet Explorer 6 for Windows viser <code>&lt;p&gt;</code>-tekst som <code>small</code> på grunn av «font-size: small»-regelen i «body p»-selektoren. Dette ender opp med å bli 12px med standard innstilling, men den vil skalere til større hvis brukeren setter sin innstilling for «Tekststørrelse» til større.</li>
+<li>Internet Explorer 5 for Mac, Opera, Netscape 6, Mozilla, og (forhåpentligvis) alle fremtidige nettlesere vil vise <code>&lt;p&gt;</code>-tekst som <code>small</code>, dette på grunn av «font-size: small»-regelen i «html&gt;body p»-selektoren. Dette ender opp med å bli 12px med standard innstilling, men vil skalere til større hvis brukeren bruker «Tekst-zoom»-funksjonen.</li>
+</ol>
+
+<h3>Les mer</h3>
+
+<ul>
+<li><cite>Mark Pilgrim</cite>: <a href="http://diveintoaccessibility.org/examples/fontsize.html">Relative Font Sizing HOWTO</a>. Gir hovedsaklig denne samme forklaringen, men nettsiden i seg selv er et eksempel på teknikken, så du kan se den i praksis.</li>
+<li><cite title="A List Apart">Todd Fahrner</cite>: <a href="http://www.alistapart.com/stories/sizematters/">Size Matters: Making Font Size Keywords Work</a>.</li>
+<li><cite>Caio Chassot</cite>: <a href="http://www.v2studio.com/k/css/n4hide/">Hiding CSS from Netscape 4</a> uten å bruke mer enn ett stilark.</li>
+<li><cite>Tantek &Ccedil;elik</cite>: <a href="http://tantek.com/CSS/Examples/boxmodelhack.html">Box Model Hack</a>. Hvordan skjule CSS for Internet Explorer 5 på Windows.</li>
+<li><a href="http://www.webstandards.org/">The Web Standards Project</a> bruker også nøkkelord for fontstørrelse sammen med IE5/Win-hacket, selv om de bruker en Javascript-basert løsning (i stedet for inline-kommentar-hacket) for å fikse problemet med Netscape 4.</li>
+<li><cite>Owen Briggs</cite>: <a href="http://www.thenoodleincident.com/tutorials/box_lesson/font/index.html">Text Sizing</a>. Skjermskudd av forskjellige teknikker til relativ-fontstørrelse på tvers av nettlesere, plattformer, og standard-innstillinger for tekststørrelse.</li>
+</ul>
+
+<p></p>
+<span class="divider">&nbsp;</span>
+</div> <!--entry-->
+
+<div class="pageturn"><div class="inner">
+<a href="dag_25_bruke_ekte_horisontale_linjer">&lt;&lt; Dag 25: Bruke ekte horisontale linjer (eller etterlikne dem skikkelig)</a> |
+<a href="innholdsfortegnelse">Innholdsfortegnelse</a>
+| <a href="dag_27_bruke_ekte_overskrifter">Dag 27: Bruke ekte overskrifter &gt;&gt;</a>
+<span class="divider">&nbsp;</span>
+</div></div> <!--pageturn-->
+
+</div></div> <!--main-->
+
+<?php include("meny.php"); ?>
+
+<?php include("menyfot.php"); ?>
+
+</div><!--menu-->
+
+<div id="navigation">
+<p class="breadcrumb">Du er her:
+<a href="/">Forsiden</a> >
+<a href="innholdsfortegnelse">Innholdsfortegnelse</a> >
+<span class="currentpage">Dag 26: Bruke relative fontstørrelser</span></p>
+</div><!--navigation-->
+
+<?php include("stats.php"); ?>
+</body>
+</html>

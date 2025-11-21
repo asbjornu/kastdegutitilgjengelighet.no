@@ -1,0 +1,120 @@
+<?php include("global.php"); ?>
+
+<head>
+<title>Dag 25: Bruke ekte horisontale linjer (eller etterlikne dem skikkelig) - Kast deg ut i tilgjengelighet</title>
+
+<?php include("linkrel.php"); ?>
+
+<?php include("stilcharset.php"); ?>
+
+<link rel="prev" href="dag_24_tilby_alternativ_tekst_til_bildekart" title="Dag 24: Tilby alternativ tekst til bildekart" />
+<link rel="next" href="dag_26_bruke_relative_fontstorrelser" title="Dag 26: Bruke relative fontstørrelser" />
+</head>
+<body>
+
+<?php include("logo.php"); ?>
+
+<p></p>
+
+<div id="main"><div class="inner">
+<div class="entry">
+<h2 class="entrysubject">Dag 25: Bruke ekte horisontale linjer (eller etterlikne dem skikkelig)</h2>
+<p class="firstparagraph">Sett at du ønsker et skille mellom dine poster. Regulære horisontale linjer (<code class="sgmltag">&lt;hr&gt;</code>-tagger) er kjedelige, så du ønsker å bruke et bilde i stedet. Det virker, og kan enkelt gjøres mer tilgjengelig med passende <code>alt</code>-tekster i tillegg.</p>
+<p>Imidlertid kan du også gå videre og bruke ekte horisontale linjer, deretter bruke et lite <acronym title="cascading style sheets">CSS</acronym>-triks til å vise det som et bilde i moderne nettlesere. Eldre nettlesere og tekstbaserte nettlesere vil ignorere <acronym title="cascading style sheets">CSS</acronym>-en og kun gjengi den horisontale linjen i dens opprinnelige stil. (Generelt bruker tekstbaserte nettlesere en rad med understreker eller stiplete streker, utvidet til å passe den enkeltes skjermbredde.)</p>
+<p>Jeg vil gi eksempler på begge teknikkene om et øyeblikk.</p>
+
+<h3>Hvem har nytte av det?</h3>
+
+<ol>
+<li><a href="dag_1_anne">Anne</a> har nytte av det. <a href="dag_21_ignorere_avstandsbilder">Som vi allerede har sett</a> leser <a href="http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a> filnavn til ethvert bilde uten et <code>alt</code>-attributt.</li>
+<li><a href="dag_5_marius">Marius</a> har nytte av det. <a href="http://www.fdisk.com/doslynx/lynxport.htm">Lynx</a> viser filnavnet til ethvert bilde uten <code>alt</code>-attributtet. Hvis du bruker en ekte horisontal linje, vil Lynx gjengi den som en serie med understreker tilpasset den enkeltes skjermbredde.</li>
+<li><a href="dag_2_jorgen">Jørgen</a> har nytte av det. <a href="http://links.sourceforge.net/">Links</a> viser ikke noen ting for bilder uten en <code>alt</code>-tekst, så Jørgen har <em>ikke</em> noen indikasjoner på at det er et skille. Vi trenger den <code>alt</code>-teksten, eller enda bedre, en ekte <code>&lt;hr&gt;</code>;-tagg, den vil Links gjengi som en serie stiplete streker i samme bredde som bredden til den enkeltes skjerm.</li>
+</ol>
+
+<h3>Hvordan gjøre det</h3>
+
+<p>Hvis du bruker bilder til horisontale linjer, så er den enkleste måten å gjøre dem tilgjengelige på, ved å bruke et <code>alt</code>-attributt til din <code class="sgmltag">&lt;img&gt;</code>-tagg. I tillegg burde du legge til et tomt <code>title</code>-attributt, dette for å skjule verktøytipset i visuelle nettlesere. Så hvis du har dette:</p>
+
+<blockquote>
+<p><code class="sgmltag">&lt;img src="/images/stiliglinje.gif" width="442" height="25"&gt;</code></p>
+</blockquote>
+
+<p>Endrer du det til dette:</p>
+
+<blockquote>
+<p><code class="sgmltag">&lt;img <strong>alt="--" title=""</strong> src="/images/stiliglinje.gif" width="442" height="25"&gt;</code></p>
+</blockquote>
+
+<p>Ikke overdriv og spesifiser 80 bindestreker i <code>alt</code>-teksten, to eller tre stykker vil være nok.</p>
+
+<h3>Hvordan gjøre det: Avansert</h3>
+
+<p>Den avanserte (og foretrukne) teknikken bruker faktisk en <code class="sgmltag">&lt;hr&gt;</code>-tagg. Dog, fordi nettleserstøtten til stilsetting av <code class="sgmltag">&lt;hr&gt;</code>-tagger er så mangelfull, skal vi bruke en statistisk (stum) <code class="sgmltag">&lt;div&gt;</code>-tagg til å vise bildet. Legg følgende <acronym title="cascading style sheets">CSS</acronym> i din <code>&lt;style&gt;</code>-seksjon i toppen av malen. (Hvis du bruker et eksternt stilark som <code>style-sites.css</code>, kan du legge det inn hvor som helst. Hvis du bruker mer enn ett stilark så legger du det i inn i det Netscape 4-vennlige stilarket.)</p>
+
+<blockquote>
+<pre><code>div.hr {display: none}
+/*/*/a{}
+div.hr {
+  display: block;
+  height: 25px;
+  background-image: url(/images/stiliglinje.gif);
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 1em 0 1em 0;
+}
+hr {display:none}
+/* */</code></pre>
+</blockquote>
+
+<p>(I <code>height</code> setter du inn høyden til ditt eget bilde. I <code>background-image</code> setter du inn adressen til ditt eget bilde.)</p>
+
+<p>Så, i din mal der du ønsker en stilig linje, gjør du dette:</p>
+
+<blockquote>
+<pre><code class="sgmltag">&lt;div class="hr"&gt;&lt;/div&gt;&lt;hr /&gt;</code></pre>
+</blockquote>
+
+<p>Resultat:</p>
+
+<ul>
+<li>Alle moderne nettlesere vil vise bildet i stedet for den vanlige enkle horisontale linjen.</li>
+<li>Netscape 4 vil vise en enkel horisontal linje.</li>
+<li>Tekstbaserte nettlesere ignorerer alltid CSS, så de vil vise en enkel horisontal linje (vanligvis presentert som en rekke med understreker eller stipler).</li>
+</ul>
+
+<h3>Les mer</h3>
+
+<ul>
+<li><a href="http://www.v2studio.com/k/css/n4hide/">Hiding CSS From Netscape 4</a> uten å bruke ekstra stilark. Dette er teknikken vi brukte ovenfor i det avanserte eksempelet.</li>
+<li><a href="http://ppewww.ph.gla.ac.uk/~flavell/www/hrstyle.html">CSS1 and the Decorative HR</a>, hvis du føler deg spesielt modig og ønsker å stilsette dekorative horisontale linjer med CSS i Netscape 4. Lykke til med dét!</li>
+</ul>
+
+<p></p>
+<span class="divider">&nbsp;</span>
+</div> <!--entry-->
+
+<div class="pageturn"><div class="inner">
+<a href="dag_24_tilby_alternativ_tekst_til_bildekart">&lt;&lt; Dag 24: Tilby alternativ tekst til bildekart</a> |
+<a href="innholdsfortegnelse">Innholdsfortegnelse</a>
+| <a href="dag_26_bruke_relative_fontstorrelser">Dag 26: Bruke relative fontstørrelser &gt;&gt;</a>
+<span class="divider">&nbsp;</span>
+</div></div> <!--pageturn-->
+
+</div></div> <!--main-->
+
+<?php include("meny.php"); ?>
+
+<?php include("menyfot.php"); ?>
+
+</div><!--menu-->
+
+<div id="navigation">
+<p class="breadcrumb">Du er her:
+<a href="/">Forsiden</a> >
+<a href="innholdsfortegnelse">Innholdsfortegnelse</a> >
+<span class="currentpage">Dag 25: Bruke ekte horisontale linjer (eller etterlikne dem skikkelig)</span></p>
+</div><!--navigation-->
+
+<?php include("stats.php"); ?>
+</body>
+</html>

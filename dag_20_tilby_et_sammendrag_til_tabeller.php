@@ -1,0 +1,108 @@
+<?php include("global.php"); ?>
+
+<head>
+<title>Dag 20: Tilby et sammendrag til tabeller - Kast deg ut i tilgjengelighet</title>
+
+<?php include("linkrel.php"); ?>
+
+<?php include("stilcharset.php"); ?>
+
+<link rel="prev" href="dag_19_bruke_ekte_tabelltitler" title="Dag 19: Bruke ekte tabelltitler" />
+<link rel="next" href="dag_21_ignorere_avstandsbilder" title="Dag 21: Ignorere avstandsbilder" />
+</head>
+<body>
+
+<?php include("logo.php"); ?>
+
+<p></p>
+
+<div id="main"><div class="inner">
+<div class="entry">
+<h2 class="entrysubject">Dag 20: Tilby et sammendrag til tabeller</h2>
+<p class="firstparagraph">Siste del i å markere opp tabeller er å tilby et sammendrag. Sammendraget til en tabell vises aldri i visuelle nettlesere; den er utelukkende laget for skjermlesere og talelesere. Det er akkurat som den virker som: Et sammendrag, en lengre beskrivelse enn overskriften. Vanligvis blir den lest opp rett før overskriften.</p>
+<p>Alle tabeller burde ha et sammedrag. Hvis du har en kalender, kan sammendraget være noe så enkelt som «Månedlig kalender med lenker til hver av dagenes innlegg.» Hvis du bruker tabeller til layout, burde du gi hver av disse tabellene et tomt sammendrag, for å indikere at tabellen blir brukt utelukkende til visuell layout og ikke til å presentere tabulære data. (Dette er noe av det samme som det å bruke et tomt <acronym title="alternate">ALT</acronym>-atributt på bilder som brukes utelukkende til å lage visuell avstand. Vi skal diskutere disse «avstandsbildene» på mandag.</p>
+
+<h3>Hvem har nytte av det?</h3>
+
+<ol>
+<li><a href="dag_1_anne">Anne</a> har nytte av det. Når <a href="http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a> kommer over kalenderen din, hører Anne «Sammendrag: Månedlig kalender med lenker til hver av dagenes innlegg.» Så <a href="dag_18_gi_din_kalender_en_ekte_overskrift">hører hun overskriften</a>, så <a href="dag_19_bruke_ekte_tabelltitler">hører hun tabelltitlene</a>, så kan hun navigere gjennom kalenderen.</li>
+<li><a href="http://www.icab.de/">iCab</a>-brukere har nytte av det. iCab kan bruke mulighetene til den innebygde tekst-til-tale-funksjonen i <acronym title="Macintosh operating system">Mac OS</acronym> til å lese nettsider, og den vil lese sammendraget til hvilken som helst tabell som definerer én.</li>
+</ol>
+
+<h3>Hvordan gjøre det: Kalender</h3>
+
+<p>I Movable Type, finn kalenderen i hovedsidemalen din. (Igjen, et søk etter "calendarhead" vil sannsynligvis finne det.) Du vil se en <code class="sgmltag">&lt;table&gt;</code> som dette:</p>
+
+<blockquote>
+<p><code class="sgmltag">&lt;table border="0" cellspacing="4" cellpadding="0"&gt;</code></p>
+</blockquote>
+
+<p>Endre det til dette:</p>
+
+<blockquote>
+<p><code class="sgmltag">&lt;table border="0" cellspacing="4" cellpadding="0" <strong>summary="Månedlig kalender med lenker til hver av dagenes innlegg"&gt;</strong></code></p>
+</blockquote>
+
+<p>I Radio, minner prosedyren om det vi har gjort de siste dagene.</p>
+
+<ol>
+<li>I Radio, åpner du Radio's faktiske applikasjon. I Windows, høyreklikk på det lille Radio-ikonet i systemkurven og velg «Åpne Radio».</li>
+<li>I «Verktøy»-menyen, velg «Utviklere», deretter «Hopp ...» (<kbd>Control+J</kbd>). Hopp til «system.verbs.builtins.radio.weblog.drawCalendar» (uten anførselstegn).</li>
+<li><p>Så går du til «Rediger»-menyen, «Finn og erstatt», «Finn ...» (<kbd>Control+F</kbd>) og finn «draw the month and year». Dette skulle åpenbare og fremheve en linje som enkelt sier «<code>bundle // draw the month and year</code>». Dobbeltklikk triangelet for å få frem den faktiske koden, noe som skulle se ut som dette:</p>
+
+<blockquote>
+<p><code>add ("&lt;table cellspacing=\"0\" border=\"0\" class=\"hCalendarTable\"&gt;"); indentLevel++</code></p>
+</blockquote>
+</li>
+
+<li><p>Endre det til dette:</p>
+
+<blockquote>
+<p><code>add ("&lt;table <strong>summary=\"Månedlig kalender med lenker til hver av dagenes innlegg.\"</strong> cellspacing=\"0\" border=\"0\" class=\"hCalendarTable\"&gt;"); indentLevel++</code></p>
+</blockquote>
+</li>
+</ol>
+
+<h3>Hvordan gjøre det: Layout-tabeller</h3>
+
+<p>Hvis du bruker tabeller til layout, legg til <code>summary=""</code> i hver tabell. Dette utfører du best med søk-og-erstatt. Søk etter dette:</p>
+
+<blockquote>
+<p><code class="sgmltag">&lt;table</code></p>
+</blockquote>
+
+<p>Og erstatt det med dette:</p>
+
+<blockquote>
+<p><code class="sgmltag">&lt;table summary=""</code></p>
+</blockquote>
+
+<p></p>
+<span class="divider">&nbsp;</span>
+</div> <!--entry-->
+
+<div class="pageturn"><div class="inner">
+<a href="dag_19_bruke_ekte_tabelltitler">&lt;&lt; Dag 19: Bruke ekte tabelltitler</a> |
+<a href="innholdsfortegnelse">Innholdsfortegnelse</a>
+| <a href="dag_21_ignorere_avstandsbilder">Dag 21: Ignorere avstandsbilder &gt;&gt;</a>
+<span class="divider">&nbsp;</span>
+</div></div> <!--pageturn-->
+
+</div></div> <!--main-->
+
+<?php include("meny.php"); ?>
+
+<?php include("menyfot.php"); ?>
+
+</div><!--menu-->
+
+<div id="navigation">
+<p class="breadcrumb">Du er her:
+<a href="/">Forsiden</a> >
+<a href="innholdsfortegnelse">Innholdsfortegnelse</a> >
+<span class="currentpage">Dag 20: Tilby et sammendrag til tabeller</span></p>
+</div><!--navigation-->
+
+<?php include("stats.php"); ?>
+</body>
+</html>

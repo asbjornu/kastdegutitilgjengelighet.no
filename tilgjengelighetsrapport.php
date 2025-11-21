@@ -1,0 +1,155 @@
+<?php include("global.php"); ?>
+
+<head>
+<title>Tilgjengelighetsrapport - Kast deg ut i tilgjengelighet</title>
+
+<?php include("linkrel.php"); ?>
+
+<?php include("stilcharset.php"); ?>
+
+<link rel="prev" href="konklusjon" title="Konklusjon" />
+<link rel="next" href="betingelser_for_bruk" title="Betingelser for bruk" />
+</head>
+<body>
+
+<?php include("logo.php"); ?>
+
+<p></p>
+
+<div id="main"><div class="inner">
+<div class="entry">
+<h2 class="entrysubject">Tilgjengelighetsrapport</h2>
+<p class="firstparagraph">Dette er den offisielle tilgjengelighetsrapporten for <a href="https://kastdegutitilgjengelighet.no/">Kast deg ut i tilgjengelighet</a>. Hvis du har noen spørsmål eller kommentarer så ikke nøl med å sende meg en e-post på <a href="mailto:feedback@diveintoaccessibility.org">feedback@diveintoaccessibility.org</a> (på engelsk).</p>
+
+<h3>Tastatursnarveier</h3>
+
+<p>De fleste nettlesere støtter å hoppe til spesifikke lenker ved å trykke på taster definert på nettstedet. I Windows kan du trykke på <kbd>ALT</kbd> + en tastatursnarveitast; i Macintosh kan du trykke på <kbd>Control</kbd> + en tastatursnarveitast.</p>
+
+<p>Alle sidene på dette nettstedet har definert følgende tastatursnarveier:</p>
+
+<ul>
+<li>Tastatursnarvei 1 - Forsiden</li>
+<li>Tastatursnarvei 3 - Innholdsfortegnelse</li>
+<li>Tastatursnarvei 4 - Søk</li>
+<li>Tastatursnarvei 8 - Betingelser for bruk</li>
+<li>Tastatursnarvei 9 - Tilbakemelding</li>
+<li>Tastatursnarvei 0 - Tilgjengelightesrapport</li>
+</ul>
+
+<h3>Overensstemmelse med standarder</h3>
+
+<ol>
+<li>Alle sidene på dette nettstedet er <a href="http://bobby.watchfire.com/">Bobby <acronym title="triple A">AAA</acronym>-godkjente</a>, i overensstemmelse med <a href="http://bobby.watchfire.com/bobby/html/en/browsereport.jsp">alle retningslinjene fra Bobby</a>. Dette er en vurderingssak; mange av egenskapene for tilgjengelighet kan måles, men mange kan ikke. Jeg har studert alle retningslinjene og mener at alle disse sidene er i overensstemmelse med dem.</li>
+<li>Alle sidene på dette nettstedet er <acronym title="Web Content Accessibility Guidelines">WCAG</acronym> <acronym title="triple A">AAA</acronym>-godkjente, i overensstemmelse <a href="http://www.w3.org/TR/WAI-WEBCONTENT/full-checklist.html">med retningslinjene for alle 3 prioritetsnivåene</a> fra <a href="http://www.w3.org/TR/WCAG10/"><acronym title="World Wide Web Consortium">W3C</acronym> Web Content Accessibility Guidelines</a>. Men igjen, dette er en vurderingssak; mange av retningslinjene er med hensikt vage og kan ikke bli testet automatisk. Jeg har studert alle retningslinjene og mener at alle disse sidene er i overensstemmelse med dem.</li>
+<li>Alle sidene på dette nettstedet er <a href="http://bobby.watchfire.com/">Section 508-godkjente</a>, i overensstemmelse med alle <acronym title="United States">U.S.</acronym> Federal Government sine <a href="http://www.section508.gov/">Section 508 Guidelines</a>. Men igjen, dette er en vurderingssak. Jeg har studert alle retningslinjene og mener at alle disse sidene er i overensstemmelse med dem.</li>
+<li>Alle sidene på dette nettstedet <a href="http://validator.w3.org/">validerer som <acronym title="extensible hypertext markup language">XHTML</acronym> 1.0 Strict</a>. Dette er ikke en vurdertingssak; et program kan fastslå med 100% sikkerhet hvorvidt en side er valid XHTML. For eksempel, <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fkastdegutitilgjengelighet.no%2F">sjekk at forsiden på dette nettstedet er valid XHTML</a>.</li>
+<li>Alle sidene på dette nettstedet bruker strukturert semantisk oppmerking. H2-tagger er brukt på hovedtitlene, H3-tagger er brukt på undertitlene. På denne siden så kan for eksempel JAWS-brukere hoppe til den neste seksjonen i tilgjengelighetsrapporten ved å trykke <kbd>ALT+INSERT+3</kbd>.</li>
+</ol>
+
+<h3>Hjelpemidler til navigasjon</h3>
+
+<ol>
+<li>Alle sidene har <tt>rel=forrige, neste, opp,</tt> og <tt>hjem</tt>-lenker for å hjelpe til med navigasjonen i tekstbaserte nettlesere. Netscape 6 og Mozilla-brukere kan også dra nytte av denne egenskapen ved å velge Vis-menyen, Skjul/Vis, Verktøylinje for navigasjon, Vis kun etter behov (eller Vis alltid).</li>
+
+<li>Tipsene er kryssrefererte på flere måter. Du kan bla igjennom tips
+<a title="Bla igjennom tips om personer" href="tips_om_personer">om personer</a>,
+<a title="Bla igjennom tips om funksjonshemninger" href="tips_om_funksjonshemninger">om funksjonshemninger</a>,
+<a title="Bla igjennom tips om prinsipper for design" href="tips_om_prinsipper_for_design">om prinsipper for design</a>,
+<a title="Bla igjennom tips om nettlesere" href="tips_om_nettlesere">om spesielle teknologier</a>, og
+<a title="Bla igjennom tips om publiseringsverktøy" href="tips_om_publiseringsverktoy">om publiseringsverktøy</a>.</li>
+
+<li>Forsiden og alle undersidene har inkludert en søkeboks (tastatursnarvei 4).</li>
+</ol>
+
+<h3>Lenker</h3>
+
+<ol>
+<li>Mange av lenkene har tittel-attributter som beskriver lenkene mer detaljert, medmindre lenketeksten allerede fullt ut beskriver målet (som for eksempel overskriften til en artikkel).</li>
+<li>Lenkene er skrevet for å gi mening ut av sammenhengen.</li>
+</ol>
+
+<h3>Bilder</h3>
+
+<ol>
+<li>Alle bildene brukt i innholdet på dette nettstedet inkludere beskrivende <code>ALT</code>-attributter. Helt og holdent dekorativ grafikk inkludere tomme <code>ALT</code>-attributter.</li>
+<li>Komplekse bilder inkluderer <acronym title="lang beskrivelse">LONGDESC</acronym>-attributter eller <em>inline</em>-beskrivelser for å forklare betydningen av hvert bilde for ikke-visuelle lesere.</li>
+</ol>
+
+<h3>Visuelt design</h3>
+
+<ol>
+<li>Dette nettstedet bruker stilark til den visuelle layouten.</li>
+<li>Dette nettstedet bruker kun relative fontstørrelser som er kompatibel med det brukerdefinerte «tekststørrelse»-valget i visuelle nettlesere.</li>
+<li>Hvis nettleseren eller leseredskapet ditt ikke støtter stilark i det hele tatt så er hver sides innhold fortsatt leselig.</li>
+</ol>
+
+<h3>Henvisninger for tilgjenglighet</h3>
+
+<ol>
+<li><a href="http://www.w3.org/TR/WCAG10/" title="Web Content Accessibility Guidelines 1.0">W3 accessibility guidelines</a>, forklarer bakgrunnen for hver av retningslinjene.</li>
+<li><a href="http://www.w3.org/TR/WCAG10-TECHS/" title="Techniques for Web Content Accessibility Guidelines 1.0">W3 accessibility techniques</a>, forklarer hvordan hver av retningslinjene implementeres.</li>
+<li><a href="http://www.w3.org/TR/WCAG10/full-checklist.html" title="Checklist of Checkpoints for Web Content Accessibility Guidelines 1.0">W3 accessibility checklist</a>, en travel utviklers guide til tilgjengelighet.</li>
+<li><a href="http://www.access-board.gov/sec508/guide/1194.22.htm" title="Section 508 Guidelines for Web-based Intranet and Internet Information and Applications">U.S. Federal Government Section 508 accessibility guidelines</a>.</li>
+</ol>
+
+<h3>Programvare for tilgjengelighet</h3>
+
+<ol>
+<li><a href="http://www.freedomscientific.com/fs_downloads/jaws.asp">JAWS</a>, en skjermleser for Windows. Tilbyr en tidsbegrenset nedlastbar demo.</li>
+<li><a href="http://www-3.ibm.com/able/hpr.html">Home Page Reader</a>, en skjermleser for Windows. Tilbry en nedlastbar demo.</li>
+<li><a href="http://lynx.browser.org/">Lynx</a>, en gratis tekstbasert nettleser for blinde brukere med braille-skjermvisning.</li>
+<li><a href="http://links.sourceforge.net/">Links</a>, en gratis tekstbasert nettleser for visuelle brukere med lav båndbredde.</li>
+<li><a href="http://www.opera.com/">Opera</a>, en visuell nettleser med mange tilgjengelighetsrelaterte egenskaper, inkludert zooming av tekst, brukerbestemte stilark, bildeskifter. Tilbyr gratis nedlastbar versjon. Kompatibel med Windows, Machintosh, Linux og mange andre operativsystemer.</li>
+</ol>
+
+<h3>Tjenester for tilgjengelighet</h3>
+<ol>
+<li><a href="http://www.cast.org/bobby/">Bobby</a>, en gratis tjeneste til å analysere nettsider for overensstemmelse med retningslinjer for tilgjengelighet. En kommersiell fullversjon er også tilgjengelig.</li>
+<li><a href="http://validator.w3.org/">HTML Validator</a>, en gratis tjeneste for å sjekke om nettsider samsvarer med de publiserte <acronym title="hypertext markup language">HTML</acronym>-standardene.</li>
+<li><a href="http://www.delorie.com/web/wpbcv.html">Web Page Backward Compatibility Viewer</a>, et verktøy til å vise nettsidene dine <em>uten</em> forskjellige moderne nettleseregenskaper.</li>
+<li><a href="http://www.delorie.com/web/lynxview.html">Lynx Viewer</a>, en gratis tjeneste til å vise hvordan nettsidene dine ville sett ut i Lynx.</li>
+</ol>
+
+<h3>Relaterte ressurser</h3>
+
+<ol>
+<li><a title="Web Accessibility in Mind" href="http://www.webaim.org/">WebAIM</a>, en ideell organisasjon dedikert til å forbedre tilgjengeligheten på online opplæringsmateriale.</li>
+<li><a href="http://trace.wisc.edu:80/world/web/">Designing More Usable Web Sites</a>, en stor liste med ytterligere ressurser.</li>
+</ol>
+
+<h3>Tilgjengelighetsbøker jeg anbefaler</h3>
+
+<ol>
+<li><cite>Joe Clark</cite>: <a href="http://www.amazon.com/exec/obidos/ASIN/073571150X/diveintomark-20">Building Accessible Websites</a>. Jeg «tech-edited» denne boken; den er glimrende. Omfattende men ikke overveldende.</li>
+<li><cite>Jim Thatcher and others</cite>: <a href="http://www.amazon.com/exec/obidos/ASIN/1904151000/diveintomark-20">Constructing Accessible Web Sites</a>. Mindre omfattende enn Joe's bok, men den går mer i dybden i emnene den tar for seg. Viser skjermskudd av hvordan forskjellige skjermlesere og alternative nettlesere tolker ymse oppmerking og tagger. Har også et kapittel om den nåværende statusen til lovbestemte tilgjengelighetskrav.</li>
+</ol>
+
+<p></p>
+<span class="divider">&nbsp;</span>
+</div> <!--entry-->
+
+<div class="pageturn"><div class="inner">
+<a href="konklusjon">&lt;&lt; Konklusjon</a> |
+<a href="innholdsfortegnelse">Innholdsfortegnelse</a>
+| <a href="betingelser_for_bruk">Betingelser for bruk &gt;&gt;</a>
+<span class="divider">&nbsp;</span>
+</div></div> <!--pageturn-->
+
+</div></div> <!--main-->
+
+<?php include("meny.php"); ?>
+
+<?php include("menyfot.php"); ?>
+
+</div><!--menu-->
+
+<div id="navigation">
+<p class="breadcrumb">Du er her:
+<a href="/">Forsiden</a> >
+<a href="innholdsfortegnelse">Innholdsfortegnelse</a> >
+<span class="currentpage">Tilgjengelightesrapport</span></p>
+</div><!--navigation-->
+
+<?php include("stats.php"); ?>
+</body>
+</html>

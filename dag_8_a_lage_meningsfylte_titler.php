@@ -1,0 +1,115 @@
+<?php include("global.php"); ?>
+
+<head>
+<title>Dag 8: Å lage meningsfylte titler - Kast deg ut i tilgjengelighet</title>
+
+<?php include("linkrel.php"); ?>
+
+<?php include("stilcharset.php"); ?>
+
+<link rel="prev" href="dag_7_a_fastsette_spraket_ditt" title="Dag 7: Å fastsette språket ditt" />
+<link rel="next" href="dag_9_tilby_ekstra_hjelpemidler_til_navigasjon" title="Dag 9: Tilby ekstra hjelpemidler til navigasjon" />
+</head>
+<body>
+
+<?php include("logo.php"); ?>
+
+<p></p>
+
+<div id="main"><div class="inner">
+<div class="entry">
+<h2 class="entrysubject">Dag 8: Å lage meningsfylte titler</h2>
+<p class="firstparagraph">Enhver side i nettstedet ditt bør ha en unik og meningsfylt tittel.</p>
+
+<ul>
+<li>Tittelen til hovedsiden kan ganske enkelt være navnet på nettstedet ditt.</li>
+<li>Sider for datobaserte arkiver bør inneholde navnet på nettstedet ditt, fulgt av datoen (eller tidsperioden) for siden. For eksempel har jeg i webloggen min daglige arkiv med titler som <a href="http://diveintomark.org/archives/2002/06/19.html">«dive into mark/June 19, 2002»</a>, og månedlige arkiv som <a href="http://diveintomark.org/archives/2002/06/">«dive into mark/June 2002»</a>.</li>
+<li>Kategorisider bør inneholde navnet på nettstedet fulgt av navnet på kategorien. For eksempel er alle mine <acronym title="cascading style sheets">CSS</acronym>-relaterte innlegg arkivert på en side med tittelen <a href="http://diveintomark.org/archives/rooms/css/">«dive into mark/CSS»</a>.</li>
+<li>Arkivet for enkeltinnlegg bør inneholde navnet på nettstedet fulgt av innleggets tittel. Jeg har ikke egne sider for enkeltinnlegg, men det har <a href="http://weblog.delacour.net/">Jonathon Delacour</a>, og han gjør dette riktig. For eksempel har han innlegget <a href="http://weblog.delacour.net/archives/000535.html">Accessibility matters</a> fra 17. juni 2002 arkivert på en side med tittelen «Jonathon Delacour: Accessibility matters».</li>
+</ul>
+
+<p>Det har ikke noe å si nøyaktig hva slags tegnsetting du bruker, selv om noen skjermlesere leser hvert skilletegn høyt. Som en generell regel høres overdreven tegnsetting like dumt ut som det ser ut.</p>
+
+<h3>Hvem har nytte av det?</h3>
+
+<ol>
+<li><a href="dag_1_anne">Anne</a> har nytte av det. <a href="http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a> har en spesiell hurtigtast (INSERT + F10) som viser (og leser opp) en liste over vinduene som er åpne i øyeblikket, med titlene deres. For nettsider blir dette tittelen på siden din. Den leser dessuten vindustitlene når man skifter mellom vinduer med ALT-TAB. Andre skjermlesere, som <a href="http://www-3.ibm.com/able/hpr.html">Home Page Reader</a>, leser tittelen til en nettside høyt med en gang når man besøker siden.</li>
+<li><a href="dag_5_marius">Marius</a> har nytte av det. <a href="http://www.fdisk.com/doslynx/lynxport.htm">Lynx</a> viser sidetittelen i den første tekstlinjen, så den er alltid det første Marius leser i Braille.</li>
+<li><a href="dag_3_knut">Knut</a> har nytte av det. På grunn av slaget blir han iblant forvirret og glemmer for et øyeblikk hva han leser om. Sidetittelen øverst i vinduet er som et visuelt anker: den blir værende på samme sted, selv om han blar i innholdet på siden. Han kan alltid titte opp på den for å hjelpe på hukommelsen.</li>
+<li><a href="http://www.google.no/">Google</a> har nytte av det. Google viser sidetitler i søkeresultatene, og <a href="http://www.searchengineworld.com/design/title.htm">den rangerer nøkkelord høyere når de forekommer i tittelen</a>. Dette er en fin ting for deg, spesielt for sidene med enkeltinnlegg. (Og det skader ikke å velge gode titler på innleggene heller).</li>
+</ol>
+
+<h3>Hvordan gjøre det</h3>
+
+<p>Movable Type har separate maler for forskjellige typer oversikts- og arkivsider. Standardmalene er ganske tilgjengelig allerede, så hvis du bruker disse trenger du ikke å forandre på noe.</p>
+
+<ol>
+<li>Hovedsiden: <code class="sgmltag">&lt;title&gt;&lt;$MTBlogName$&gt;&lt;/title&gt;</code></li>
+<li>Arkivsiden: <code class="sgmltag">&lt;title&gt;&lt;$MTBlogName$&gt; Arkiv&lt;/title&gt;</code></li>
+<li>Kategoriarkiv: <code class="sgmltag">&lt;title&gt;&lt;$MTBlogName$&gt;: &lt;$MTArchiveTitle$&gt;&lt;/title&gt;</code></li>
+<li>Datobasert arkiv: <code class="sgmltag">&lt;title&gt;&lt;$MTBlogName$&gt;: &lt;$MTArchiveTitle$&gt;&lt;/title&gt;</code></li>
+<li>Arkiv for enkeltinnlegg: <code class="sgmltag">&lt;title&gt;&lt;$MTBlogName$&gt;: &lt;$MTEntryTitle$&gt;&lt;/title&gt;</code></li>
+</ol>
+
+<p>Greymatter har et lignende sett med maler, men med et annerledes malformat. Greymatter har ikke noen egen mal-variabel for navnet til webloggen, så sett inn navnet på din egen weblogg i hvert tilfelle.</p>
+
+<ol>
+<li>Hovedsidemal: <code class="sgmltag">&lt;title&gt;Min weblogg&lt;/title&gt;</code></li>
+<li>Hovedarkivmal: <code class="sgmltag">&lt;title&gt;Mitt weblogg-arkiv&lt;/title&gt;</code></li>
+<li>Arkivloggmal: <code class="sgmltag">&lt;title&gt;Min weblogg: {{month}} {{year}}&lt;/title&gt;</code></li>
+<li>Mal for enkeltinnlegg: <code class="sgmltag">&lt;title&gt;Min weblogg: {{entrysubject}}&lt;/title&gt;</code></li>
+</ol>
+
+<p>Manila (i hvert fall med standard konfigurasjon) lar deg spesifisere en tittel for hver dag, derfor burde du bruke det i sidetittelen i stedet for datoen, for det blir sannsynligvis mer relevant til innholdet.</p>
+
+<ol>
+<li>Hovedsidemal: <code class="sgmltag">&lt;title&gt;{siteName}&lt;/title&gt;</code></li>
+<li>Mal: <code class="sgmltag">&lt;title&gt;{siteName}: {title}&lt;/title&gt;</code></li>
+</ol>
+
+<p>Radio er litt mer vrien, du kan fortsatt legge til datoen til dine datobaserte arkiver ved å bruke Radios makro-språk. Vær forsiktig når du kopierer og limer inn denne makroen; det må ikke være linjeskift noen steder, og Radio bryr seg. (Takk til Jake Savin for disse instruksjonene.)</p>
+
+<ol>
+<li>Hovedsidemal: <code class="sgmltag">&lt;title&gt;&lt;%title%&gt;&lt;/title&gt;</code></li>
+<li>Hovedmal: <code class="sgmltag">&lt;title&gt;&lt;%title%&gt;&lt;%local (d); if radio.weblog.file.getArchiveFileDate (radioResponder.fileBeingRendered, @d) {": " + string.dateString (d)} else {""}%&gt;&lt;/title&gt;</code></li>
+</ol>
+
+<p>Jeg vet dessverre ikke hvordan man tilpasser sidetitler tilfredsstillende i Blogger. <a href="mailto:f8dy@diveintoaccessibility.org">Forslag er velkomne</a>.</p>
+
+<p>Vær oppmerksom på at dette kun er forslag. Du kan inkludere ordet «Arkiv» i de daglige og månedlige arkivsidene, eller ikke. Tegnsettingen har egentlig ikke noe å si, så lenge den ikke blir urimelig overflødig. Du kan sette navnet til nettstedet i slutten av tittelen istedenfor i begynnelsen. Men du bør i hvert fall ha det med et eller annet sted i alle sidetitlene -- det er et viktig holdepunkt, særlig når folk bytter mellom flere åpne vinduer.</p>
+
+<h3>Les mer</h3>
+
+<ul>
+<li><cite>Jake Savin</cite>: <a href="http://radio.weblogs.com/0001000/2002/06/19.html#a630">Adding a date to your Radio archive pages</a>.</li>
+</ul>
+
+<p></p>
+<span class="divider">&nbsp;</span>
+</div> <!--entry-->
+
+<div class="pageturn"><div class="inner">
+<a href="dag_7_a_fastsette_spraket_ditt">&lt;&lt; Dag 7: Å fastsette språket ditt</a> |
+<a href="innholdsfortegnelse">Innholdsfortegnelse</a>
+| <a href="dag_9_tilby_ekstra_hjelpemidler_til_navigasjon">Dag 9: Tilby ekstra hjelpemidler til navigasjon &gt;&gt;</a>
+<span class="divider">&nbsp;</span>
+</div></div> <!--pageturn-->
+
+</div></div> <!--main-->
+
+<?php include("meny.php"); ?>
+
+<?php include("menyfot.php"); ?>
+
+</div><!--menu-->
+
+<div id="navigation">
+<p class="breadcrumb">Du er her:
+<a href="/">Forsiden</a> >
+<a href="innholdsfortegnelse">Innholdsfortegnelse</a> >
+<span class="currentpage">Dag 8: Å lage meningsfylte titler</span></p>
+</div><!--navigation-->
+
+<?php include("stats.php"); ?>
+</body>
+</html>

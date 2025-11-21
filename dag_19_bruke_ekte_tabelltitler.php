@@ -1,0 +1,148 @@
+<?php include("global.php"); ?>
+
+<head>
+<title>Dag 19: Bruke ekte tabelltitler - Kast deg ut i tilgjengelighet</title>
+
+<?php include("linkrel.php"); ?>
+
+<?php include("stilcharset.php"); ?>
+
+<link rel="prev" href="dag_18_gi_din_kalender_en_ekte_overskrift" title="Dag 18: Gi din kalender en ekte overskrift" />
+<link rel="next" href="dag_20_tilby_et_sammendrag_til_tabeller" title="Dag 20: Tilby et sammendrag til tabeller" />
+</head>
+<body>
+
+<?php include("logo.php"); ?>
+
+<p></p>
+
+<div id="main"><div class="inner">
+<div class="entry">
+<h2 class="entrysubject">Dag 19: Bruke ekte tabelltitler</h2>
+<p class="firstparagraph">Hvis du har en kalender på nettstedet ditt, skulle den bli fremstilt som en <acronym title="hypertext markup language">HTML</acronym>-tabell. Det har vært noen få forsøk på å lage rene <acronym title="cascading style sheets">CSS</acronym>-kalendere. Dette er et villspor; kalendere er tabelldata, og skulle bli merket opp som sådan.</p>
+<p>Den aller viktigste tingen om datatabellen er å merke opp titlene riktig. Når det dreier seg om en kalender, betyr det ukens dager langs toppen. Du skulle så absolutt inkludere titlene til ukens dager; hvis du ikke ønsker at de skal være synlige, kan du gjøre dem usynlige med <acronym title="cascading style sheets">CSS</acronym>. (Jeg gjør dette i min egen weblogg.) Men ikke desto mindre så må titlene være der, fordi skjermlesere er avhengige av dem for å hjelpe blinde brukere til å navigere gjennom tabellen uten å gå seg vill.</p>
+<p>Når det gjelder en kalender (og hvilke som helst datatabeller, faktisk, men vi snakker mest om kalendere i dag) er saken den at den er veldig enkel å bruke hvis du kan se alt sammen på én gang, men veldig vanskelig å bruke hvis du bare kan se én dag om gangen. Forestill deg at du har en dag-etter-dag kalender på skrivebordet ditt, men hver side lister kun opp månedens dag, ikke ukens dag. Side etter side: 1, 2, 3, 4, 5, 6, 7 ... I dag er 4, noe jeg tilfeldigvis vet er torsdag. Hopp nå over til 11, 12, 13. Vær rask: Hvilken av ukens dager er 13? Siden sier deg det ikke; du er nødt til å holde rede på det selv.</p>
+<p>Slik er det for en blind bruker å navigere på en kalender uten noen skikkelige titler. Du får en masse tall, men ingen sammenheng til å holde styr på dem. Ved å legge skikkelige titler på kalenderen lar man skjermleser-programvare assosiere tabelltitlene (ukens dager) med tabelldataene (månedens dager), og de leser dem etter hverandre. «Torsdag 4, torsdag 11, fredag 12, lørdag 13.» Ah, det er en lørdag.</p>
+<p>Merk deg at jeg sa skikkelige titler. Å legge ukens dager inn i <code class="sgmltag">&lt;td&gt;</code>-tagger i den første raden er ikke nok. De må være <code class="sgmltag">&lt;th&gt;</code>-tagger i stedet. De fleste weblogg-maler gjør dette feil, men det er enkelt nok å fikse, og kalenderen din vil se nøyaktig lik ut i visuelle nettlesere når du er ferdig.</p>
+
+<h3>Hvem har nytte av det?</h3>
+
+<ol>
+<li><p><a href="dag_1_anne">Anne</a> har nytte av det. Når hun møter på kalenderen din, <a href="http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a> leser først <a href="dag_18_gi_din_kalender_en_ekte_overskrift">overskriftene</a>, deretter kunngjøres titlene, så kan Anne holde nede <kbd>Control</kbd> + <kbd>ALT</kbd> og flytte seg gjennom tabellen med piltastene. Etter som hun forflytter seg, kunngjør JAWS tittelen (ukens dag) og celledataen (månedens dag).</p>
+<p>Alle større skjermlesere tillater denne typen tabell-navigasjon. <a href="http://www-3.ibm.com/able/hpr.html">Home Page Reader</a> lar brukere bytte til «Tabell-navigasjon»-modus (<kbd>ALT+T</kbd>), deretter å flytte seg gjennom kalenderen uten å måtte holde nede ytterligere modifiserte taster. Home Page Reader går faktisk et skritt lenger enn JAWS. Som vi straks vil se, kan du definere en kortere (eller lengre) tittel for hver tabelltittel (nesten som å <a href="dag_14_legge_titler_pa_lenker">legge til tittel på en lenke</a>), og Home Page Reader leser det i stedet for den originale tabelltittelens tekst. Det betyr at du visuelt kan vise ukens dager som «Søn», «Man», «Tir», men du kan fortelle Home Page Reader til å lese dem som «Søndag», «Mandag», «Tirsdag». Kult.</p>
+</li>
+</ol>
+
+<h3>Hvordan gjøre det</h3>
+
+<p>Hvis du ikke allerede har gjort det, sørg for at kalenderen din <a href="dag_18_gi_din_kalender_en_ekte_overskrift">har en ekte overskrift</a>. <code>&lt;caption&gt;</code>-taggen må være den første tingen etter <code>&lt;table&gt;</code>-taggen, og raden med <code>&lt;th&gt;</code>-tagger skal være den første tingen etter det.</p>
+<p>I Movable Type, finn kalenderen i hovedsidemalen din. (Igjen, et søk etter «calendarhead» vil sannsynligvis finne den.) Umiddelbart etter <code>&lt;caption&gt;</code>, vil du se ukens dager definert som dette:</p>
+
+<blockquote>
+<p><code class="sgmltag">&lt;tr&gt;<br />
+&lt;td align="center"&gt;&lt;span class="calendar"&gt;Søn&lt;/span&gt;&lt;/td&gt;<br />
+&lt;td align="center"&gt;&lt;span class="calendar"&gt;Man&lt;/span&gt;&lt;/td&gt;<br />
+&lt;td align="center"&gt;&lt;span class="calendar"&gt;Tir&lt;/span&gt;&lt;/td&gt;<br />
+&lt;td align="center"&gt;&lt;span class="calendar"&gt;Ons&lt;/span&gt;&lt;/td&gt;<br />
+&lt;td align="center"&gt;&lt;span class="calendar"&gt;Tor&lt;/span&gt;&lt;/td&gt;<br />
+&lt;td align="center"&gt;&lt;span class="calendar"&gt;Fre&lt;/span&gt;&lt;/td&gt;<br />
+&lt;td align="center"&gt;&lt;span class="calendar"&gt;Lør&lt;/span&gt;&lt;/td&gt;<br />
+&lt;/tr&gt;</code></p>
+</blockquote>
+
+<p>Endre det til dette:</p>
+
+<blockquote>
+<p><code class="sgmltag">&lt;tr&gt;<br />
+&lt;<strong>th abbr="Søndag"</strong> align="center"&gt;&lt;span class="calendar"&gt;Søn&lt;/span&gt;<strong>&lt;/th&gt;</strong><br />
+&lt;<strong>th abbr="Mandag"</strong> align="center"&gt;&lt;span class="calendar"&gt;Man&lt;/span&gt;<strong>&lt;/th&gt;</strong><br />
+&lt;<strong>th abbr="Tirsdag"</strong> align="center"&gt;&lt;span class="calendar"&gt;Tir&lt;/span&gt;<strong>&lt;/th&gt;</strong><br />
+&lt;<strong>th abbr="Onsdag"</strong> align="center"&gt;&lt;span class="calendar"&gt;Ons&lt;/span&gt;<strong>&lt;/th&gt;</strong><br />
+&lt;<strong>th abbr="Torsdag"</strong> align="center"&gt;&lt;span class="calendar"&gt;Tor&lt;/span&gt;<strong>&lt;/th&gt;</strong><br />
+&lt;<strong>th abbr="Fredag"</strong> align="center"&gt;&lt;span class="calendar"&gt;Fre&lt;/span&gt;<strong>&lt;/th&gt;</strong><br />
+&lt;<strong>th abbr="Lørdag"</strong> align="center"&gt;&lt;span class="calendar"&gt;Lør&lt;/span&gt;<strong>&lt;/th&gt;</strong><br />
+&lt;/tr&gt;</code></p>
+</blockquote>
+
+<p>Det skjer to ting her: Alle <code class="sgmltag">&lt;td&gt;</code>-tagger endres til <code class="sgmltag">&lt;th&gt;</code>, og hver av de får et «<code>abbr</code>»-atributt som spesifiserer hele navnet til ukens dag. («<code>abbr</code>»-atributtet kan tjene et dobbelt formål. For veldig lange tabelltitler, tjener det som en forkortelse; herav navnet. Men for veldig korte tabelltitler, tjener det som en lengre versjon, som er det vi gjør her.)</p>
+<p>I Radio, minner prosedyren om det du gjorde i går, da du ga tabellen en ekte overskrift.</p>
+
+<ol>
+<li>I Radio, åpner du Radio's faktiske applikasjon. I Windows, høyreklikk på det lille Radio-ikonet i systemkurven og velg «Åpne Radio».</li>
+<li>I «Verktøy»-menyen, velg «Utviklere», deretter «Hopp ...» (<kbd>Control+J</kbd>). Hopp til «system.verbs.builtins.radio.weblog.drawCalendar» (uten anførselstegn).</li>
+<li><p>Så går du til «Rediger»-menyen, «Finn og erstatt», «Finn ...» (<kbd>Control+F</kbd>) og finn "addDayName". Dette skulle åpenbare og fremheve <tt>addDayName</tt>-funksjonen. Dobbeltklikk triangelet for å få frem den faktiske funksjons-koden, noe som skulle se ut som dette:</p>
+
+<blockquote>
+<p><code>on addDayName (name)<br />
+&nbsp;&nbsp;add ("&lt;td width=\"19\" height=\"10\" align=\"center\" style=\"font-size:9px\"&gt;" + name + "&lt;/td&gt;")</code></p>
+</blockquote>
+</li>
+
+<li><p>Endre det til dette:</p>
+
+<blockquote>
+<p><code>on addDayName (name<strong>, fullname</strong>)<br />
+&nbsp;&nbsp;add ("<strong>&lt;th abbr=\"" + fullname + "\"</strong> width=\"19\" height=\"10\" align=\"center\" style=\"font-size:9px\"&gt;" + name + "<strong>&lt;/th&gt;</strong>")</code></p>
+</blockquote>
+</li>
+
+<li><p>Dobbeltklikk nå på «<code>for i = 1 to 7</code>»-linjen rett under det for å se dette:</p>
+
+<blockquote>
+<p><code>for i = 1 to 7<br />
+&nbsp;&nbsp;addDayName (radio.string.getLocalizedString ("dayOfWeekShort." + i))</code></p>
+</blockquote>
+</li>
+
+<li><p>Og endre det til dette:</p>
+
+<blockquote>
+<p><code>for i = 1 to 7<br />
+&nbsp;&nbsp;addDayName (radio.string.getLocalizedString ("dayOfWeekShort." + i)<strong>, radio.string.getLocalizedString ("dayOfWeek." + i)</strong>)</code></p>
+</blockquote>
+</li>
+</ol>
+
+<h3>Veldig viktig merknad om layout-tabeller</h3>
+
+<p>Tabeller brukt utelukkende for visuell layout har et fullstendig annerledels sett med regler. <em>Ikke</em> bruk <code class="sgmltag">&lt;th&gt;</code>-tagger på layout-tabeller. Bortsett fra å knote tabellene dine til å <a href="dag_10_presentere_ditt_viktigste_innhold_forst">presentere ditt viktigste innhold først</a>, er det veldig lite du behøver å gjøre for å gjøre layout-tabeller tilgjengelige. Vi skal diskutere en liten ting i morgen.</p>
+
+<h3>Les mer</h3>
+
+<p>Hvis du trenger å markere opp datatabeller mer sammensatt enn en kalender (som tabeller med flere nivåer med titler og undertitler), står du alene. Her er noen steder du kan starte:</p>
+
+<ul>
+<li><cite title="The Making Connections Unit">Jim Byrne</cite>: <a href="http://www.mcu.org.uk/articles/tables.html">Table Manners</a>.</li>
+<li><cite><acronym title="Web Accessibility in Mind">WebAIM</acronym></cite>: <a href="http://www.webaim.org/tutorials/tables">Create tables that transform gracefully</a>.</li>
+<li><cite title="Idyll Mountain">Kynn Bartlett</cite>: <a href="http://access.idyllmtn.com/tables/">Understanding Accessible Table Markup</a>.</li>
+</ul>
+
+<p></p>
+<span class="divider">&nbsp;</span>
+</div> <!--entry-->
+
+<div class="pageturn"><div class="inner">
+<a href="dag_18_gi_din_kalender_en_ekte_overskrift">&lt;&lt; Dag 18: Gi din kalender en ekte overskrift</a> |
+<a href="innholdsfortegnelse">Innholdsfortegnelse</a>
+| <a href="dag_20_tilby_et_sammendrag_til_tabeller">Dag 20: Tilby et sammendrag til tabeller &gt;&gt;</a>
+<span class="divider">&nbsp;</span>
+</div></div> <!--pageturn-->
+
+</div></div> <!--main-->
+
+<?php include("meny.php"); ?>
+
+<?php include("menyfot.php"); ?>
+
+</div><!--menu-->
+
+<div id="navigation">
+<p class="breadcrumb">Du er her:
+<a href="/">Forsiden</a> >
+<a href="innholdsfortegnelse">Innholdsfortegnelse</a> >
+<span class="currentpage">Dag 19: Bruke ekte tabelltitler</span></p>
+</div><!--navigation-->
+
+<?php include("stats.php"); ?>
+</body>
+</html>
