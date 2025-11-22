@@ -11,7 +11,7 @@
 <link rel="up" title="Innholdsfortegnelse" href="innholdsfortegnelse.html" />
 <link rel="first" title="Dag 1: Anne" href="dag_1_anne.html" />
 <link rel="last" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" />
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="css/common.css" type="text/css" />
 <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="css/screen.css" type="text/css" media="projection" />
@@ -25,7 +25,7 @@
 <div id="logo">
 <div class="inner">
 <h1 class="title"><a href="index.html" accesskey="1">Kast deg ut i tilgjengelighet</a></h1>
-<p>Et mer tilgjengelig nettsted på 30 dager</p>
+<p>Et mer tilgjengelig nettsted pÃ¥ 30 dager</p>
 <a class="skip" href="#startnavigation">Hopp til navigasjonen</a>
 <span class="divider">&nbsp;</span>
 </div>
@@ -35,20 +35,20 @@
 <div id="main"><div class="inner">
 <div class="entry">
 <h2 class="entrysubject">Dag 18: Gi din kalender en ekte overskrift</h2>
-<p class="firstparagraph">«Men,» hører jeg du roper ut, «kalenderen min <em>har</em> allerede en overskrift. Bare se her, den har måneden og året rett der til høyre på toppen. Til og med i fet skrift.»</p>
-<p>Men hvis du dykker inn i <acronym title="hypertext markup language">HTML</acronym>-kilden, så vil du se at kalenderen din ikke har en <em>ekte</em> overskrift. Sannsynligvis har den en enkel <code class="sgmltag">&lt;td&gt;</code> tabellcelle definert til å strekke seg over hele den første raden, med en <acronym title="cascading style sheets">CSS</acronym>-regel som gjør den fet. Dette er veldig mye lettere med en ekte <code class="sgmltag">&lt;caption&gt;</code>-tagg. Det er lettere å lese i malen din, siden din sparer noen byte, ser nøyaktig lik ut i visuelle nettlesere, og er mer tilgjengelig.</p>
+<p class="firstparagraph">Â«Men,Â» hÃ¸rer jeg du roper ut, Â«kalenderen min <em>har</em> allerede en overskrift. Bare se her, den har mÃ¥neden og Ã¥ret rett der til hÃ¸yre pÃ¥ toppen. Til og med i fet skrift.Â»</p>
+<p>Men hvis du dykker inn i <acronym title="hypertext markup language">HTML</acronym>-kilden, sÃ¥ vil du se at kalenderen din ikke har en <em>ekte</em> overskrift. Sannsynligvis har den en enkel <code class="sgmltag">&lt;td&gt;</code> tabellcelle definert til Ã¥ strekke seg over hele den fÃ¸rste raden, med en <acronym title="cascading style sheets">CSS</acronym>-regel som gjÃ¸r den fet. Dette er veldig mye lettere med en ekte <code class="sgmltag">&lt;caption&gt;</code>-tagg. Det er lettere Ã¥ lese i malen din, siden din sparer noen byte, ser nÃ¸yaktig lik ut i visuelle nettlesere, og er mer tilgjengelig.</p>
 
 <h3>Hvem har nytte av det?</h3>
 
 <ol>
-<li><a href="dag_5_marius.html">Marius</a> har nytte av det. <a href="http://www.fdisk.com/doslynx/lynxport.htm">Lynx</a> viser overskriften i fronten med ordet «OVERSKRIFT:», og gjør det helt tydelig at denne linjen er overskriften og ikke kolonnens tittel eller tabelldata.</li>
-<li><a href="dag_1_anne.html">Anne</a> får indirekte nytte av det. Ved å bruke en ekte <code>&lt;caption&gt;</code>-tagg ryddes veien for bruken av ekte tabelltitler, noe som gagner Anne på en måte som vi skal diskutere i morgen.</li>
+<li><a href="dag_5_marius.html">Marius</a> har nytte av det. <a href="http://www.fdisk.com/doslynx/lynxport.htm">Lynx</a> viser overskriften i fronten med ordet Â«OVERSKRIFT:Â», og gjÃ¸r det helt tydelig at denne linjen er overskriften og ikke kolonnens tittel eller tabelldata.</li>
+<li><a href="dag_1_anne.html">Anne</a> fÃ¥r indirekte nytte av det. Ved Ã¥ bruke en ekte <code>&lt;caption&gt;</code>-tagg ryddes veien for bruken av ekte tabelltitler, noe som gagner Anne pÃ¥ en mÃ¥te som vi skal diskutere i morgen.</li>
 </ol>
 
-<h3>Hvordan gjøre det</h3>
+<h3>Hvordan gjÃ¸re det</h3>
 
-<p>Du kan kun gjøre dette i publiseringsverktøy som har støtte for kalendere (noe som utelukker Blogger) og som tillater deg å tilpasse <acronym title="hypertext markup language">HTML</acronym>-en som er generert for kalendere (som utelukker Manilla).</p>
-<p>I Movable Type, har du sannsynligvis en tabell til kalenderen i din hovedsidemal som starter slik som dette (du finner den sannsynligvis ved å søke etter «calendarhead»):</p>
+<p>Du kan kun gjÃ¸re dette i publiseringsverktÃ¸y som har stÃ¸tte for kalendere (noe som utelukker Blogger) og som tillater deg Ã¥ tilpasse <acronym title="hypertext markup language">HTML</acronym>-en som er generert for kalendere (som utelukker Manilla).</p>
+<p>I Movable Type, har du sannsynligvis en tabell til kalenderen i din hovedsidemal som starter slik som dette (du finner den sannsynligvis ved Ã¥ sÃ¸ke etter Â«calendarheadÂ»):</p>
 
 <blockquote>
 <p><code class="sgmltag">&lt;table border="0" cellspacing="4" cellpadding="0"&gt;<br />
@@ -56,35 +56,35 @@
 &lt;td colspan="7" align="center"&gt;&lt;span class="calendarhead"&gt;&lt;$MTDate format="%B %Y"$&gt;&lt;/span&gt;&lt;/td&gt;<br />
 &lt;/tr&gt;</strong><br />
 &lt;tr&gt;<br />
-&lt;td align="center"&gt;&lt;span class="calendar"&gt;Søn&lt;/span&gt;&lt;/td&gt;<br />
+&lt;td align="center"&gt;&lt;span class="calendar"&gt;SÃ¸n&lt;/span&gt;&lt;/td&gt;<br />
 ...</code></p>
 </blockquote>
 
-<p>La tabelltaggen være, men bytt ut hele den første <code class="sgmltag">&lt;tr&gt;</code>-tabellraden med en ekte <code class="sgmltag">&lt;caption&gt;</code>-tagg, slik som dette:</p>
+<p>La tabelltaggen vÃ¦re, men bytt ut hele den fÃ¸rste <code class="sgmltag">&lt;tr&gt;</code>-tabellraden med en ekte <code class="sgmltag">&lt;caption&gt;</code>-tagg, slik som dette:</p>
 
 <blockquote>
 <p><code class="sgmltag">&lt;table border="0" cellspacing="4" cellpadding="0"&gt;<br />
 <strong>&lt;caption class="calendarhead"&gt;&lt;$MTDate format="%B %Y"$&gt;&lt;/caption&gt;</strong><br />
 &lt;tr&gt;<br />
-&lt;td align="center"&gt;&lt;span class="calendar"&gt;Søn&lt;/span&gt;&lt;/td&gt;<br />
+&lt;td align="center"&gt;&lt;span class="calendar"&gt;SÃ¸n&lt;/span&gt;&lt;/td&gt;<br />
 ...</code></p>
 </blockquote>
 
-<p>La resten være; vi fikser det i morgen.</p>
-<p><code>class</code>-atributtet til <code class="sgmltag">&lt;caption&gt;</code> er valgfri; jeg lot den være der så dette kunne bli en dropp-inn utskiftning i Movable Type's standardmal, som bruker en <acronym title="cascading style sheets">CSS</acronym>-regel for å gjøre måneden og året i fet skrift. Ved å bruke <code class="sgmltag">&lt;caption&gt;</code>-taggen som vist, burde siden din vises nøyaktig likt som den gjorde før.</p>
+<p>La resten vÃ¦re; vi fikser det i morgen.</p>
+<p><code>class</code>-atributtet til <code class="sgmltag">&lt;caption&gt;</code> er valgfri; jeg lot den vÃ¦re der sÃ¥ dette kunne bli en dropp-inn utskiftning i Movable Type's standardmal, som bruker en <acronym title="cascading style sheets">CSS</acronym>-regel for Ã¥ gjÃ¸re mÃ¥neden og Ã¥ret i fet skrift. Ved Ã¥ bruke <code class="sgmltag">&lt;caption&gt;</code>-taggen som vist, burde siden din vises nÃ¸yaktig likt som den gjorde fÃ¸r.</p>
 <p>I Greymatter, er konseptet det samme men malens tagger er annerledels:</p>
 
 <blockquote>
 <p><code class="sgmltag">&lt;caption&gt;{{monthword}} {{yearyear}}&lt;/caption&gt;</code></p>
 </blockquote>
 
-<p>Igjen, du kan forandre den visuelle stilen til <code>caption</code> ved å bruke cascading style sheets, hvis du er inne i denslags ting.</p>
-<p>I Radio, så er prosessen til en viss grad vanskeligere, men ikke umulig. (Jeg står i gjeld til <a href="http://www.tmtm.com/insanity/">Tony Bowden</a> for disse instruksjonene.)</p>
+<p>Igjen, du kan forandre den visuelle stilen til <code>caption</code> ved Ã¥ bruke cascading style sheets, hvis du er inne i denslags ting.</p>
+<p>I Radio, sÃ¥ er prosessen til en viss grad vanskeligere, men ikke umulig. (Jeg stÃ¥r i gjeld til <a href="http://www.tmtm.com/insanity/">Tony Bowden</a> for disse instruksjonene.)</p>
 
 <ol>
-<li>I Radio, åpner du Radio's faktiske applikasjon. I Windows, høyreklikk på det lille Radio-ikonet i systemkurven og velg «Åpne Radio».</li>
-<li>I «Verktøy»-menyen, velg «Utviklere», deretter «Hopp ...» (<kbd>Control+J</kbd>). Hopp til «system.verbs.builtins.radio.weblog.drawCalendar» (uten anførselstegn).</li>
-<li>Så går du til «Rediger»-menyen, «Finn og erstatt», «Finn ...» (<kbd>Control+F</kbd>) og finn "hCalendarTable". Dette skulle åpenbare datablokken med kode som tegner den innledende <code>&lt;table&gt;</code>-taggen og den falske kalenderoverskriften.</li>
+<li>I Radio, Ã¥pner du Radio's faktiske applikasjon. I Windows, hÃ¸yreklikk pÃ¥ det lille Radio-ikonet i systemkurven og velg Â«Ã…pne RadioÂ».</li>
+<li>I Â«VerktÃ¸yÂ»-menyen, velg Â«UtviklereÂ», deretter Â«Hopp ...Â» (<kbd>Control+J</kbd>). Hopp til Â«system.verbs.builtins.radio.weblog.drawCalendarÂ» (uten anfÃ¸rselstegn).</li>
+<li>SÃ¥ gÃ¥r du til Â«RedigerÂ»-menyen, Â«Finn og erstattÂ», Â«Finn ...Â» (<kbd>Control+F</kbd>) og finn "hCalendarTable". Dette skulle Ã¥penbare datablokken med kode som tegner den innledende <code>&lt;table&gt;</code>-taggen og den falske kalenderoverskriften.</li>
 <li><p>Endre den siste linjen av datablokken (som skriver ut <var>monthYearString</var>-en i en <code>&lt;tr&gt;</code>-tagg) til dette:</p>
 
 <blockquote>
@@ -92,8 +92,8 @@
 </blockquote>
 </li>
 
-<li>Lukk vinduet. Den vil spørre om du ønsker å kompilere endringene, svar ja.</li>
-<li><p>Hvis du ønsker det kan du stilsette overskriften. Gå til din hjemmesidemal (i preferanse-siden) og legg stil til <code>caption</code>-overskriften. Dette er det jeg bruker. Hvor min <code>&lt;style&gt;</code>-seksjon før inneholdt dette:</p>
+<li>Lukk vinduet. Den vil spÃ¸rre om du Ã¸nsker Ã¥ kompilere endringene, svar ja.</li>
+<li><p>Hvis du Ã¸nsker det kan du stilsette overskriften. GÃ¥ til din hjemmesidemal (i preferanse-siden) og legg stil til <code>caption</code>-overskriften. Dette er det jeg bruker. Hvor min <code>&lt;style&gt;</code>-seksjon fÃ¸r inneholdt dette:</p>
 
 <blockquote>
 <pre><code>body, td, p {
@@ -102,7 +102,7 @@
 }</code></pre>
 </blockquote>
 
-<p>Nå inneholder den dette:</p>
+<p>NÃ¥ inneholder den dette:</p>
 
 <blockquote>
 <pre><code>body, td, p, <strong>caption</strong> {
@@ -140,11 +140,11 @@
 <div id="menu">
 <a class="skip" name="startnavigation" id="startnavigation"></a>
 <form method="get" action="http://kastdegutitilgjengelighet.no/sok" id="searchbox_005108012550997225989:cf_v5g16xmu">
-<p id="searchlabel"><label for="sok" accesskey="4">Søk i dette nettstedet:</label></p>
+<p id="searchlabel"><label for="sok" accesskey="4">SÃ¸k i dette nettstedet:</label></p>
 <p><input type="hidden" name="cx" value="005108012550997225989:cf_v5g16xmu" />
 <input type="hidden" name="cof" value="FORID:11" />
 <input type="text" id="sok" name="q" size="18" />
-<input type="submit" name="sa" value="Søk" /></p>
+<input type="submit" name="sa" value="SÃ¸k" /></p>
 </form>
 
 <div class="menusection"><div class="inner">
@@ -158,7 +158,7 @@
 <li><a href="tips_om_funksjonshemninger.html">Tips om funksjonshemninger</a></li>
 <li><a href="tips_om_prinsipper_for_design.html">Tips om prinsipper for design</a></li>
 <li><a href="tips_om_nettlesere.html">Tips om nettlesere</a></li>
-<li><a href="tips_om_publiseringsverktoy.html">Tips om publiseringsverktøy</a></li>
+<li><a href="tips_om_publiseringsverktoy.html">Tips om publiseringsverktÃ¸y</a></li>
 <li><a href="mailto:kontakt@kastdegutitilgjengelighet.no" accesskey="9">Tilbakemelding (e-post)</a></li>
 <li><a title="Informasjon om copyright- og lisensiering (engelsk)" href="betingelser_for_bruk.html" accesskey="8">Betingelser for bruk</a></li>
 </ul>
