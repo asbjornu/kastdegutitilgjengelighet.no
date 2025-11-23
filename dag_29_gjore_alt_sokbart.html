@@ -1,164 +1,211 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nb" lang="nb">
+<!DOCTYPE html>
+<html lang="nb">
 <head>
-<title>Dag 29: Gjøre alt søkbart - Kast deg ut i tilgjengelighet</title>
-
-<link rel="start" title="Forsiden" href="/" />
-<link rel="contents" title="Innholdsfortegnelse" href="innholdsfortegnelse.html" />
-<link rel="help" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" />
-<link rel="author" title="Send tilbakemelding" href="mailto:kontakt@kastdegutitilgjengelighet.no" />
-<link rel="copyright" title="Betingelser for bruk (engelsk)" href="betingelser_for_bruk.html" />
-<link rel="up" title="Innholdsfortegnelse" href="innholdsfortegnelse.html" />
-<link rel="first" title="Dag 1: Anne" href="dag_1_anne.html" />
-<link rel="last" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="css/common.css" type="text/css" />
-<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="css/screen.css" type="text/css" media="projection" />
-<link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
-<link rel="stylesheet" href="css/aural.css" type="text/css" media="aural" />
-<link rel="prev" href="dag_28_merking_av_skjema-elementer.html" title="Dag 28: Merking av skjema-elementer" />
-<link rel="next" href="dag_30_lage_en_tilgjengelighetsrapport.html" title="Dag 30: Lage en tilgjengelighetsrapport" />
+  <meta charset="utf-8">
+  <title>Dag 29: Gjøre alt søkbart - Kast deg ut i tilgjengelighet</title>
+  <link rel="start" title="Forsiden" href="/">
+  <link rel="contents" title="Innholdsfortegnelse" href="innholdsfortegnelse.html">
+  <link rel="help" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html">
+  <link rel="author" title="Send tilbakemelding" href="mailto:kontakt@kastdegutitilgjengelighet.no">
+  <link rel="copyright" title="Betingelser for bruk (engelsk)" href="betingelser_for_bruk.html">
+  <link rel="up" title="Innholdsfortegnelse" href="innholdsfortegnelse.html">
+  <link rel="first" title="Dag 1: Anne" href="dag_1_anne.html">
+  <link rel="last" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html">
+  <link rel="stylesheet" href="css/common.css" type="text/css">
+  <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/screen.css" type="text/css" media="projection">
+  <link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+  <link rel="stylesheet" href="css/aural.css" type="text/css" media="aural">
+  <link rel="prev" href="dag_28_merking_av_skjema-elementer.html" title="Dag 28: Merking av skjema-elementer">
+  <link rel="next" href="dag_30_lage_en_tilgjengelighetsrapport.html" title="Dag 30: Lage en tilgjengelighetsrapport">
 </head>
 <body>
-
-<div id="logo">
-<div class="inner">
-<h1 class="title"><a href="/" accesskey="1">Kast deg ut i tilgjengelighet</a></h1>
-<p>Et mer tilgjengelig nettsted på 30 dager</p>
-<a class="skip" href="#startnavigation">Hopp til navigasjonen</a>
-<span class="divider">&nbsp;</span>
-</div>
-</div>
-<p></p>
-
-<div id="main"><div class="inner">
-<div class="entry">
-<h2 class="entrysubject">Dag 29: Gjøre alt søkbart</h2>
-<p class="firstparagraph">Alle nettsteder trenger et nettstedsøk. Punktum.</p>
-<p>Regler for et godt nettstedsøk:</p>
-
-<ol>
-<li>Plasser søkeboksen på hver eneste side, helst «ovenfor hovedinnholdet» (synlig uten å måtte skrolle).</li>
-<li>Søker i alt innholdet som standard. Hvis du har et valg for å søke i innlegg, kommentarer, eller begge deler, gjør «begge deler» til standard.</li>
-<li>Ikke fyll opp søkeboksen din med avanserte valg, som boolsk logikk, sensitivitet for store og små bokstaver, eller regulære uttrykk. Velg som standard å etterligne Googles måte å gjøre det på (passe til alle ord, ikke passe til partielle ord, ikke passe til om det er store eller små bokstaver, ikke bruke regulære uttrykk) og gjør så valgene synlige på en egen separat «Avansert søk»-side.</li>
-<li>Gi søkeboksen din <a href="dag_28_merking_av_skjema-elementer.html">en skikkelig «label»</a> og <a href="dag_15_definere_tastatursnarveier.html">en tastatursnarvei</a>. Jeg anbefaler <code>accesskey="4"</code>. (Merk: <a href="dag_15_definere_tastatursnarveier.html">På dag 15</a> ga jeg et eksempel på hvordan man definere tastatursnarveier til et søkeskjema, men jeg fikk gjort det feil. For å oppnå maksimum kompabilitet på tvers av nettlesere, så trenger du å definere tastatursnarveien på <code>&lt;label&gt;</code>, og ikke på <code>&lt;input&gt;</code>. Se eksempelet nedenfor for den korrekte syntaksen.)</li>
-</ol>
-
-<h3>Hvem har nytte av det?</h3>
-
-<p><a href="dag_1_anne.html">Anne</a>, <a href="dag_2_jorgen.html">Jørgen</a>, <a href="dag_3_knut.html">Knut</a>, <a href="dag_4_lillian.html">Lillian</a>, <a href="dag_5_marius.html">Marius</a>, og stort sett alle andre i verden har nytte av et godt implementert nettstedsøk. Spesielt i en weblogg eller et nyhetsorientert nettsted hvor innholdet primært er organisert kronologisk, det er veldig frustrerende å prøve å finne et bestemt innlegg som ikke lenger ligger på forsiden. Det er ikke mange som vet om «site:domainname.com»-syntaksen til Google (for å begrense søkeresultatene til et bestemt domene), men Google reindekserer uansett bare én gang i måneden. Tilby ditt eget nettstedsøk.</p>
-
-<h3>Hvordan gjøre det</h3>
-
-<p>Greymatter har innebygd søkefunksjonalitet, men du kommer til å måtte tilpasse malen en smule for å tilby en tastatursnarvei til søkeboksen. Gå til «Edit Templates», «Miscellaneous Templates», «Search Form Template», og finn et skjema som dette:</p>
-
-<blockquote>
-<p><code>&lt;FORM ACTION="{{cgiwebpath}}/gm-comments.cgi" METHOD=POST&gt;<br />
-&lt;INPUT TYPE=TEXT NAME="gmsearch" SIZE=20&gt;<br />
-&lt;INPUT TYPE=SUBMIT VALUE="Search"&gt;<br />
-&lt;/FORM&gt;</code></p>
-</blockquote>
-
-<p>Og endre det til dette:</p>
-
-<blockquote>
-<p><code>&lt;FORM ACTION="{{cgiwebpath}}/gm-comments.cgi" METHOD=POST&gt;<br />
-<strong>&lt;label for="gmsearch" accesskey="4"&gt;Search for:&lt;/label&gt;</strong><br />
-&lt;INPUT TYPE=TEXT <strong>id="gmsearch"</strong> NAME="gmsearch" SIZE=20&gt;<br />
-&lt;INPUT TYPE=SUBMIT VALUE="Search"&gt;<br />
-&lt;/FORM&gt;</code></p>
-</blockquote>
-
-<p>Movable Type-brukere kan prøve ut <a href="http://www.jayallen.org/mt-search/">MT-Search</a> tillegget. Jeg bruker dette på et kommende <acronym title="Movable Type">MT</acronym>-drevet nettsted. Jeg prøvde det på min hoved-weblogg (900+ innlegg) og den var forholdsvis langsom, men den ser ut til å fungere greit på mindre nettsteder. Den blir ikke lenger aktivt utviklet, men den virker greit, til og med i den siste versjonen av Movable Type. (Merk: Hvis du bruker MySQL-versjonen av Movable Type 2.2 <a href="http://philringnalda.com/archives/002257.php">så trenger du å modifisere mt-search.cgi en smule</a>.)</p>
-<p>Hvis du har webloggen din på ditt eget domenenavn kan du bruke en tredjeparts søketjeneste som indekserer innholdet ditt og tilbyr søkeresultater etter etterspørsel. Populære alternativer på denne fronten inkluderer <a href="http://www.atomz.com/search/trial_account.htm">Atomz Express Search</a> som Blogger.com anbefaler, og <a href="http://www.google.com/services/free.html">Google Free Web Search</a> som jeg bruker på min egen weblogg. Begge kan tilpasses til en viss grad, og ganske fort også, selv om deres indeksering av innholdet ditt ikke er oppdatert umiddelbart. Begge tillater deg å modifisere utseende på søkeboksen din; mitt Google-drevne søkeskjema ser ut som dette (legg merke til bruken av <code>&lt;label&gt;</code> og <code>accesskey</code>):</p>
-
-<blockquote>
-<p><code>&lt;form id="searchform" method="get" action="http://www.google.com/custom"&gt;<br />
-&lt;p id="searchlabel"&gt;<strong>&lt;label for="q" accesskey="4"&gt;Search this site:&lt;/label&gt;</strong>&lt;/p&gt;<br />
-&lt;p id="searchinput"&gt;&lt;input type="text" <strong>id="q"</strong> name="q" size="18" maxlength="255" value=" " /&gt;&lt;/p&gt;<br />
-&lt;p id="searchsubmit"&gt;&lt;input type="submit" value="Search" /&gt;<br />
-&lt;input type="hidden" name="cof" value="LW:116;L:http://diveintomark.org/images/eyes.jpg;LH:68;AH:left;GL:0;S:http://diveintomark.org/;AWFID:0d8ffcebe359c844;" /&gt;<br />
-&lt;input type="hidden" name="domains" value="diveintomark.org" /&gt;<br />
-&lt;input type="hidden" name="sitesearch" value="diveintomark.org" /&gt;<br />
-&lt;/p&gt;<br />
-&lt;/form&gt;</code></p>
-</blockquote>
-
-<p>Merk: Du kan ikke klippe og lime dette inn i din egen weblogg. Hvis du ønsker å bruke Google Free Web Search så må du registrere deg og få din egen kode til det skjulte <code>cof</code>-feltet.</p>
-
-<h3>Les mer</h3>
-
-<ul>
-<li><cite>Jay Allen</cite>: <a href="http://www.jayallen.org/mt-search/">MT-Search</a>, et søketillegg til Movable Type.</li>
-<li><cite>Phil Ringnalda</cite>: <a href="http://philringnalda.com/archives/002257.php">mt-search.cgi and MySQL</a>. Viktig informasjon om å få MT-Search til å fungere med Movable Type 2.2 og MySQL.</li>
-<li><a href="http://www.atomz.com/search/trial_account.htm">Atomz Express Search</a>.</li>
-<li><a href="http://www.google.com/services/free.html">Google Free Web Search</a>.</li>
-<li><cite>Blogger.com</cite>: <a href="http://publicmind.blogger.com/enduser/group.jsp?node=185">How do I add a search engine to my blog?</a> Anbefaler Atomz, men lenker til andre som ikke er listet her.</li>
-<li><cite>Jukka Korpela</cite>: <a href="http://www.cs.tut.fi/~jkorpela/forms/accesskey.html">Improving accessibility with <code>accesskey</code> in HTML forms and links</a>. Detaljert forklaring på hvorfor man burde bruke «4» som tastatursnarvei til ens nettstedsøk.</li>
-<li><cite>Jakob Nielsen</cite>: <a href="http://www.useit.com/alertbox/20000109.html">Is Navigation Useful?</a> <q>Users often rely on search as their main hunting strategy.</q></li>
-<li><cite>Jakob Nielsen</cite>: <a href="http://www.useit.com/alertbox/9707b.html">Search Usability</a>. Fem år gammel og fortsatt veldig relevant.</li>
-<li><cite>PHP.net</cite>: <a href="http://www.php.net/urlhowto.php">URL HOWTO</a>. PHP.net har det mest forbløffende nettstedsøket jeg noensinne har sett. Hinsides en standard søkeboks bruker de et egendefinert 404 feilmeldingsdokument (som vanligvis bare ville vise en «Siden ikke funnet»-feilmelding) for å intelligent søke i nettstedet basert på URL-er. Så du kan skrive en adresse som <a href="http://php.net/phpinfo">php.net/phpinfo</a> inn i din nettlesers adressefelt, og php.net vil så videresende deg til <a href="http://www.php.net/manual/en/function.phpinfo.php">the reference page on the phpinfo function</a>.</li>
-</ul>
-
-<p></p>
-<span class="divider">&nbsp;</span>
-</div> <!--entry-->
-
-<div class="pageturn"><div class="inner">
-<a href="dag_28_merking_av_skjema-elementer.html">&lt;&lt; Dag 28: Merking av skjema-elementer</a> |
-<a href="innholdsfortegnelse.html">Innholdsfortegnelse</a>
-| <a href="dag_30_lage_en_tilgjengelighetsrapport.html">Dag 30: Lage en tilgjengelighetsrapport &gt;&gt;</a>
-<span class="divider">&nbsp;</span>
-</div></div> <!--pageturn-->
-
-</div></div> <!--main-->
-
-<div id="menu">
-<a class="skip" name="startnavigation" id="startnavigation"></a>
-<form method="get" action="/sok" id="searchbox_005108012550997225989:cf_v5g16xmu">
-<p id="searchlabel"><label for="sok" accesskey="4">Søk i dette nettstedet:</label></p>
-<p><input type="hidden" name="cx" value="005108012550997225989:cf_v5g16xmu" />
-<input type="hidden" name="cof" value="FORID:11" />
-<input type="text" id="sok" name="q" size="18" />
-<input type="submit" name="sa" value="Søk" /></p>
-</form>
-
-<div class="menusection"><div class="inner">
-<h2 class="invisibletitle">Nettstedets lenker</h2>
-
-<a class="skip" href="#endinternal">Hopp over nettstedets lenker</a>
-<ul>
-<li><a title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" accesskey="0">Tilgjengelighetsrapport</a></li>
-<li><a href="innholdsfortegnelse.html" accesskey="3">Innholdsfortegnelse</a></li>
-<li><a href="tips_om_personer.html">Tips om personer</a></li>
-<li><a href="tips_om_funksjonshemninger.html">Tips om funksjonshemninger</a></li>
-<li><a href="tips_om_prinsipper_for_design.html">Tips om prinsipper for design</a></li>
-<li><a href="tips_om_nettlesere.html">Tips om nettlesere</a></li>
-<li><a href="tips_om_publiseringsverktoy.html">Tips om publiseringsverktøy</a></li>
-<li><a href="mailto:kontakt@kastdegutitilgjengelighet.no" accesskey="9">Tilbakemelding (e-post)</a></li>
-<li><a title="Informasjon om copyright- og lisensiering (engelsk)" href="betingelser_for_bruk.html" accesskey="8">Betingelser for bruk</a></li>
-</ul>
-
-<a class="skip" id="endinternal"></a>
-</div>
-</div>
-<!--.menusection-->
-<div id="footer"><div class="inner">
-
-<address>Copyright &copy; 2002 <a title="Dive Into Mark, forfatterens blogg" href="http://diveintomark.org/">Mark Pilgrim</a></address>
-
-</div></div> <!--footer-->
-
-<div id="ads"></div>
-</div> <!--menu-->
-<div id="navigation">
-<p class="breadcrumb">Du er her:
-<a href="/">Forsiden</a> >
-<a href="innholdsfortegnelse.html">Innholdsfortegnelse</a> >
-<span class="currentpage">Dag 29: Gjøre alt søkbart</span></p>
-</div><!--navigation-->
-
-
+  <div class="inner" id="logo">
+    <h1 class="title"><a href="/" accesskey="1">Kast deg ut i tilgjengelighet</a></h1>
+    <p>Et mer tilgjengelig nettsted på 30 dager</p><a class="skip" href="#startnavigation">Hopp til navigasjonen</a>
+    <span class="divider">&nbsp;</span>
+  </div>
+  <div class="inner" id="main">
+    <div class="entry">
+      <h2 class="entrysubject">Dag 29: Gjøre alt søkbart</h2>
+      <p class="firstparagraph">Alle nettsteder trenger et nettstedsøk. Punktum.</p>
+      <p>Regler for et godt nettstedsøk:</p>
+      <ol>
+        <li>Plasser søkeboksen på hver eneste side, helst «ovenfor hovedinnholdet» (synlig uten å måtte skrolle).</li>
+        <li>Søker i alt innholdet som standard. Hvis du har et valg for å søke i innlegg, kommentarer, eller begge
+        deler, gjør «begge deler» til standard.</li>
+        <li>Ikke fyll opp søkeboksen din med avanserte valg, som boolsk logikk, sensitivitet for store og små
+        bokstaver, eller regulære uttrykk. Velg som standard å etterligne Googles måte å gjøre det på (passe til alle
+        ord, ikke passe til partielle ord, ikke passe til om det er store eller små bokstaver, ikke bruke regulære
+        uttrykk) og gjør så valgene synlige på en egen separat «Avansert søk»-side.</li>
+        <li>Gi søkeboksen din <a href="dag_28_merking_av_skjema-elementer.html">en skikkelig «label»</a> og <a href=
+        "dag_15_definere_tastatursnarveier.html">en tastatursnarvei</a>. Jeg anbefaler <code>accesskey="4"</code>.
+        (Merk: <a href="dag_15_definere_tastatursnarveier.html">På dag 15</a> ga jeg et eksempel på hvordan man
+        definere tastatursnarveier til et søkeskjema, men jeg fikk gjort det feil. For å oppnå maksimum kompabilitet på
+        tvers av nettlesere, så trenger du å definere tastatursnarveien på <code>&lt;label&gt;</code>, og ikke på
+        <code>&lt;input&gt;</code>. Se eksempelet nedenfor for den korrekte syntaksen.)
+        </li>
+      </ol>
+      <h3>Hvem har nytte av det?</h3>
+      <p><a href="dag_1_anne.html">Anne</a>, <a href="dag_2_jorgen.html">Jørgen</a>, <a href=
+      "dag_3_knut.html">Knut</a>, <a href="dag_4_lillian.html">Lillian</a>, <a href="dag_5_marius.html">Marius</a>, og
+      stort sett alle andre i verden har nytte av et godt implementert nettstedsøk. Spesielt i en weblogg eller et
+      nyhetsorientert nettsted hvor innholdet primært er organisert kronologisk, det er veldig frustrerende å prøve å
+      finne et bestemt innlegg som ikke lenger ligger på forsiden. Det er ikke mange som vet om
+      «site:domainname.com»-syntaksen til Google (for å begrense søkeresultatene til et bestemt domene), men Google
+      reindekserer uansett bare én gang i måneden. Tilby ditt eget nettstedsøk.</p>
+      <h3>Hvordan gjøre det</h3>
+      <p>Greymatter har innebygd søkefunksjonalitet, men du kommer til å måtte tilpasse malen en smule for å tilby en
+      tastatursnarvei til søkeboksen. Gå til «Edit Templates», «Miscellaneous Templates», «Search Form Template», og
+      finn et skjema som dette:</p>
+      <blockquote>
+        <p><code>&lt;FORM ACTION="{{cgiwebpath}}/gm-comments.cgi" METHOD=POST&gt;<br>
+        &lt;INPUT TYPE=TEXT NAME="gmsearch" SIZE=20&gt;<br>
+        &lt;INPUT TYPE=SUBMIT VALUE="Search"&gt;<br>
+        &lt;/FORM&gt;</code></p>
+      </blockquote>
+      <p>Og endre det til dette:</p>
+      <blockquote>
+        <p><code>&lt;FORM ACTION="{{cgiwebpath}}/gm-comments.cgi" METHOD=POST&gt;<br>
+        <strong>&lt;label for="gmsearch" accesskey="4"&gt;Search for:&lt;/label&gt;</strong><br>
+        &lt;INPUT TYPE=TEXT <strong>id="gmsearch"</strong> NAME="gmsearch" SIZE=20&gt;<br>
+        &lt;INPUT TYPE=SUBMIT VALUE="Search"&gt;<br>
+        &lt;/FORM&gt;</code></p>
+      </blockquote>
+      <p>Movable Type-brukere kan prøve ut <a href="http://www.jayallen.org/mt-search/">MT-Search</a> tillegget. Jeg
+      bruker dette på et kommende <abbr title="Movable Type">MT</abbr>-drevet nettsted. Jeg prøvde det på min
+      hoved-weblogg (900+ innlegg) og den var forholdsvis langsom, men den ser ut til å fungere greit på mindre
+      nettsteder. Den blir ikke lenger aktivt utviklet, men den virker greit, til og med i den siste versjonen av
+      Movable Type. (Merk: Hvis du bruker MySQL-versjonen av Movable Type 2.2 <a href=
+      "http://philringnalda.com/archives/002257.php">så trenger du å modifisere mt-search.cgi en smule</a>.)</p>
+      <p>Hvis du har webloggen din på ditt eget domenenavn kan du bruke en tredjeparts søketjeneste som indekserer
+      innholdet ditt og tilbyr søkeresultater etter etterspørsel. Populære alternativer på denne fronten inkluderer
+      <a href="http://www.atomz.com/search/trial_account.htm">Atomz Express Search</a> som Blogger.com anbefaler, og
+      <a href="http://www.google.com/services/free.html">Google Free Web Search</a> som jeg bruker på min egen weblogg.
+      Begge kan tilpasses til en viss grad, og ganske fort også, selv om deres indeksering av innholdet ditt ikke er
+      oppdatert umiddelbart. Begge tillater deg å modifisere utseende på søkeboksen din; mitt Google-drevne søkeskjema
+      ser ut som dette (legg merke til bruken av <code>&lt;label&gt;</code> og <code>accesskey</code>):</p>
+      <blockquote>
+        <p><code>&lt;form id="searchform" method="get" action="http://www.google.com/custom"&gt;<br>
+        &lt;p id="searchlabel"&gt;<strong>&lt;label for="q" accesskey="4"&gt;Search this
+        site:&lt;/label&gt;</strong>&lt;/p&gt;<br>
+        &lt;p id="searchinput"&gt;&lt;input type="text" <strong>id="q"</strong> name="q" size="18" maxlength="255"
+        value=" " /&gt;&lt;/p&gt;<br>
+        &lt;p id="searchsubmit"&gt;&lt;input type="submit" value="Search" /&gt;<br>
+        &lt;input type="hidden" name="cof"
+        value="LW:116;L:http://diveintomark.org/images/eyes.jpg;LH:68;AH:left;GL:0;S:http://diveintomark.org/;AWFID:0d8ffcebe359c844;"
+        /&gt;<br>
+        &lt;input type="hidden" name="domains" value="diveintomark.org" /&gt;<br>
+        &lt;input type="hidden" name="sitesearch" value="diveintomark.org" /&gt;<br>
+        &lt;/p&gt;<br>
+        &lt;/form&gt;</code></p>
+      </blockquote>
+      <p>Merk: Du kan ikke klippe og lime dette inn i din egen weblogg. Hvis du ønsker å bruke Google Free Web Search
+      så må du registrere deg og få din egen kode til det skjulte <code>cof</code>-feltet.</p>
+      <h3>Les mer</h3>
+      <ul>
+        <li>
+          <cite>Jay Allen</cite>: <a href="http://www.jayallen.org/mt-search/">MT-Search</a>, et søketillegg til
+          Movable Type.
+        </li>
+        <li>
+          <cite>Phil Ringnalda</cite>: <a href="http://philringnalda.com/archives/002257.php">mt-search.cgi and
+          MySQL</a>. Viktig informasjon om å få MT-Search til å fungere med Movable Type 2.2 og MySQL.
+        </li>
+        <li>
+          <a href="http://www.atomz.com/search/trial_account.htm">Atomz Express Search</a>.
+        </li>
+        <li>
+          <a href="http://www.google.com/services/free.html">Google Free Web Search</a>.
+        </li>
+        <li>
+          <cite>Blogger.com</cite>: <a href="http://publicmind.blogger.com/enduser/group.jsp?node=185">How do I add a
+          search engine to my blog?</a> Anbefaler Atomz, men lenker til andre som ikke er listet her.
+        </li>
+        <li>
+          <cite>Jukka Korpela</cite>: <a href="http://www.cs.tut.fi/~jkorpela/forms/accesskey.html">Improving
+          accessibility with <code>accesskey</code> in HTML forms and links</a>. Detaljert forklaring på hvorfor man
+          burde bruke «4» som tastatursnarvei til ens nettstedsøk.
+        </li>
+        <li>
+          <cite>Jakob Nielsen</cite>: <a href="http://www.useit.com/alertbox/20000109.html">Is Navigation Useful?</a>
+          <q>Users often rely on search as their main hunting strategy.</q>
+        </li>
+        <li>
+          <cite>Jakob Nielsen</cite>: <a href="http://www.useit.com/alertbox/9707b.html">Search Usability</a>. Fem år
+          gammel og fortsatt veldig relevant.
+        </li>
+        <li>
+          <cite>PHP.net</cite>: <a href="http://www.php.net/urlhowto.php">URL HOWTO</a>. PHP.net har det mest
+          forbløffende nettstedsøket jeg noensinne har sett. Hinsides en standard søkeboks bruker de et egendefinert
+          404 feilmeldingsdokument (som vanligvis bare ville vise en «Siden ikke funnet»-feilmelding) for å intelligent
+          søke i nettstedet basert på URL-er. Så du kan skrive en adresse som <a href=
+          "http://php.net/phpinfo">php.net/phpinfo</a> inn i din nettlesers adressefelt, og php.net vil så videresende
+          deg til <a href="http://www.php.net/manual/en/function.phpinfo.php">the reference page on the phpinfo
+          function</a>.
+        </li>
+      </ul><span class="divider">&nbsp;</span>
+    </div><!--entry-->
+    <div class="pageturn inner">
+      <a href="dag_28_merking_av_skjema-elementer.html">&lt;&lt; Dag 28: Merking av skjema-elementer</a> | <a href=
+      "innholdsfortegnelse.html">Innholdsfortegnelse</a> | <a href="dag_30_lage_en_tilgjengelighetsrapport.html">Dag
+      30: Lage en tilgjengelighetsrapport &gt;&gt;</a> <span class="divider">&nbsp;</span>
+    </div><!--pageturn-->
+  </div><!--main-->
+  <div id="menu">
+    <a class="skip" id="startnavigation"></a>
+    <form method="get" action="/sok" id="searchbox_005108012550997225989:cf_v5g16xmu" name=
+    "searchbox_005108012550997225989:cf_v5g16xmu">
+      <p id="searchlabel"><label for="sok" accesskey="4">Søk i dette nettstedet:</label></p>
+      <p><input type="hidden" name="cx" value="005108012550997225989:cf_v5g16xmu"> <input type="hidden" name="cof"
+      value="FORID:11"> <input type="text" id="sok" name="q" size="18"> <input type="submit" name="sa" value="Søk"></p>
+    </form>
+    <div class="menusection inner">
+      <h2 class="invisibletitle">Nettstedets lenker</h2><a class="skip" href="#endinternal">Hopp over nettstedets
+      lenker</a>
+      <ul>
+        <li>
+          <a title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" accesskey=
+          "0">Tilgjengelighetsrapport</a>
+        </li>
+        <li>
+          <a href="innholdsfortegnelse.html" accesskey="3">Innholdsfortegnelse</a>
+        </li>
+        <li>
+          <a href="tips_om_personer.html">Tips om personer</a>
+        </li>
+        <li>
+          <a href="tips_om_funksjonshemninger.html">Tips om funksjonshemninger</a>
+        </li>
+        <li>
+          <a href="tips_om_prinsipper_for_design.html">Tips om prinsipper for design</a>
+        </li>
+        <li>
+          <a href="tips_om_nettlesere.html">Tips om nettlesere</a>
+        </li>
+        <li>
+          <a href="tips_om_publiseringsverktoy.html">Tips om publiseringsverktøy</a>
+        </li>
+        <li>
+          <a href="mailto:kontakt@kastdegutitilgjengelighet.no" accesskey="9">Tilbakemelding (e-post)</a>
+        </li>
+        <li>
+          <a title="Informasjon om copyright- og lisensiering (engelsk)" href="betingelser_for_bruk.html" accesskey=
+          "8">Betingelser for bruk</a>
+        </li>
+      </ul><a class="skip" id="endinternal"></a>
+    </div><!--.menusection-->
+    <div class="inner" id="footer">
+      <address>
+        Copyright © 2002 <a title="Dive Into Mark, forfatterens blogg" href="http://diveintomark.org/">Mark Pilgrim</a>
+      </address>
+    </div><!--footer-->
+    <div id="ads"></div>
+  </div><!--menu-->
+  <div id="navigation">
+    <p class="breadcrumb">Du er her: <a href="/">Forsiden</a> &gt; <a href=
+    "innholdsfortegnelse.html">Innholdsfortegnelse</a> &gt; <span class="currentpage">Dag 29: Gjøre alt
+    søkbart</span></p>
+  </div><!--navigation-->
 </body>
 </html>

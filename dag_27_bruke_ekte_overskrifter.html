@@ -1,58 +1,70 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nb" lang="nb">
+<!DOCTYPE html>
+<html lang="nb">
 <head>
-<title>Dag 27: Bruke ekte overskrifter - Kast deg ut i tilgjengelighet</title>
-
-<link rel="start" title="Forsiden" href="/" />
-<link rel="contents" title="Innholdsfortegnelse" href="innholdsfortegnelse.html" />
-<link rel="help" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" />
-<link rel="author" title="Send tilbakemelding" href="mailto:kontakt@kastdegutitilgjengelighet.no" />
-<link rel="copyright" title="Betingelser for bruk (engelsk)" href="betingelser_for_bruk.html" />
-<link rel="up" title="Innholdsfortegnelse" href="innholdsfortegnelse.html" />
-<link rel="first" title="Dag 1: Anne" href="dag_1_anne.html" />
-<link rel="last" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="css/common.css" type="text/css" />
-<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="css/screen.css" type="text/css" media="projection" />
-<link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
-<link rel="stylesheet" href="css/aural.css" type="text/css" media="aural" />
-<link rel="prev" href="dag_26_bruke_relative_fontstorrelser.html" title="Dag 26: Bruke relative fontstørrelser" />
-<link rel="next" href="dag_28_merking_av_skjema-elementer.html" title="Dag 28: Merking av skjema-elementer" />
+  <meta charset="utf-8">
+  <title>Dag 27: Bruke ekte overskrifter - Kast deg ut i tilgjengelighet</title>
+  <link rel="start" title="Forsiden" href="/">
+  <link rel="contents" title="Innholdsfortegnelse" href="innholdsfortegnelse.html">
+  <link rel="help" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html">
+  <link rel="author" title="Send tilbakemelding" href="mailto:kontakt@kastdegutitilgjengelighet.no">
+  <link rel="copyright" title="Betingelser for bruk (engelsk)" href="betingelser_for_bruk.html">
+  <link rel="up" title="Innholdsfortegnelse" href="innholdsfortegnelse.html">
+  <link rel="first" title="Dag 1: Anne" href="dag_1_anne.html">
+  <link rel="last" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html">
+  <link rel="stylesheet" href="css/common.css" type="text/css">
+  <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/screen.css" type="text/css" media="projection">
+  <link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+  <link rel="stylesheet" href="css/aural.css" type="text/css" media="aural">
+  <link rel="prev" href="dag_26_bruke_relative_fontstorrelser.html" title="Dag 26: Bruke relative fontstørrelser">
+  <link rel="next" href="dag_28_merking_av_skjema-elementer.html" title="Dag 28: Merking av skjema-elementer">
 </head>
 <body>
-
-<div id="logo">
-<div class="inner">
-<h1 class="title"><a href="/" accesskey="1">Kast deg ut i tilgjengelighet</a></h1>
-<p>Et mer tilgjengelig nettsted på 30 dager</p>
-<a class="skip" href="#startnavigation">Hopp til navigasjonen</a>
-<span class="divider">&nbsp;</span>
-</div>
-</div>
-<p></p>
-
-<div id="main"><div class="inner">
-<div class="entry">
-<h2 class="entrysubject">Dag 27: Bruke ekte overskrifter</h2>
-<p class="firstparagraph">Se for deg hjemmesiden din sine hovedtrekk. Det øverste nivået er merket opp med nettstedets navn. På forsiden din lister du innlegg fra flere dager, så det andre nivået ditt er merket opp med datoenes beskrivelser: «Tirsdag 16. juli 2002», eller noe lignende. Hver dag poster du flere innlegg, og hvert av dem har muligens sine egne titler. Da har du i så fall et tredje nivå også, merket opp med hvert sitt innleggs individuelle titler.</p>
-<p>Marker nå opp nettstedet ditt ved å bruke ekte <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>-tagger. Skjermlesere er avhengige av disse for å kunne tyde strukturen til sidene dine. Sidene dine <em>har en</em> struktur, men uten passende overskrifts-tagger kan ikke skjermlesere finne den. Jeg vil straks vise deg hvordan du bruker CSS til å få overskriftene dine til å se like ut i visuelle nettlesere som hvilke som helst <code>&lt;font&gt;</code>-basert monstrum du for øyeblikket måtte bruke.</p>
-
-<h3>Hvem har nytte av det?</h3>
-
-<ol>
-<li><a href="dag_1_anne.html">Anne</a> har nytte av det. Straks Anne kommer til siden din sier <a href="http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a> fra om at siden har et visst antall med lenker og overskrifter. Anne kan da trykke <kbd>INSERT+F6</kbd> for å høre alle overskriftene på siden din bli lest opp, eller <kbd>CTRL+INSERT+ENTER</kbd> for å raskt navigere gjennom siden din ved å hoppe til den neste overskriften.</li>
-<li><a href="dag_2_jorgen.html">Jørgen</a> har nytte av det. I <a href="http://www.opera.com/">Opera</a> kan han trykke <kbd>S</kbd> for å hoppe til den neste overskriften, eller <kbd>W</kbd> for å hoppe tilbake til den forrige.</li>
-<li><a href="http://www.google.no/">Google</a> har nytte av det. Google setter pris på godt strukturerte sider, og rangerer nøkkelord høyere når de befinner seg i taggene til ekte overskrifter. (Enda en grunn til å bruke ekte overskrifter i postenes titler.)</li>
-</ol>
-
-<h3>Hvordan gjøre det: Movable Type</h3>
-
-<ol>
-<li><p>Definer stilen til logoen for nettstedet ditt. I malen til stilarket ditt (<code>styles-sites.css</code>), legger du til følgende linjer:</p>
-
-<blockquote>
-<pre><code>h1, h2, h3 {
+  <div class="inner" id="logo">
+    <h1 class="title"><a href="/" accesskey="1">Kast deg ut i tilgjengelighet</a></h1>
+    <p>Et mer tilgjengelig nettsted på 30 dager</p><a class="skip" href="#startnavigation">Hopp til navigasjonen</a>
+    <span class="divider">&nbsp;</span>
+  </div>
+  <div class="inner" id="main">
+    <div class="entry">
+      <h2 class="entrysubject">Dag 27: Bruke ekte overskrifter</h2>
+      <p class="firstparagraph">Se for deg hjemmesiden din sine hovedtrekk. Det øverste nivået er merket opp med
+      nettstedets navn. På forsiden din lister du innlegg fra flere dager, så det andre nivået ditt er merket opp med
+      datoenes beskrivelser: «Tirsdag 16. juli 2002», eller noe lignende. Hver dag poster du flere innlegg, og hvert av
+      dem har muligens sine egne titler. Da har du i så fall et tredje nivå også, merket opp med hvert sitt innleggs
+      individuelle titler.</p>
+      <p>Marker nå opp nettstedet ditt ved å bruke ekte <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>,
+      <code>&lt;h3&gt;</code>-tagger. Skjermlesere er avhengige av disse for å kunne tyde strukturen til sidene dine.
+      Sidene dine <em>har en</em> struktur, men uten passende overskrifts-tagger kan ikke skjermlesere finne den. Jeg
+      vil straks vise deg hvordan du bruker CSS til å få overskriftene dine til å se like ut i visuelle nettlesere som
+      hvilke som helst <code>&lt;font&gt;</code>-basert monstrum du for øyeblikket måtte bruke.</p>
+      <h3>Hvem har nytte av det?</h3>
+      <ol>
+        <li>
+          <a href="dag_1_anne.html">Anne</a> har nytte av det. Straks Anne kommer til siden din sier <a href=
+          "http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a> fra om at siden har et visst antall
+          med lenker og overskrifter. Anne kan da trykke <kbd>INSERT+F6</kbd> for å høre alle overskriftene på siden
+          din bli lest opp, eller <kbd>CTRL+INSERT+ENTER</kbd> for å raskt navigere gjennom siden din ved å hoppe til
+          den neste overskriften.
+        </li>
+        <li>
+          <a href="dag_2_jorgen.html">Jørgen</a> har nytte av det. I <a href="http://www.opera.com/">Opera</a> kan han
+          trykke <kbd>S</kbd> for å hoppe til den neste overskriften, eller <kbd>W</kbd> for å hoppe tilbake til den
+          forrige.
+        </li>
+        <li>
+          <a href="http://www.google.no/">Google</a> har nytte av det. Google setter pris på godt strukturerte sider,
+          og rangerer nøkkelord høyere når de befinner seg i taggene til ekte overskrifter. (Enda en grunn til å bruke
+          ekte overskrifter i postenes titler.)
+        </li>
+      </ol>
+      <h3>Hvordan gjøre det: Movable Type</h3>
+      <ol>
+        <li>
+          <p>Definer stilen til logoen for nettstedet ditt. I malen til stilarket ditt (<code>styles-sites.css</code>),
+          legger du til følgende linjer:</p>
+          <blockquote>
+            <pre><code>h1, h2, h3 {
   margin: 0;
   padding: 0;
 }
@@ -65,73 +77,69 @@ h1 {
 /*/*/a{}
 h1 {font-size: 100%}
 /* */</code></pre>
-</blockquote>
-</li>
-
-
-<li><p>Definer logoen til nettstedet ditt ved å bruke en <code>&lt;h1&gt;</code>-tagg. I dine 4 viktigste maler (Main Index, Category Archive, Date-Based Archive, Individual Entry Archive), søker du så for dette:</p>
-
-<blockquote>
-<pre><code>&lt;div id="banner"&gt;
+          </blockquote>
+        </li>
+        <li>
+          <p>Definer logoen til nettstedet ditt ved å bruke en <code>&lt;h1&gt;</code>-tagg. I dine 4 viktigste maler
+          (Main Index, Category Archive, Date-Based Archive, Individual Entry Archive), søker du så for dette:</p>
+          <blockquote>
+            <pre><code>&lt;div id="banner"&gt;
 &lt;$MTBlogName$&gt;&lt;br /&gt;</code></pre>
-</blockquote>
-
-<p>Og erstatter det med dette:</p>
-
-<blockquote>
-<pre><code>&lt;div id="banner"&gt;
+          </blockquote>
+          <p>Og erstatter det med dette:</p>
+          <blockquote>
+            <pre><code>&lt;div id="banner"&gt;
 <strong>&lt;h1&gt;</strong>&lt;$MTBlogName$&gt;<strong>&lt;/h1&gt;</strong></code></pre>
-</blockquote>
-</li>
-
-<li><p>Definer dine dato-overskrifter ved å bruke <code>&lt;h2&gt;</code>-tagger. Vi har allerede en klasse (class) definert for disse, så vi burde ikke trenge å gjøre noen endringer i stilarket; vi bare endrer på taggen. I dine 4 viktigste maler, søker du for dette:</p>
-
-<blockquote>
-<pre><code>&lt;div class="date"&gt;
+          </blockquote>
+        </li>
+        <li>
+          <p>Definer dine dato-overskrifter ved å bruke <code>&lt;h2&gt;</code>-tagger. Vi har allerede en klasse
+          (class) definert for disse, så vi burde ikke trenge å gjøre noen endringer i stilarket; vi bare endrer på
+          taggen. I dine 4 viktigste maler, søker du for dette:</p>
+          <blockquote>
+            <pre><code>&lt;div class="date"&gt;
 &lt;$MTEntryDate format="%B %d, %Y"$&gt;
 &lt;/div&gt;</code></pre>
-</blockquote>
-
-<p>Og erstatter det med dette:</p>
-
-<blockquote>
-<pre><code>&lt;<strong>h2</strong> class="date"&gt;
+          </blockquote>
+          <p>Og erstatter det med dette:</p>
+          <blockquote>
+            <pre><code>&lt;<strong>h2</strong> class="date"&gt;
 &lt;$MTEntryDate format="%B %d, %Y"$&gt;
 &lt;/<strong>h2</strong>&gt;</code></pre>
-</blockquote>
-</li>
-
-<li><p>Definer titlene til innleggene dine ved å bruke <code>&lt;h3&gt;</code>-tagger. Igjen, dette innvolverer kun å endre på taggen, ikke på stilarket. I dine 4 viktigste maler søker du for dette:</p>
-
-<blockquote>
-<p><code>&lt;span class="title"&gt;&lt;$MTEntryTitle$&gt;&lt;/span&gt;</code></p>
-</blockquote>
-
-<p>Og erstatter det med dette:</p>
-
-<blockquote>
-<p><code>&lt;<strong>h3</strong> class="title"&gt;&lt;$MTEntryTitle$&gt;&lt;/<strong>h3</strong>&gt;</code></p>
-</blockquote>
-</li>
-</ol>
-
-<h3>Hvordan gjøre det: Radio</h3>
-
-<ol>
-<li><p>Definer stilen til overskriftene dine. Standard-temaet til Radio bruker ikke ekte tagger for overskrifter, så vi blir nødt til å definere disse selv. (Skreddersydd til å passe, så disse eksemplene burde gjøre at sidene dine ser like ut som de gjorde før i visuelle nettlesere.)</p>
-<p>Dog, før vi starter, søk i ditt Home Page Template etter «<code>h2 {</code>». Hvis du finner en slik regel, fjern den; den er egentlig ikke brukt noen steder, og den kommer bare til å være i veien for deg:</p>
-
-<blockquote>
-<p><code>h2 {<br />
-font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 24px; font-weight: bold<br />
-}</code></p>
-</blockquote>
-</li>
-
-<li><p>OK, legg nå til disse stilene, hvor som helst i <code>&lt;style&gt;</code>-seksjonen i ditt Home Page Template:</p>
-
-<blockquote>
-<pre><code>h1, h2 {
+          </blockquote>
+        </li>
+        <li>
+          <p>Definer titlene til innleggene dine ved å bruke <code>&lt;h3&gt;</code>-tagger. Igjen, dette innvolverer
+          kun å endre på taggen, ikke på stilarket. I dine 4 viktigste maler søker du for dette:</p>
+          <blockquote>
+            <p><code>&lt;span class="title"&gt;&lt;$MTEntryTitle$&gt;&lt;/span&gt;</code></p>
+          </blockquote>
+          <p>Og erstatter det med dette:</p>
+          <blockquote>
+            <p><code>&lt;<strong>h3</strong>
+            class="title"&gt;&lt;$MTEntryTitle$&gt;&lt;/<strong>h3</strong>&gt;</code></p>
+          </blockquote>
+        </li>
+      </ol>
+      <h3>Hvordan gjøre det: Radio</h3>
+      <ol>
+        <li>
+          <p>Definer stilen til overskriftene dine. Standard-temaet til Radio bruker ikke ekte tagger for overskrifter,
+          så vi blir nødt til å definere disse selv. (Skreddersydd til å passe, så disse eksemplene burde gjøre at
+          sidene dine ser like ut som de gjorde før i visuelle nettlesere.)</p>
+          <p>Dog, før vi starter, søk i ditt Home Page Template etter «<code>h2 {</code>». Hvis du finner en slik
+          regel, fjern den; den er egentlig ikke brukt noen steder, og den kommer bare til å være i veien for deg:</p>
+          <blockquote>
+            <p><code>h2 {<br>
+            font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 24px; font-weight: bold<br>
+            }</code></p>
+          </blockquote>
+        </li>
+        <li>
+          <p>OK, legg nå til disse stilene, hvor som helst i <code>&lt;style&gt;</code>-seksjonen i ditt Home Page
+          Template:</p>
+          <blockquote>
+            <pre><code>h1, h2 {
   margin: 0;
   padding: 0;
 }
@@ -146,7 +154,7 @@ h1 {
   voice-family: inherit;
   font-size: x-large;
 }
-html>body h1 {
+html&gt;body h1 {
   font-size: x-large;
 }
 h2 {
@@ -155,106 +163,109 @@ h2 {
   voice-family: inherit;
   font-size: small;
 }
-html>body h2 {
+html&gt;body h2 {
   font-size: small;
 }
 /* */</code></pre>
-</blockquote>
-
-<p>Legg merke til at vi bruker relative fontstørrelser for våre overskrifter i nettlesere som har støtte for relative fontstørrelser, og absolutte fontstørrelser i Netscape 4. Denne teknikken burde se kjent ut, <a href="dag_26_bruke_relative_fontstorrelser.html">vi gjorde jo akkurat det samme i går</a>.</p>
-</li>
-
-<li><p>Definer overskriften for nettstedet ditt sitt navn. I ditt Home Page Template søker du for «<code>&lt;%siteName%&gt;</code>» og finner en linje som ser slik ut:</p>
-
-<blockquote>
-<p><code>&lt;font size="+2"&gt;&lt;b&gt;&lt;a href="&lt;%radio.macros.weblogUrl ()%&gt;" style="color:Black; text-decoration:none"&gt;&lt;%siteName%&gt;&lt;/a&gt;&lt;/b&gt;&lt;/font&gt;</code></p>
-</blockquote>
-
-<p>Endre det så til dette:</p>
-
-<blockquote>
-<p><code><strong>&lt;h1&gt;</strong>&lt;a href="&lt;%radio.macros.weblogUrl ()%&gt;" style="color:Black; text-decoration:none"&gt;&lt;%siteName%&gt;&lt;/a&gt;<strong>&lt;/h1&gt;</strong></code></p>
-</blockquote>
-</li>
-
-<li><p>Definer overskriften for dine dato-overskrifter. I ditt Day Template søker du for «<code>&lt;%longDate%&gt;</code>» og finner en linje som ser slik ut:</p>
-
-<blockquote>
-<p><code>&lt;b&gt;&lt;%longDate%&gt;&lt;/b&gt;</code></p>
-</blockquote>
-
-<p>Endre den så til dette:</p>
-
-<blockquote>
-<p><code><strong>&lt;h2&gt;</strong>&lt;%longDate%&gt;<strong>&lt;/h2&gt;</strong></code></p>
-</blockquote>
-</li>
-</ol>
-
-<h3>Les mer</h3>
-
-<ul>
-<li><cite>Shirley Kaiser</cite>: <a href="http://www.brainstormsandraves.com/2002_05_12_archive.shtml#76539537">Don't Fake Your Markup</a>: Accessibility Issues for CSS.</li>
-</ul>
-
-<p></p>
-<span class="divider">&nbsp;</span>
-</div> <!--entry-->
-
-<div class="pageturn"><div class="inner">
-<a href="dag_26_bruke_relative_fontstorrelser.html">&lt;&lt; Dag 26: Bruke relative fontstørrelser</a> |
-<a href="innholdsfortegnelse.html">Innholdsfortegnelse</a>
-| <a href="dag_28_merking_av_skjema-elementer.html">Dag 28: Merking av skjema-elementer &gt;&gt;</a>
-<span class="divider">&nbsp;</span>
-</div></div> <!--pageturn-->
-
-</div></div> <!--main-->
-
-<div id="menu">
-<a class="skip" name="startnavigation" id="startnavigation"></a>
-<form method="get" action="/sok" id="searchbox_005108012550997225989:cf_v5g16xmu">
-<p id="searchlabel"><label for="sok" accesskey="4">Søk i dette nettstedet:</label></p>
-<p><input type="hidden" name="cx" value="005108012550997225989:cf_v5g16xmu" />
-<input type="hidden" name="cof" value="FORID:11" />
-<input type="text" id="sok" name="q" size="18" />
-<input type="submit" name="sa" value="Søk" /></p>
-</form>
-
-<div class="menusection"><div class="inner">
-<h2 class="invisibletitle">Nettstedets lenker</h2>
-
-<a class="skip" href="#endinternal">Hopp over nettstedets lenker</a>
-<ul>
-<li><a title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" accesskey="0">Tilgjengelighetsrapport</a></li>
-<li><a href="innholdsfortegnelse.html" accesskey="3">Innholdsfortegnelse</a></li>
-<li><a href="tips_om_personer.html">Tips om personer</a></li>
-<li><a href="tips_om_funksjonshemninger.html">Tips om funksjonshemninger</a></li>
-<li><a href="tips_om_prinsipper_for_design.html">Tips om prinsipper for design</a></li>
-<li><a href="tips_om_nettlesere.html">Tips om nettlesere</a></li>
-<li><a href="tips_om_publiseringsverktoy.html">Tips om publiseringsverktøy</a></li>
-<li><a href="mailto:kontakt@kastdegutitilgjengelighet.no" accesskey="9">Tilbakemelding (e-post)</a></li>
-<li><a title="Informasjon om copyright- og lisensiering (engelsk)" href="betingelser_for_bruk.html" accesskey="8">Betingelser for bruk</a></li>
-</ul>
-
-<a class="skip" id="endinternal"></a>
-</div>
-</div>
-<!--.menusection-->
-<div id="footer"><div class="inner">
-
-<address>Copyright &copy; 2002 <a title="Dive Into Mark, forfatterens blogg" href="http://diveintomark.org/">Mark Pilgrim</a></address>
-
-</div></div> <!--footer-->
-
-<div id="ads"></div>
-</div> <!--menu-->
-<div id="navigation">
-<p class="breadcrumb">Du er her:
-<a href="/">Forsiden</a> >
-<a href="innholdsfortegnelse.html">Innholdsfortegnelse</a> >
-<span class="currentpage">Dag 27: Bruke ekte overskrifter</span></p>
-</div><!--navigation-->
-
-
+          </blockquote>
+          <p>Legg merke til at vi bruker relative fontstørrelser for våre overskrifter i nettlesere som har støtte for
+          relative fontstørrelser, og absolutte fontstørrelser i Netscape 4. Denne teknikken burde se kjent ut,
+          <a href="dag_26_bruke_relative_fontstorrelser.html">vi gjorde jo akkurat det samme i går</a>.</p>
+        </li>
+        <li>
+          <p>Definer overskriften for nettstedet ditt sitt navn. I ditt Home Page Template søker du for
+          «<code>&lt;%siteName%&gt;</code>» og finner en linje som ser slik ut:</p>
+          <blockquote>
+            <p><code>&lt;font size="+2"&gt;&lt;b&gt;&lt;a href="&lt;%radio.macros.weblogUrl ()%&gt;"
+            style="color:Black; text-decoration:none"&gt;&lt;%siteName%&gt;&lt;/a&gt;&lt;/b&gt;&lt;/font&gt;</code></p>
+          </blockquote>
+          <p>Endre det så til dette:</p>
+          <blockquote>
+            <p><code><strong>&lt;h1&gt;</strong>&lt;a href="&lt;%radio.macros.weblogUrl ()%&gt;" style="color:Black;
+            text-decoration:none"&gt;&lt;%siteName%&gt;&lt;/a&gt;<strong>&lt;/h1&gt;</strong></code></p>
+          </blockquote>
+        </li>
+        <li>
+          <p>Definer overskriften for dine dato-overskrifter. I ditt Day Template søker du for
+          «<code>&lt;%longDate%&gt;</code>» og finner en linje som ser slik ut:</p>
+          <blockquote>
+            <p><code>&lt;b&gt;&lt;%longDate%&gt;&lt;/b&gt;</code></p>
+          </blockquote>
+          <p>Endre den så til dette:</p>
+          <blockquote>
+            <p><code><strong>&lt;h2&gt;</strong>&lt;%longDate%&gt;<strong>&lt;/h2&gt;</strong></code></p>
+          </blockquote>
+        </li>
+      </ol>
+      <h3>Les mer</h3>
+      <ul>
+        <li>
+          <cite>Shirley Kaiser</cite>: <a href=
+          "http://www.brainstormsandraves.com/2002_05_12_archive.shtml#76539537">Don't Fake Your Markup</a>:
+          Accessibility Issues for CSS.
+        </li>
+      </ul><span class="divider">&nbsp;</span>
+    </div><!--entry-->
+    <div class="pageturn inner">
+      <a href="dag_26_bruke_relative_fontstorrelser.html">&lt;&lt; Dag 26: Bruke relative fontstørrelser</a> | <a href=
+      "innholdsfortegnelse.html">Innholdsfortegnelse</a> | <a href="dag_28_merking_av_skjema-elementer.html">Dag 28:
+      Merking av skjema-elementer &gt;&gt;</a> <span class="divider">&nbsp;</span>
+    </div><!--pageturn-->
+  </div><!--main-->
+  <div id="menu">
+    <a class="skip" id="startnavigation"></a>
+    <form method="get" action="/sok" id="searchbox_005108012550997225989:cf_v5g16xmu" name=
+    "searchbox_005108012550997225989:cf_v5g16xmu">
+      <p id="searchlabel"><label for="sok" accesskey="4">Søk i dette nettstedet:</label></p>
+      <p><input type="hidden" name="cx" value="005108012550997225989:cf_v5g16xmu"> <input type="hidden" name="cof"
+      value="FORID:11"> <input type="text" id="sok" name="q" size="18"> <input type="submit" name="sa" value="Søk"></p>
+    </form>
+    <div class="menusection inner">
+      <h2 class="invisibletitle">Nettstedets lenker</h2><a class="skip" href="#endinternal">Hopp over nettstedets
+      lenker</a>
+      <ul>
+        <li>
+          <a title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" accesskey=
+          "0">Tilgjengelighetsrapport</a>
+        </li>
+        <li>
+          <a href="innholdsfortegnelse.html" accesskey="3">Innholdsfortegnelse</a>
+        </li>
+        <li>
+          <a href="tips_om_personer.html">Tips om personer</a>
+        </li>
+        <li>
+          <a href="tips_om_funksjonshemninger.html">Tips om funksjonshemninger</a>
+        </li>
+        <li>
+          <a href="tips_om_prinsipper_for_design.html">Tips om prinsipper for design</a>
+        </li>
+        <li>
+          <a href="tips_om_nettlesere.html">Tips om nettlesere</a>
+        </li>
+        <li>
+          <a href="tips_om_publiseringsverktoy.html">Tips om publiseringsverktøy</a>
+        </li>
+        <li>
+          <a href="mailto:kontakt@kastdegutitilgjengelighet.no" accesskey="9">Tilbakemelding (e-post)</a>
+        </li>
+        <li>
+          <a title="Informasjon om copyright- og lisensiering (engelsk)" href="betingelser_for_bruk.html" accesskey=
+          "8">Betingelser for bruk</a>
+        </li>
+      </ul><a class="skip" id="endinternal"></a>
+    </div><!--.menusection-->
+    <div class="inner" id="footer">
+      <address>
+        Copyright © 2002 <a title="Dive Into Mark, forfatterens blogg" href="http://diveintomark.org/">Mark Pilgrim</a>
+      </address>
+    </div><!--footer-->
+    <div id="ads"></div>
+  </div><!--menu-->
+  <div id="navigation">
+    <p class="breadcrumb">Du er her: <a href="/">Forsiden</a> &gt; <a href=
+    "innholdsfortegnelse.html">Innholdsfortegnelse</a> &gt; <span class="currentpage">Dag 27: Bruke ekte
+    overskrifter</span></p>
+  </div><!--navigation-->
 </body>
 </html>

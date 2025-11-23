@@ -1,141 +1,158 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nb" lang="nb">
+<!DOCTYPE html>
+<html lang="nb">
 <head>
-<title>Dag 6: Å velge en DOCTYPE - Kast deg ut i tilgjengelighet</title>
-
-<link rel="start" title="Forsiden" href="/" />
-<link rel="contents" title="Innholdsfortegnelse" href="innholdsfortegnelse.html" />
-<link rel="help" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" />
-<link rel="author" title="Send tilbakemelding" href="mailto:kontakt@kastdegutitilgjengelighet.no" />
-<link rel="copyright" title="Betingelser for bruk (engelsk)" href="betingelser_for_bruk.html" />
-<link rel="up" title="Innholdsfortegnelse" href="innholdsfortegnelse.html" />
-<link rel="first" title="Dag 1: Anne" href="dag_1_anne.html" />
-<link rel="last" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="css/common.css" type="text/css" />
-<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="css/screen.css" type="text/css" media="projection" />
-<link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
-<link rel="stylesheet" href="css/aural.css" type="text/css" media="aural" />
-<link rel="prev" href="dag_5_marius.html" title="Dag 5: Marius" />
-<link rel="next" href="dag_7_a_fastsette_spraket_ditt.html" title="Dag 7: Å fastsette språket ditt" />
+  <meta charset="utf-8">
+  <title>Dag 6: Å velge en DOCTYPE - Kast deg ut i tilgjengelighet</title>
+  <link rel="start" title="Forsiden" href="/">
+  <link rel="contents" title="Innholdsfortegnelse" href="innholdsfortegnelse.html">
+  <link rel="help" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html">
+  <link rel="author" title="Send tilbakemelding" href="mailto:kontakt@kastdegutitilgjengelighet.no">
+  <link rel="copyright" title="Betingelser for bruk (engelsk)" href="betingelser_for_bruk.html">
+  <link rel="up" title="Innholdsfortegnelse" href="innholdsfortegnelse.html">
+  <link rel="first" title="Dag 1: Anne" href="dag_1_anne.html">
+  <link rel="last" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html">
+  <link rel="stylesheet" href="css/common.css" type="text/css">
+  <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/screen.css" type="text/css" media="projection">
+  <link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+  <link rel="stylesheet" href="css/aural.css" type="text/css" media="aural">
+  <link rel="prev" href="dag_5_marius.html" title="Dag 5: Marius">
+  <link rel="next" href="dag_7_a_fastsette_spraket_ditt.html" title="Dag 7: Å fastsette språket ditt">
 </head>
 <body>
-
-<div id="logo">
-<div class="inner">
-<h1 class="title"><a href="/" accesskey="1">Kast deg ut i tilgjengelighet</a></h1>
-<p>Et mer tilgjengelig nettsted på 30 dager</p>
-<a class="skip" href="#startnavigation">Hopp til navigasjonen</a>
-<span class="divider">&nbsp;</span>
-</div>
-</div>
-<p></p>
-
-<div id="main"><div class="inner">
-<div class="entry">
-<h2 class="entrysubject">Dag 6: Å velge en DOCTYPE</h2>
-<p class="firstparagraph">Du starter setninger med stor bokstav. Start HTML-dokumentene dine med en <code class="sgmltag">DOCTYPE</code>. Det er grunnleggende grammatikk.</p>
-
-<h3>Hvem har nytte av det?</h3>
-<p>Du har nytte av det. Mange av tipsene i resten av denne serien krever at du vet hvilken HTML-versjon du bruker, fordi fremgangsmåtene er noe ulike. Så finn det ut nå, eller legg til en om du ikke allerede har en.</p>
-<h3>Hvordan gjøre det</h3>
-<p>Det kan hende du allerede har en <code class="sgmltag">DOCTYPE</code>. Se på kildekoden til hjemmesiden din; <code class="sgmltag">DOCTYPE</code>-en (hvis du har en) står helt øverst, til og med før <code class="sgmltag">&lt;html&gt;</code>-taggen.</p>
-
-<ul>
-<li>Hvis du bruker standardmalen til Movable Type vil <code class="sgmltag">DOCTYPE</code>-en din sannsynligvis inneholde teksten «<code class="sgmltag">XHTML 1.0 Transitional</code>». Dette er fint.</li>
-<li>Hvis du bruker en av standardmalene til Radio Userland, Manila eller Blogger, inneholder <code class="sgmltag">DOCTYPE</code>-en sannsynligvis «<code class="sgmltag">HTML 4.01 Transitional</code>». Dette er også fint.</li>
-<li>Andre gyldige <code class="sgmltag">DOCTYPE</code>-er inneholder uttrykk som «<code class="sgmltag">HTML 4.01 Strict</code>», «<code class="sgmltag">XHTML 1.0 Strict</code>», «<code class="sgmltag">XHTML 1.1</code>» og et par andre. Alle disse er fine.</li>
-</ul>
-
-<p>Hvis du har en <code class="sgmltag">DOCTYPE</code> trenger du ikke gjøre noe med den. Men hvis du ikke ser noen <code class="sgmltag">DOCTYPE</code> før <code class="sgmltag">&lt;html&gt;</code>-taggen i kildekoden, kan du legge til denne:</p>
-
-<blockquote>
-<p><code class="sgmltag">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</code></p>
-</blockquote>
-
-<p>Av tekniske grunner jeg helst ikke vil gå inn på her (se «Les mer» under hvis du er interessert), er det mulig utseendet til siden din forandrer seg litt etter at du har lagt til denne <code class="sgmltag">DOCTYPE</code>-en. Hvis (og bare hvis) dette skjer, kan du bruke et kompromiss med en halv <code class="sgmltag">DOCTYPE</code>, som denne:</p>
-
-<blockquote>
-<p><code class="sgmltag">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"&gt;</code></p>
-</blockquote>
-
-<p>Merk at <em>alle</em> sidene dine bør ha en <code class="sgmltag">DOCTYPE</code>, så du bør sjekke alle malene dine.</p>
-
-<ul>
-<li>Movable Type-brukere bør gå gjennom malene «Main Index», «Master Archive Index», «Category Archive», «Date-Based Archive» og «Individual Entry Archive» i tillegg til eventuelle selvlagde maler.</li>
-<li>Brukere av Radio Userland og Manila bør sjekke «Main template» og «Home page template».</li>
-<li>Greymatter-brukere bør se gjennom «Main Index-Related Templates», «Archive-Related Templates» og «Entry-Related Templates».</li>
-<li>Blogger-brukere bør sette inn en <code class="sgmltag">DOCTYPE</code> i hovedmalen. Dersom «Archive template» er en egen side (altså hvis den har en <code class="sgmltag">&lt;html&gt;</code>-tagg øverst), bør den også ha en <code class="sgmltag">DOCTYPE</code>.</li>
-</ul>
-
-<p>For resten av serien er det viktig at du vet om du bruker <code class="sgmltag">HTML 4</code> (valgfri variant), <code class="sgmltag">XHTML 1.0</code> (valgfri variant) eller <code class="sgmltag">XHTML 1.1</code>. Du får vite hvorfor i morgen.</p>
-
-<h3>Les mer</h3>
-<ul>
-<li><cite>A List Apart</cite>: <a href="http://www.alistapart.com/stories/doctype/">Fixing Your Site With The Right <code class="sgmltag">DOCTYPE</code></a>.</li>
-<li><cite><acronym title="Microsoft Developer Network">MSDN</acronym></cite>: <a href="http://msdn.microsoft.com/workshop/author/css/overview/cssenhancements.asp">Quirks mode in <acronym title="Internet Explorer">IE</acronym> 6</a>. (Merk: Dette nettstedet virker ikke i noen av versjonene til Netscape og Mozilla. Dette er Microsoft sin feil, ikke min.)</li>
-<li><a href="http://www.mozilla.org/docs/web-developer/quirks/">Quirks mode in Mozilla</a>.</li>
-</ul>
-
-<p></p>
-<span class="divider">&nbsp;</span>
-</div> <!--entry-->
-
-<div class="pageturn"><div class="inner">
-<a href="dag_5_marius.html">&lt;&lt; Dag 5: Marius</a> |
-<a href="innholdsfortegnelse.html">Innholdsfortegnelse</a>
-| <a href="dag_7_a_fastsette_spraket_ditt.html">Dag 7: Å fastsette språket ditt &gt;&gt;</a>
-<span class="divider">&nbsp;</span>
-</div></div> <!--pageturn-->
-
-</div></div> <!--main-->
-
-<div id="menu">
-<a class="skip" name="startnavigation" id="startnavigation"></a>
-<form method="get" action="/sok" id="searchbox_005108012550997225989:cf_v5g16xmu">
-<p id="searchlabel"><label for="sok" accesskey="4">Søk i dette nettstedet:</label></p>
-<p><input type="hidden" name="cx" value="005108012550997225989:cf_v5g16xmu" />
-<input type="hidden" name="cof" value="FORID:11" />
-<input type="text" id="sok" name="q" size="18" />
-<input type="submit" name="sa" value="Søk" /></p>
-</form>
-
-<div class="menusection"><div class="inner">
-<h2 class="invisibletitle">Nettstedets lenker</h2>
-
-<a class="skip" href="#endinternal">Hopp over nettstedets lenker</a>
-<ul>
-<li><a title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" accesskey="0">Tilgjengelighetsrapport</a></li>
-<li><a href="innholdsfortegnelse.html" accesskey="3">Innholdsfortegnelse</a></li>
-<li><a href="tips_om_personer.html">Tips om personer</a></li>
-<li><a href="tips_om_funksjonshemninger.html">Tips om funksjonshemninger</a></li>
-<li><a href="tips_om_prinsipper_for_design.html">Tips om prinsipper for design</a></li>
-<li><a href="tips_om_nettlesere.html">Tips om nettlesere</a></li>
-<li><a href="tips_om_publiseringsverktoy.html">Tips om publiseringsverktøy</a></li>
-<li><a href="mailto:kontakt@kastdegutitilgjengelighet.no" accesskey="9">Tilbakemelding (e-post)</a></li>
-<li><a title="Informasjon om copyright- og lisensiering (engelsk)" href="betingelser_for_bruk.html" accesskey="8">Betingelser for bruk</a></li>
-</ul>
-
-<a class="skip" id="endinternal"></a>
-</div>
-</div>
-<!--.menusection-->
-<div id="footer"><div class="inner">
-
-<address>Copyright &copy; 2002 <a title="Dive Into Mark, forfatterens blogg" href="http://diveintomark.org/">Mark Pilgrim</a></address>
-
-</div></div> <!--footer-->
-
-<div id="ads"></div>
-</div> <!--menu-->
-<div id="navigation">
-<p class="breadcrumb">Du er her:
-<a href="/">Forsiden</a> >
-<a href="innholdsfortegnelse.html">Innholdsfortegnelse</a> >
-<span class="currentpage">Dag 6: Å velge en DOCTYPE</span></p>
-</div><!--navigation-->
-
-
+  <div class="inner" id="logo">
+    <h1 class="title"><a href="/" accesskey="1">Kast deg ut i tilgjengelighet</a></h1>
+    <p>Et mer tilgjengelig nettsted på 30 dager</p><a class="skip" href="#startnavigation">Hopp til navigasjonen</a>
+    <span class="divider">&nbsp;</span>
+  </div>
+  <div class="inner" id="main">
+    <div class="entry">
+      <h2 class="entrysubject">Dag 6: Å velge en DOCTYPE</h2>
+      <p class="firstparagraph">Du starter setninger med stor bokstav. Start HTML-dokumentene dine med en <code class=
+      "sgmltag">DOCTYPE</code>. Det er grunnleggende grammatikk.</p>
+      <h3>Hvem har nytte av det?</h3>
+      <p>Du har nytte av det. Mange av tipsene i resten av denne serien krever at du vet hvilken HTML-versjon du
+      bruker, fordi fremgangsmåtene er noe ulike. Så finn det ut nå, eller legg til en om du ikke allerede har en.</p>
+      <h3>Hvordan gjøre det</h3>
+      <p>Det kan hende du allerede har en <code class="sgmltag">DOCTYPE</code>. Se på kildekoden til hjemmesiden din;
+      <code class="sgmltag">DOCTYPE</code>-en (hvis du har en) står helt øverst, til og med før <code class=
+      "sgmltag">&lt;html&gt;</code>-taggen.</p>
+      <ul>
+        <li>Hvis du bruker standardmalen til Movable Type vil <code class="sgmltag">DOCTYPE</code>-en din sannsynligvis
+        inneholde teksten «<code class="sgmltag">XHTML 1.0 Transitional</code>». Dette er fint.</li>
+        <li>Hvis du bruker en av standardmalene til Radio Userland, Manila eller Blogger, inneholder <code class=
+        "sgmltag">DOCTYPE</code>-en sannsynligvis «<code class="sgmltag">HTML 4.01 Transitional</code>». Dette er også
+        fint.</li>
+        <li>Andre gyldige <code class="sgmltag">DOCTYPE</code>-er inneholder uttrykk som «<code class="sgmltag">HTML
+        4.01 Strict</code>», «<code class="sgmltag">XHTML 1.0 Strict</code>», «<code class="sgmltag">XHTML 1.1</code>»
+        og et par andre. Alle disse er fine.</li>
+      </ul>
+      <p>Hvis du har en <code class="sgmltag">DOCTYPE</code> trenger du ikke gjøre noe med den. Men hvis du ikke ser
+      noen <code class="sgmltag">DOCTYPE</code> før <code class="sgmltag">&lt;html&gt;</code>-taggen i kildekoden, kan
+      du legge til denne:</p>
+      <blockquote>
+        <p><code class="sgmltag">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd"&gt;</code></p>
+      </blockquote>
+      <p>Av tekniske grunner jeg helst ikke vil gå inn på her (se «Les mer» under hvis du er interessert), er det mulig
+      utseendet til siden din forandrer seg litt etter at du har lagt til denne <code class=
+      "sgmltag">DOCTYPE</code>-en. Hvis (og bare hvis) dette skjer, kan du bruke et kompromiss med en halv <code class=
+      "sgmltag">DOCTYPE</code>, som denne:</p>
+      <blockquote>
+        <p><code class="sgmltag">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"&gt;</code></p>
+      </blockquote>
+      <p>Merk at <em>alle</em> sidene dine bør ha en <code class="sgmltag">DOCTYPE</code>, så du bør sjekke alle malene
+      dine.</p>
+      <ul>
+        <li>Movable Type-brukere bør gå gjennom malene «Main Index», «Master Archive Index», «Category Archive»,
+        «Date-Based Archive» og «Individual Entry Archive» i tillegg til eventuelle selvlagde maler.</li>
+        <li>Brukere av Radio Userland og Manila bør sjekke «Main template» og «Home page template».</li>
+        <li>Greymatter-brukere bør se gjennom «Main Index-Related Templates», «Archive-Related Templates» og
+        «Entry-Related Templates».</li>
+        <li>Blogger-brukere bør sette inn en <code class="sgmltag">DOCTYPE</code> i hovedmalen. Dersom «Archive
+        template» er en egen side (altså hvis den har en <code class="sgmltag">&lt;html&gt;</code>-tagg øverst), bør
+        den også ha en <code class="sgmltag">DOCTYPE</code>.</li>
+      </ul>
+      <p>For resten av serien er det viktig at du vet om du bruker <code class="sgmltag">HTML 4</code> (valgfri
+      variant), <code class="sgmltag">XHTML 1.0</code> (valgfri variant) eller <code class="sgmltag">XHTML 1.1</code>.
+      Du får vite hvorfor i morgen.</p>
+      <h3>Les mer</h3>
+      <ul>
+        <li>
+          <cite>A List Apart</cite>: <a href="http://www.alistapart.com/stories/doctype/">Fixing Your Site With The
+          Right <code class="sgmltag">DOCTYPE</code></a>.
+        </li>
+        <li>
+          <cite><abbr title="Microsoft Developer Network">MSDN</abbr></cite>: <a href=
+          "http://msdn.microsoft.com/workshop/author/css/overview/cssenhancements.asp">Quirks mode in <abbr title=
+          "Internet Explorer">IE</abbr> 6</a>. (Merk: Dette nettstedet virker ikke i noen av versjonene til Netscape og
+          Mozilla. Dette er Microsoft sin feil, ikke min.)
+        </li>
+        <li>
+          <a href="http://www.mozilla.org/docs/web-developer/quirks/">Quirks mode in Mozilla</a>.
+        </li>
+      </ul><span class="divider">&nbsp;</span>
+    </div><!--entry-->
+    <div class="pageturn inner">
+      <a href="dag_5_marius.html">&lt;&lt; Dag 5: Marius</a> | <a href=
+      "innholdsfortegnelse.html">Innholdsfortegnelse</a> | <a href="dag_7_a_fastsette_spraket_ditt.html">Dag 7: Å
+      fastsette språket ditt &gt;&gt;</a> <span class="divider">&nbsp;</span>
+    </div><!--pageturn-->
+  </div><!--main-->
+  <div id="menu">
+    <a class="skip" id="startnavigation"></a>
+    <form method="get" action="/sok" id="searchbox_005108012550997225989:cf_v5g16xmu" name=
+    "searchbox_005108012550997225989:cf_v5g16xmu">
+      <p id="searchlabel"><label for="sok" accesskey="4">Søk i dette nettstedet:</label></p>
+      <p><input type="hidden" name="cx" value="005108012550997225989:cf_v5g16xmu"> <input type="hidden" name="cof"
+      value="FORID:11"> <input type="text" id="sok" name="q" size="18"> <input type="submit" name="sa" value="Søk"></p>
+    </form>
+    <div class="menusection inner">
+      <h2 class="invisibletitle">Nettstedets lenker</h2><a class="skip" href="#endinternal">Hopp over nettstedets
+      lenker</a>
+      <ul>
+        <li>
+          <a title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" accesskey=
+          "0">Tilgjengelighetsrapport</a>
+        </li>
+        <li>
+          <a href="innholdsfortegnelse.html" accesskey="3">Innholdsfortegnelse</a>
+        </li>
+        <li>
+          <a href="tips_om_personer.html">Tips om personer</a>
+        </li>
+        <li>
+          <a href="tips_om_funksjonshemninger.html">Tips om funksjonshemninger</a>
+        </li>
+        <li>
+          <a href="tips_om_prinsipper_for_design.html">Tips om prinsipper for design</a>
+        </li>
+        <li>
+          <a href="tips_om_nettlesere.html">Tips om nettlesere</a>
+        </li>
+        <li>
+          <a href="tips_om_publiseringsverktoy.html">Tips om publiseringsverktøy</a>
+        </li>
+        <li>
+          <a href="mailto:kontakt@kastdegutitilgjengelighet.no" accesskey="9">Tilbakemelding (e-post)</a>
+        </li>
+        <li>
+          <a title="Informasjon om copyright- og lisensiering (engelsk)" href="betingelser_for_bruk.html" accesskey=
+          "8">Betingelser for bruk</a>
+        </li>
+      </ul><a class="skip" id="endinternal"></a>
+    </div><!--.menusection-->
+    <div class="inner" id="footer">
+      <address>
+        Copyright © 2002 <a title="Dive Into Mark, forfatterens blogg" href="http://diveintomark.org/">Mark Pilgrim</a>
+      </address>
+    </div><!--footer-->
+    <div id="ads"></div>
+  </div><!--menu-->
+  <div id="navigation">
+    <p class="breadcrumb">Du er her: <a href="/">Forsiden</a> &gt; <a href=
+    "innholdsfortegnelse.html">Innholdsfortegnelse</a> &gt; <span class="currentpage">Dag 6: Å velge en
+    DOCTYPE</span></p>
+  </div><!--navigation-->
 </body>
 </html>

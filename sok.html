@@ -1,56 +1,37 @@
 <?php include("global.php"); ?>
-
+<!DOCTYPE html>
+<html>
 <head>
-<title>Søk -Kast deg ut i tilgjengelighet</title>
-<link rel="start" title="Forsiden" href="https://kastdegutitilgjengelighet.no/" />
-<link rel="contents" title="Innholdsfortegnelse" href="innholdsfortegnelse" />
-<link rel="help" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport" />
-<link rel="author" title="Send tilbakemelding" href="mailto:kontakt@kastdegutitilgjengelighet.no" />
-<link rel="copyright" title="Betingelser for bruk (engelsk)" href="betingelser_for_bruk" />
-
-<?php include("stilcharset.php"); ?>
-
-<link rel="stylesheet" href="css/googlesok.css" type="text/css" media="screen,projection" />
+  <title>Søk -Kast deg ut i tilgjengelighet</title>
+  <link rel="start" title="Forsiden" href="https://kastdegutitilgjengelighet.no/">
+  <link rel="contents" title="Innholdsfortegnelse" href="innholdsfortegnelse">
+  <link rel="help" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport">
+  <link rel="author" title="Send tilbakemelding" href="mailto:kontakt@kastdegutitilgjengelighet.no">
+  <link rel="copyright" title="Betingelser for bruk (engelsk)" href="betingelser_for_bruk">
+  <?php include("stilcharset.php"); ?>
+  <link rel="stylesheet" href="css/googlesok.css" type="text/css" media="screen,projection">
 </head>
 <body>
-
-<?php include("logo.php"); ?>
-
-<p></p>
-
-<div id="main"><div class="inner">
-
-<h2>Søkeresultater</h2>
-<div id="googlefiks">
-<div id="results_005108012550997225989:cf_v5g16xmu"></div>
-<script type="text/javascript">
-  var googleSearchIframeName = "results_005108012550997225989:cf_v5g16xmu";
-  var googleSearchFormName = "searchbox_005108012550997225989:cf_v5g16xmu";
-  var googleSearchFrameWidth = 600;
-  var googleSearchFrameborder = 0;
-  var googleSearchDomain = "https://www.google.com";
-  var googleSearchPath = "/cse";
-</script>
-<script type="text/javascript" src="https://www.google.com/afsonline/show_afs_search.js"></script>
-</div>
-
-<span class="divider">&nbsp;</span>
-</div>
-</div>
-<!--main-->
-
-<?php include("meny.php"); ?>
-
-<?php include("menyfot.php"); ?>
-
-</div><!--menu-->
-
-<div id="navigation">
-<p class="breadcrumb">Du er her:
-<a href="/">Forsiden</a> >
-<span class="currentpage">Søk</span></p>
-</div><!--navigation-->
-
-<?php include("stats.php"); ?>
+  <?php include("logo.php"); ?>
+  <div class="inner" id="main">
+    <h2>Søkeresultater</h2>
+    <div id="googlefiks">
+      <div id="results_005108012550997225989:cf_v5g16xmu"></div>
+      <script type="text/javascript">
+      var googleSearchIframeName = "results_005108012550997225989:cf_v5g16xmu";
+      var googleSearchFormName = "searchbox_005108012550997225989:cf_v5g16xmu";
+      var googleSearchFrameWidth = 600;
+      var googleSearchFrameborder = 0;
+      var googleSearchDomain = "https://www.google.com";
+      var googleSearchPath = "/cse";
+      </script>
+      <script type="text/javascript" src="https://www.google.com/afsonline/show_afs_search.js"></script>
+    </div><span class="divider">&nbsp;</span>
+  </div><!--main-->
+  <?php include("meny.php"); ?><?php include("menyfot.php"); ?><!--menu-->
+  <div id="navigation">
+    <p class="breadcrumb">Du er her: <a href="/">Forsiden</a> &gt; <span class="currentpage">Søk</span></p>
+  </div><!--navigation-->
+  <?php include("stats.php"); ?>
 </body>
 </html>

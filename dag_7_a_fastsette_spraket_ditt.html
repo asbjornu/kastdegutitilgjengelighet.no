@@ -1,157 +1,179 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nb" lang="nb">
+<!DOCTYPE html>
+<html lang="nb">
 <head>
-<title>Dag 7: Å fastsette språket ditt - Kast deg ut i tilgjengelighet</title>
-
-<link rel="start" title="Forsiden" href="/" />
-<link rel="contents" title="Innholdsfortegnelse" href="innholdsfortegnelse.html" />
-<link rel="help" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" />
-<link rel="author" title="Send tilbakemelding" href="mailto:kontakt@kastdegutitilgjengelighet.no" />
-<link rel="copyright" title="Betingelser for bruk (engelsk)" href="betingelser_for_bruk.html" />
-<link rel="up" title="Innholdsfortegnelse" href="innholdsfortegnelse.html" />
-<link rel="first" title="Dag 1: Anne" href="dag_1_anne.html" />
-<link rel="last" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="css/common.css" type="text/css" />
-<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="css/screen.css" type="text/css" media="projection" />
-<link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
-<link rel="stylesheet" href="css/aural.css" type="text/css" media="aural" />
-<link rel="prev" href="dag_6_a_velge_en_doctype.html" title="Dag 6: Å velge en DOCTYPE" />
-<link rel="next" href="dag_8_a_lage_meningsfylte_titler.html" title="Dag 8: Å lage meningsfylte titler" />
+  <meta charset="utf-8">
+  <title>Dag 7: Å fastsette språket ditt - Kast deg ut i tilgjengelighet</title>
+  <link rel="start" title="Forsiden" href="/">
+  <link rel="contents" title="Innholdsfortegnelse" href="innholdsfortegnelse.html">
+  <link rel="help" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html">
+  <link rel="author" title="Send tilbakemelding" href="mailto:kontakt@kastdegutitilgjengelighet.no">
+  <link rel="copyright" title="Betingelser for bruk (engelsk)" href="betingelser_for_bruk.html">
+  <link rel="up" title="Innholdsfortegnelse" href="innholdsfortegnelse.html">
+  <link rel="first" title="Dag 1: Anne" href="dag_1_anne.html">
+  <link rel="last" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html">
+  <link rel="stylesheet" href="css/common.css" type="text/css">
+  <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/screen.css" type="text/css" media="projection">
+  <link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+  <link rel="stylesheet" href="css/aural.css" type="text/css" media="aural">
+  <link rel="prev" href="dag_6_a_velge_en_doctype.html" title="Dag 6: Å velge en DOCTYPE">
+  <link rel="next" href="dag_8_a_lage_meningsfylte_titler.html" title="Dag 8: Å lage meningsfylte titler">
 </head>
 <body>
-
-<div id="logo">
-<div class="inner">
-<h1 class="title"><a href="/" accesskey="1">Kast deg ut i tilgjengelighet</a></h1>
-<p>Et mer tilgjengelig nettsted på 30 dager</p>
-<a class="skip" href="#startnavigation">Hopp til navigasjonen</a>
-<span class="divider">&nbsp;</span>
-</div>
-</div>
-<p></p>
-
-<div id="main"><div class="inner">
-<div class="entry">
-<h2 class="entrysubject">Dag 7: Å fastsette språket ditt</h2>
-<p class="firstparagraph">Du vet hvilket språk du skriver med, så fortell det til brukerne dine ... og programvaren deres.</p>
-
-<h3>Hvem har nytte av det?</h3>
-
-<ol>
-<li><a href="dag_1_anne.html">Anne</a> har nytte av det. Skjermleserprogrammet hennes (<a href="http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a>) må vite hvilket språk sidene dine er skrevet i for å kunne uttale ordene riktig når den leser opp teksten på sidene. Hvis du ikke opplyser om hvilket språk du bruker vil JAWS prøve å gjette, og den kan gjette feil, særlig hvis du siterer kildekode eller annet ikke-språklig innhold.</li>
-<li><a href="http://google.no/">Google</a> har nytte av det, selv om du skriver på engelsk, men spesielt hvis du bruker et annet språk. Ifølge <a href="http://www.google.com/press/zeitgeist.html">Google Zeitgeist</a> søker 50% av Google-brukerne på andre språk enn engelsk, og mange av disse setter <a href="http://www.google.com/preferences">Google-innstillingene</a> sine slik at det bare søkes etter sider med bestemte språk. Googles algoritmer for å gjette språk er bedre enn de fleste, men hvorfor gjøre jobben til Google vanskeligere enn nødvendig?</li>
-</ol>
-
-<h3>Hvordan gjøre det</h3>
-
-<p>Først må du finne den riktige to-bokstavskoden for språket du bruker. Koden for norsk er «<code>no</code>», koden for engelsk er «<code>en</code>», fransk er «<code>fr</code>» og koden for tysk er «<code>de</code>». Bruker du et annet språk kan du <a href="http://www.loc.gov/standards/iso639-2/englangn.html">finne språkkoden din her</a>. Kodene skiller ikke mellom små og store bokstaver.</p>
-
-<p>Nå kan du sette inn språkkoden din i <code class="sgmltag">&lt;html&gt;</code>-taggen. Nøyaktig hvordan dette gjøres er avhengig av hvilken HTML-versjon du bruker. <a href="dag_6_a_velge_en_doctype.html">Se på <code class="sgmltag">DOCTYPE</code>-en din</a> og gjør deretter en av de følgende:</p>
-
-<ol>
-<li><p>Hvis du bruker en (hvilken som helst) variant av HTML 4, endre <code class="sgmltag">&lt;html&gt;</code>-taggen din til dette (bytt ut koden med den riktige for språket du skriver dersom det ikke er norsk):</p>
-
-<blockquote>
-<p><code class="sgmltag">&lt;html lang="no"&gt;</code></p>
-</blockquote>
-</li>
-
-<li><p>Hvis du bruker en variant av <code class="sgmltag">XHTML 1.0</code>, endre <code class="sgmltag">&lt;html&gt;</code>-taggen til dette (endre om nødvendig språkkoden begge stedene):</p>
-
-<blockquote>
-<p><code class="sgmltag">&lt;html xmlns="http://www.w3.org/1999/xhtml" lang="no" xml:lang="no"&gt;</code></p>
-</blockquote>
-</li>
-
-<li><p>Hvis du bruker <code class="sgmltag">XHTML 1.1</code>, <code class="sgmltag">&lt;html&gt;</code>-taggen til dette (igjen, endre språkkoden hvis du ikke skriver på norsk):</p>
-
-<blockquote>
-<p><code class="sgmltag">&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="no"&gt;</code></p>
-</blockquote>
-</li>
-</ol>
-
-<p>Som med <code class="sgmltag">DOCTYPE</code>, bør du oppgi hvilket språk du bruker på hver side i nettstedet ditt.</p>
-
-<p>En liten tilleggsopplysning: Hvis du bruker mer enn ett språk på en side, kan du spesifisere språket for enkelte elementer. Hvis du for eksempel har en webside som bruker HTML 4 og hovedsaklig er skrevet på norsk, men siterer en engelsk artikkel, kan du merke det opp slik:</p>
-
-<blockquote>
-<pre><code class="sgmltag">&lt;html lang="no"&gt;
+  <div class="inner" id="logo">
+    <h1 class="title"><a href="/" accesskey="1">Kast deg ut i tilgjengelighet</a></h1>
+    <p>Et mer tilgjengelig nettsted på 30 dager</p><a class="skip" href="#startnavigation">Hopp til navigasjonen</a>
+    <span class="divider">&nbsp;</span>
+  </div>
+  <div class="inner" id="main">
+    <div class="entry">
+      <h2 class="entrysubject">Dag 7: Å fastsette språket ditt</h2>
+      <p class="firstparagraph">Du vet hvilket språk du skriver med, så fortell det til brukerne dine ... og
+      programvaren deres.</p>
+      <h3>Hvem har nytte av det?</h3>
+      <ol>
+        <li>
+          <a href="dag_1_anne.html">Anne</a> har nytte av det. Skjermleserprogrammet hennes (<a href=
+          "http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a>) må vite hvilket språk sidene dine
+          er skrevet i for å kunne uttale ordene riktig når den leser opp teksten på sidene. Hvis du ikke opplyser om
+          hvilket språk du bruker vil JAWS prøve å gjette, og den kan gjette feil, særlig hvis du siterer kildekode
+          eller annet ikke-språklig innhold.
+        </li>
+        <li>
+          <a href="http://google.no/">Google</a> har nytte av det, selv om du skriver på engelsk, men spesielt hvis du
+          bruker et annet språk. Ifølge <a href="http://www.google.com/press/zeitgeist.html">Google Zeitgeist</a> søker
+          50% av Google-brukerne på andre språk enn engelsk, og mange av disse setter <a href=
+          "http://www.google.com/preferences">Google-innstillingene</a> sine slik at det bare søkes etter sider med
+          bestemte språk. Googles algoritmer for å gjette språk er bedre enn de fleste, men hvorfor gjøre jobben til
+          Google vanskeligere enn nødvendig?
+        </li>
+      </ol>
+      <h3>Hvordan gjøre det</h3>
+      <p>Først må du finne den riktige to-bokstavskoden for språket du bruker. Koden for norsk er «<code>no</code>»,
+      koden for engelsk er «<code>en</code>», fransk er «<code>fr</code>» og koden for tysk er «<code>de</code>».
+      Bruker du et annet språk kan du <a href="http://www.loc.gov/standards/iso639-2/englangn.html">finne språkkoden
+      din her</a>. Kodene skiller ikke mellom små og store bokstaver.</p>
+      <p>Nå kan du sette inn språkkoden din i <code class="sgmltag">&lt;html&gt;</code>-taggen. Nøyaktig hvordan dette
+      gjøres er avhengig av hvilken HTML-versjon du bruker. <a href="dag_6_a_velge_en_doctype.html">Se på <code class=
+      "sgmltag">DOCTYPE</code>-en din</a> og gjør deretter en av de følgende:</p>
+      <ol>
+        <li>
+          <p>Hvis du bruker en (hvilken som helst) variant av HTML 4, endre <code class=
+          "sgmltag">&lt;html&gt;</code>-taggen din til dette (bytt ut koden med den riktige for språket du skriver
+          dersom det ikke er norsk):</p>
+          <blockquote>
+            <p><code class="sgmltag">&lt;html lang="no"&gt;</code></p>
+          </blockquote>
+        </li>
+        <li>
+          <p>Hvis du bruker en variant av <code class="sgmltag">XHTML 1.0</code>, endre <code class=
+          "sgmltag">&lt;html&gt;</code>-taggen til dette (endre om nødvendig språkkoden begge stedene):</p>
+          <blockquote>
+            <p><code class="sgmltag">&lt;html xmlns="http://www.w3.org/1999/xhtml" lang="no"
+            xml:lang="no"&gt;</code></p>
+          </blockquote>
+        </li>
+        <li>
+          <p>Hvis du bruker <code class="sgmltag">XHTML 1.1</code>, <code class="sgmltag">&lt;html&gt;</code>-taggen
+          til dette (igjen, endre språkkoden hvis du ikke skriver på norsk):</p>
+          <blockquote>
+            <p><code class="sgmltag">&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="no"&gt;</code></p>
+          </blockquote>
+        </li>
+      </ol>
+      <p>Som med <code class="sgmltag">DOCTYPE</code>, bør du oppgi hvilket språk du bruker på hver side i nettstedet
+      ditt.</p>
+      <p>En liten tilleggsopplysning: Hvis du bruker mer enn ett språk på en side, kan du spesifisere språket for
+      enkelte elementer. Hvis du for eksempel har en webside som bruker HTML 4 og hovedsaklig er skrevet på norsk, men
+      siterer en engelsk artikkel, kan du merke det opp slik:</p>
+      <blockquote>
+        <pre><code class="sgmltag">&lt;html lang="no"&gt;
   ...
   &lt;blockquote lang="en"&gt;
     ...
   &lt;/blockquote&gt;</code>
 </pre>
-</blockquote>
-
-<h3>Les mer</h3>
-
-<ul>
-<li><a href="http://www.loc.gov/standards/iso639-2/englangn.html">Oversikt over språkkoder</a>.</li>
-<li><a href="http://www.w3.org/TR/REC-html40/struct/dirlang.html#h-8.1">lang-attributtet i <acronym title="hypertext markup language">HTML</acronym>-spesifikasjonen</a>.</li>
-<li><a href="http://lists.w3.org/Archives/Public/w3c-wai-ig/2001AprJun/0713.html">Jim Thatcher om støtte for <code class="sgmltag">lang</code>-attributtet i skjermlesere</a>. Han beskriver algoritmene deres for å automatisk finne ut hvilket språk som er brukt som «svært mangelfull». Og han burde vite hva han snakker om, siden han har skrevet algoritmen for <a href="http://www-3.ibm.com/able/hpr.html">Home Page Reader</a>. Andre skjermlesere har lagt til støtte for lang-attributtet siden han skrev denne kommentaren, men språkgjettingsalgoritmene deres er fremdeles svært mangelfulle, noe som gjør det enda viktigere og nyttigere å oppgi språket.</li>
-</ul>
-
-<p></p>
-<span class="divider">&nbsp;</span>
-</div> <!--entry-->
-
-<div class="pageturn"><div class="inner">
-<a href="dag_6_a_velge_en_doctype.html">&lt;&lt; Dag 6: Å velge en DOCTYPE</a> |
-<a href="innholdsfortegnelse.html">Innholdsfortegnelse</a>
-| <a href="dag_8_a_lage_meningsfylte_titler.html">Dag 8: Å lage meningsfylte titler &gt;&gt;</a>
-<span class="divider">&nbsp;</span>
-</div></div> <!--pageturn-->
-
-</div></div> <!--main-->
-
-<div id="menu">
-<a class="skip" name="startnavigation" id="startnavigation"></a>
-<form method="get" action="/sok" id="searchbox_005108012550997225989:cf_v5g16xmu">
-<p id="searchlabel"><label for="sok" accesskey="4">Søk i dette nettstedet:</label></p>
-<p><input type="hidden" name="cx" value="005108012550997225989:cf_v5g16xmu" />
-<input type="hidden" name="cof" value="FORID:11" />
-<input type="text" id="sok" name="q" size="18" />
-<input type="submit" name="sa" value="Søk" /></p>
-</form>
-
-<div class="menusection"><div class="inner">
-<h2 class="invisibletitle">Nettstedets lenker</h2>
-
-<a class="skip" href="#endinternal">Hopp over nettstedets lenker</a>
-<ul>
-<li><a title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" accesskey="0">Tilgjengelighetsrapport</a></li>
-<li><a href="innholdsfortegnelse.html" accesskey="3">Innholdsfortegnelse</a></li>
-<li><a href="tips_om_personer.html">Tips om personer</a></li>
-<li><a href="tips_om_funksjonshemninger.html">Tips om funksjonshemninger</a></li>
-<li><a href="tips_om_prinsipper_for_design.html">Tips om prinsipper for design</a></li>
-<li><a href="tips_om_nettlesere.html">Tips om nettlesere</a></li>
-<li><a href="tips_om_publiseringsverktoy.html">Tips om publiseringsverktøy</a></li>
-<li><a href="mailto:kontakt@kastdegutitilgjengelighet.no" accesskey="9">Tilbakemelding (e-post)</a></li>
-<li><a title="Informasjon om copyright- og lisensiering (engelsk)" href="betingelser_for_bruk.html" accesskey="8">Betingelser for bruk</a></li>
-</ul>
-
-<a class="skip" id="endinternal"></a>
-</div>
-</div>
-<!--.menusection-->
-<div id="footer"><div class="inner">
-
-<address>Copyright &copy; 2002 <a title="Dive Into Mark, forfatterens blogg" href="http://diveintomark.org/">Mark Pilgrim</a></address>
-
-</div></div> <!--footer-->
-
-<div id="ads"></div>
-</div> <!--menu-->
-<div id="navigation">
-<p class="breadcrumb">Du er her:
-<a href="/">Forsiden</a> >
-<a href="innholdsfortegnelse.html">Innholdsfortegnelse</a> >
-<span class="currentpage">Dag 7: Å fastsette språket ditt</span></p>
-</div><!--navigation-->
-
-
+      </blockquote>
+      <h3>Les mer</h3>
+      <ul>
+        <li>
+          <a href="http://www.loc.gov/standards/iso639-2/englangn.html">Oversikt over språkkoder</a>.
+        </li>
+        <li>
+          <a href="http://www.w3.org/TR/REC-html40/struct/dirlang.html#h-8.1">lang-attributtet i <abbr title=
+          "hypertext markup language">HTML</abbr>-spesifikasjonen</a>.
+        </li>
+        <li>
+          <a href="http://lists.w3.org/Archives/Public/w3c-wai-ig/2001AprJun/0713.html">Jim Thatcher om støtte for
+          <code class="sgmltag">lang</code>-attributtet i skjermlesere</a>. Han beskriver algoritmene deres for å
+          automatisk finne ut hvilket språk som er brukt som «svært mangelfull». Og han burde vite hva han snakker om,
+          siden han har skrevet algoritmen for <a href="http://www-3.ibm.com/able/hpr.html">Home Page Reader</a>. Andre
+          skjermlesere har lagt til støtte for lang-attributtet siden han skrev denne kommentaren, men
+          språkgjettingsalgoritmene deres er fremdeles svært mangelfulle, noe som gjør det enda viktigere og nyttigere
+          å oppgi språket.
+        </li>
+      </ul><span class="divider">&nbsp;</span>
+    </div><!--entry-->
+    <div class="pageturn inner">
+      <a href="dag_6_a_velge_en_doctype.html">&lt;&lt; Dag 6: Å velge en DOCTYPE</a> | <a href=
+      "innholdsfortegnelse.html">Innholdsfortegnelse</a> | <a href="dag_8_a_lage_meningsfylte_titler.html">Dag 8: Å
+      lage meningsfylte titler &gt;&gt;</a> <span class="divider">&nbsp;</span>
+    </div><!--pageturn-->
+  </div><!--main-->
+  <div id="menu">
+    <a class="skip" id="startnavigation"></a>
+    <form method="get" action="/sok" id="searchbox_005108012550997225989:cf_v5g16xmu" name=
+    "searchbox_005108012550997225989:cf_v5g16xmu">
+      <p id="searchlabel"><label for="sok" accesskey="4">Søk i dette nettstedet:</label></p>
+      <p><input type="hidden" name="cx" value="005108012550997225989:cf_v5g16xmu"> <input type="hidden" name="cof"
+      value="FORID:11"> <input type="text" id="sok" name="q" size="18"> <input type="submit" name="sa" value="Søk"></p>
+    </form>
+    <div class="menusection inner">
+      <h2 class="invisibletitle">Nettstedets lenker</h2><a class="skip" href="#endinternal">Hopp over nettstedets
+      lenker</a>
+      <ul>
+        <li>
+          <a title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" accesskey=
+          "0">Tilgjengelighetsrapport</a>
+        </li>
+        <li>
+          <a href="innholdsfortegnelse.html" accesskey="3">Innholdsfortegnelse</a>
+        </li>
+        <li>
+          <a href="tips_om_personer.html">Tips om personer</a>
+        </li>
+        <li>
+          <a href="tips_om_funksjonshemninger.html">Tips om funksjonshemninger</a>
+        </li>
+        <li>
+          <a href="tips_om_prinsipper_for_design.html">Tips om prinsipper for design</a>
+        </li>
+        <li>
+          <a href="tips_om_nettlesere.html">Tips om nettlesere</a>
+        </li>
+        <li>
+          <a href="tips_om_publiseringsverktoy.html">Tips om publiseringsverktøy</a>
+        </li>
+        <li>
+          <a href="mailto:kontakt@kastdegutitilgjengelighet.no" accesskey="9">Tilbakemelding (e-post)</a>
+        </li>
+        <li>
+          <a title="Informasjon om copyright- og lisensiering (engelsk)" href="betingelser_for_bruk.html" accesskey=
+          "8">Betingelser for bruk</a>
+        </li>
+      </ul><a class="skip" id="endinternal"></a>
+    </div><!--.menusection-->
+    <div class="inner" id="footer">
+      <address>
+        Copyright © 2002 <a title="Dive Into Mark, forfatterens blogg" href="http://diveintomark.org/">Mark Pilgrim</a>
+      </address>
+    </div><!--footer-->
+    <div id="ads"></div>
+  </div><!--menu-->
+  <div id="navigation">
+    <p class="breadcrumb">Du er her: <a href="/">Forsiden</a> &gt; <a href=
+    "innholdsfortegnelse.html">Innholdsfortegnelse</a> &gt; <span class="currentpage">Dag 7: Å fastsette språket
+    ditt</span></p>
+  </div><!--navigation-->
 </body>
 </html>

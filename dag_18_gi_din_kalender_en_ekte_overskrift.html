@@ -1,111 +1,121 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nb" lang="nb">
+<!DOCTYPE html>
+<html lang="nb">
 <head>
-<title>Dag 18: Gi din kalender en ekte overskrift</title>
-
-<link rel="start" title="Forsiden" href="/" />
-<link rel="contents" title="Innholdsfortegnelse" href="innholdsfortegnelse.html" />
-<link rel="help" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" />
-<link rel="author" title="Send tilbakemelding" href="mailto:kontakt@kastdegutitilgjengelighet.no" />
-<link rel="copyright" title="Betingelser for bruk (engelsk)" href="betingelser_for_bruk.html" />
-<link rel="up" title="Innholdsfortegnelse" href="innholdsfortegnelse.html" />
-<link rel="first" title="Dag 1: Anne" href="dag_1_anne.html" />
-<link rel="last" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="css/common.css" type="text/css" />
-<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="css/screen.css" type="text/css" media="projection" />
-<link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
-<link rel="stylesheet" href="css/aural.css" type="text/css" media="aural" />
-<link rel="prev" href="dag_17_definere_bokstavord.html" title="Dag 17: Definere bokstavord" />
-<link rel="next" href="dag_19_bruke_ekte_tabelltitler.html" title="Dag 19: Bruke ekte tabelltitler" />
+  <meta charset="utf-8">
+  <title>Dag 18: Gi din kalender en ekte overskrift</title>
+  <link rel="start" title="Forsiden" href="/">
+  <link rel="contents" title="Innholdsfortegnelse" href="innholdsfortegnelse.html">
+  <link rel="help" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html">
+  <link rel="author" title="Send tilbakemelding" href="mailto:kontakt@kastdegutitilgjengelighet.no">
+  <link rel="copyright" title="Betingelser for bruk (engelsk)" href="betingelser_for_bruk.html">
+  <link rel="up" title="Innholdsfortegnelse" href="innholdsfortegnelse.html">
+  <link rel="first" title="Dag 1: Anne" href="dag_1_anne.html">
+  <link rel="last" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html">
+  <link rel="stylesheet" href="css/common.css" type="text/css">
+  <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/screen.css" type="text/css" media="projection">
+  <link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+  <link rel="stylesheet" href="css/aural.css" type="text/css" media="aural">
+  <link rel="prev" href="dag_17_definere_bokstavord.html" title="Dag 17: Definere bokstavord">
+  <link rel="next" href="dag_19_bruke_ekte_tabelltitler.html" title="Dag 19: Bruke ekte tabelltitler">
 </head>
 <body>
-
-<div id="logo">
-<div class="inner">
-<h1 class="title"><a href="/" accesskey="1">Kast deg ut i tilgjengelighet</a></h1>
-<p>Et mer tilgjengelig nettsted på 30 dager</p>
-<a class="skip" href="#startnavigation">Hopp til navigasjonen</a>
-<span class="divider">&nbsp;</span>
-</div>
-</div>
-<p></p>
-
-<div id="main"><div class="inner">
-<div class="entry">
-<h2 class="entrysubject">Dag 18: Gi din kalender en ekte overskrift</h2>
-<p class="firstparagraph">«Men,» hører jeg du roper ut, «kalenderen min <em>har</em> allerede en overskrift. Bare se her, den har måneden og året rett der til høyre på toppen. Til og med i fet skrift.»</p>
-<p>Men hvis du dykker inn i <acronym title="hypertext markup language">HTML</acronym>-kilden, så vil du se at kalenderen din ikke har en <em>ekte</em> overskrift. Sannsynligvis har den en enkel <code class="sgmltag">&lt;td&gt;</code> tabellcelle definert til å strekke seg over hele den første raden, med en <acronym title="cascading style sheets">CSS</acronym>-regel som gjør den fet. Dette er veldig mye lettere med en ekte <code class="sgmltag">&lt;caption&gt;</code>-tagg. Det er lettere å lese i malen din, siden din sparer noen byte, ser nøyaktig lik ut i visuelle nettlesere, og er mer tilgjengelig.</p>
-
-<h3>Hvem har nytte av det?</h3>
-
-<ol>
-<li><a href="dag_5_marius.html">Marius</a> har nytte av det. <a href="http://www.fdisk.com/doslynx/lynxport.htm">Lynx</a> viser overskriften i fronten med ordet «OVERSKRIFT:», og gjør det helt tydelig at denne linjen er overskriften og ikke kolonnens tittel eller tabelldata.</li>
-<li><a href="dag_1_anne.html">Anne</a> får indirekte nytte av det. Ved å bruke en ekte <code>&lt;caption&gt;</code>-tagg ryddes veien for bruken av ekte tabelltitler, noe som gagner Anne på en måte som vi skal diskutere i morgen.</li>
-</ol>
-
-<h3>Hvordan gjøre det</h3>
-
-<p>Du kan kun gjøre dette i publiseringsverktøy som har støtte for kalendere (noe som utelukker Blogger) og som tillater deg å tilpasse <acronym title="hypertext markup language">HTML</acronym>-en som er generert for kalendere (som utelukker Manilla).</p>
-<p>I Movable Type, har du sannsynligvis en tabell til kalenderen i din hovedsidemal som starter slik som dette (du finner den sannsynligvis ved å søke etter «calendarhead»):</p>
-
-<blockquote>
-<p><code class="sgmltag">&lt;table border="0" cellspacing="4" cellpadding="0"&gt;<br />
-<strong>&lt;tr&gt;<br />
-&lt;td colspan="7" align="center"&gt;&lt;span class="calendarhead"&gt;&lt;$MTDate format="%B %Y"$&gt;&lt;/span&gt;&lt;/td&gt;<br />
-&lt;/tr&gt;</strong><br />
-&lt;tr&gt;<br />
-&lt;td align="center"&gt;&lt;span class="calendar"&gt;Søn&lt;/span&gt;&lt;/td&gt;<br />
-...</code></p>
-</blockquote>
-
-<p>La tabelltaggen være, men bytt ut hele den første <code class="sgmltag">&lt;tr&gt;</code>-tabellraden med en ekte <code class="sgmltag">&lt;caption&gt;</code>-tagg, slik som dette:</p>
-
-<blockquote>
-<p><code class="sgmltag">&lt;table border="0" cellspacing="4" cellpadding="0"&gt;<br />
-<strong>&lt;caption class="calendarhead"&gt;&lt;$MTDate format="%B %Y"$&gt;&lt;/caption&gt;</strong><br />
-&lt;tr&gt;<br />
-&lt;td align="center"&gt;&lt;span class="calendar"&gt;Søn&lt;/span&gt;&lt;/td&gt;<br />
-...</code></p>
-</blockquote>
-
-<p>La resten være; vi fikser det i morgen.</p>
-<p><code>class</code>-atributtet til <code class="sgmltag">&lt;caption&gt;</code> er valgfri; jeg lot den være der så dette kunne bli en dropp-inn utskiftning i Movable Type's standardmal, som bruker en <acronym title="cascading style sheets">CSS</acronym>-regel for å gjøre måneden og året i fet skrift. Ved å bruke <code class="sgmltag">&lt;caption&gt;</code>-taggen som vist, burde siden din vises nøyaktig likt som den gjorde før.</p>
-<p>I Greymatter, er konseptet det samme men malens tagger er annerledels:</p>
-
-<blockquote>
-<p><code class="sgmltag">&lt;caption&gt;{{monthword}} {{yearyear}}&lt;/caption&gt;</code></p>
-</blockquote>
-
-<p>Igjen, du kan forandre den visuelle stilen til <code>caption</code> ved å bruke cascading style sheets, hvis du er inne i denslags ting.</p>
-<p>I Radio, så er prosessen til en viss grad vanskeligere, men ikke umulig. (Jeg står i gjeld til <a href="http://www.tmtm.com/insanity/">Tony Bowden</a> for disse instruksjonene.)</p>
-
-<ol>
-<li>I Radio, åpner du Radio's faktiske applikasjon. I Windows, høyreklikk på det lille Radio-ikonet i systemkurven og velg «Åpne Radio».</li>
-<li>I «Verktøy»-menyen, velg «Utviklere», deretter «Hopp ...» (<kbd>Control+J</kbd>). Hopp til «system.verbs.builtins.radio.weblog.drawCalendar» (uten anførselstegn).</li>
-<li>Så går du til «Rediger»-menyen, «Finn og erstatt», «Finn ...» (<kbd>Control+F</kbd>) og finn "hCalendarTable". Dette skulle åpenbare datablokken med kode som tegner den innledende <code>&lt;table&gt;</code>-taggen og den falske kalenderoverskriften.</li>
-<li><p>Endre den siste linjen av datablokken (som skriver ut <var>monthYearString</var>-en i en <code>&lt;tr&gt;</code>-tagg) til dette:</p>
-
-<blockquote>
-<p><code class="sgmltag">add ("&lt;caption&gt;" + monthYearString + "&lt;/caption&gt;")</code></p>
-</blockquote>
-</li>
-
-<li>Lukk vinduet. Den vil spørre om du ønsker å kompilere endringene, svar ja.</li>
-<li><p>Hvis du ønsker det kan du stilsette overskriften. Gå til din hjemmesidemal (i preferanse-siden) og legg stil til <code>caption</code>-overskriften. Dette er det jeg bruker. Hvor min <code>&lt;style&gt;</code>-seksjon før inneholdt dette:</p>
-
-<blockquote>
-<pre><code>body, td, p {
+  <div class="inner" id="logo">
+    <h1 class="title"><a href="/" accesskey="1">Kast deg ut i tilgjengelighet</a></h1>
+    <p>Et mer tilgjengelig nettsted på 30 dager</p><a class="skip" href="#startnavigation">Hopp til navigasjonen</a>
+    <span class="divider">&nbsp;</span>
+  </div>
+  <div class="inner" id="main">
+    <div class="entry">
+      <h2 class="entrysubject">Dag 18: Gi din kalender en ekte overskrift</h2>
+      <p class="firstparagraph">«Men,» hører jeg du roper ut, «kalenderen min <em>har</em> allerede en overskrift. Bare
+      se her, den har måneden og året rett der til høyre på toppen. Til og med i fet skrift.»</p>
+      <p>Men hvis du dykker inn i <abbr title="hypertext markup language">HTML</abbr>-kilden, så vil du se at
+      kalenderen din ikke har en <em>ekte</em> overskrift. Sannsynligvis har den en enkel <code class=
+      "sgmltag">&lt;td&gt;</code> tabellcelle definert til å strekke seg over hele den første raden, med en
+      <abbr title="cascading style sheets">CSS</abbr>-regel som gjør den fet. Dette er veldig mye lettere med en ekte
+      <code class="sgmltag">&lt;caption&gt;</code>-tagg. Det er lettere å lese i malen din, siden din sparer noen byte,
+      ser nøyaktig lik ut i visuelle nettlesere, og er mer tilgjengelig.</p>
+      <h3>Hvem har nytte av det?</h3>
+      <ol>
+        <li>
+          <a href="dag_5_marius.html">Marius</a> har nytte av det. <a href=
+          "http://www.fdisk.com/doslynx/lynxport.htm">Lynx</a> viser overskriften i fronten med ordet «OVERSKRIFT:», og
+          gjør det helt tydelig at denne linjen er overskriften og ikke kolonnens tittel eller tabelldata.
+        </li>
+        <li>
+          <a href="dag_1_anne.html">Anne</a> får indirekte nytte av det. Ved å bruke en ekte
+          <code>&lt;caption&gt;</code>-tagg ryddes veien for bruken av ekte tabelltitler, noe som gagner Anne på en
+          måte som vi skal diskutere i morgen.
+        </li>
+      </ol>
+      <h3>Hvordan gjøre det</h3>
+      <p>Du kan kun gjøre dette i publiseringsverktøy som har støtte for kalendere (noe som utelukker Blogger) og som
+      tillater deg å tilpasse <abbr title="hypertext markup language">HTML</abbr>-en som er generert for kalendere (som
+      utelukker Manilla).</p>
+      <p>I Movable Type, har du sannsynligvis en tabell til kalenderen i din hovedsidemal som starter slik som dette
+      (du finner den sannsynligvis ved å søke etter «calendarhead»):</p>
+      <blockquote>
+        <p><code class="sgmltag">&lt;table border="0" cellspacing="4" cellpadding="0"&gt;<br>
+        <strong>&lt;tr&gt;<br>
+        &lt;td colspan="7" align="center"&gt;&lt;span class="calendarhead"&gt;&lt;$MTDate format="%B
+        %Y"$&gt;&lt;/span&gt;&lt;/td&gt;<br>
+        &lt;/tr&gt;</strong><br>
+        &lt;tr&gt;<br>
+        &lt;td align="center"&gt;&lt;span class="calendar"&gt;Søn&lt;/span&gt;&lt;/td&gt;<br>
+        ...</code></p>
+      </blockquote>
+      <p>La tabelltaggen være, men bytt ut hele den første <code class="sgmltag">&lt;tr&gt;</code>-tabellraden med en
+      ekte <code class="sgmltag">&lt;caption&gt;</code>-tagg, slik som dette:</p>
+      <blockquote>
+        <p><code class="sgmltag">&lt;table border="0" cellspacing="4" cellpadding="0"&gt;<br>
+        <strong>&lt;caption class="calendarhead"&gt;&lt;$MTDate format="%B %Y"$&gt;&lt;/caption&gt;</strong><br>
+        &lt;tr&gt;<br>
+        &lt;td align="center"&gt;&lt;span class="calendar"&gt;Søn&lt;/span&gt;&lt;/td&gt;<br>
+        ...</code></p>
+      </blockquote>
+      <p>La resten være; vi fikser det i morgen.</p>
+      <p><code>class</code>-atributtet til <code class="sgmltag">&lt;caption&gt;</code> er valgfri; jeg lot den være
+      der så dette kunne bli en dropp-inn utskiftning i Movable Type's standardmal, som bruker en <abbr title=
+      "cascading style sheets">CSS</abbr>-regel for å gjøre måneden og året i fet skrift. Ved å bruke <code class=
+      "sgmltag">&lt;caption&gt;</code>-taggen som vist, burde siden din vises nøyaktig likt som den gjorde før.</p>
+      <p>I Greymatter, er konseptet det samme men malens tagger er annerledels:</p>
+      <blockquote>
+        <p><code class="sgmltag">&lt;caption&gt;{{monthword}} {{yearyear}}&lt;/caption&gt;</code></p>
+      </blockquote>
+      <p>Igjen, du kan forandre den visuelle stilen til <code>caption</code> ved å bruke cascading style sheets, hvis
+      du er inne i denslags ting.</p>
+      <p>I Radio, så er prosessen til en viss grad vanskeligere, men ikke umulig. (Jeg står i gjeld til <a href=
+      "http://www.tmtm.com/insanity/">Tony Bowden</a> for disse instruksjonene.)</p>
+      <ol>
+        <li>I Radio, åpner du Radio's faktiske applikasjon. I Windows, høyreklikk på det lille Radio-ikonet i
+        systemkurven og velg «Åpne Radio».</li>
+        <li>I «Verktøy»-menyen, velg «Utviklere», deretter «Hopp ...» (<kbd>Control+J</kbd>). Hopp til
+        «system.verbs.builtins.radio.weblog.drawCalendar» (uten anførselstegn).</li>
+        <li>Så går du til «Rediger»-menyen, «Finn og erstatt», «Finn ...» (<kbd>Control+F</kbd>) og finn
+        "hCalendarTable". Dette skulle åpenbare datablokken med kode som tegner den innledende
+        <code>&lt;table&gt;</code>-taggen og den falske kalenderoverskriften.</li>
+        <li>
+          <p>Endre den siste linjen av datablokken (som skriver ut <var>monthYearString</var>-en i en
+          <code>&lt;tr&gt;</code>-tagg) til dette:</p>
+          <blockquote>
+            <p><code class="sgmltag">add ("&lt;caption&gt;" + monthYearString + "&lt;/caption&gt;")</code></p>
+          </blockquote>
+        </li>
+        <li>Lukk vinduet. Den vil spørre om du ønsker å kompilere endringene, svar ja.</li>
+        <li>
+          <p>Hvis du ønsker det kan du stilsette overskriften. Gå til din hjemmesidemal (i preferanse-siden) og legg
+          stil til <code>caption</code>-overskriften. Dette er det jeg bruker. Hvor min
+          <code>&lt;style&gt;</code>-seksjon før inneholdt dette:</p>
+          <blockquote>
+            <pre><code>body, td, p {
   font-family: verdana, sans-serif;
   font-size: 12px;
 }</code></pre>
-</blockquote>
-
-<p>Nå inneholder den dette:</p>
-
-<blockquote>
-<pre><code>body, td, p, <strong>caption</strong> {
+          </blockquote>
+          <p>Nå inneholder den dette:</p>
+          <blockquote>
+            <pre><code>body, td, p, <strong>caption</strong> {
     font-family: verdana, sans-serif;
     font-size: 12px;
     }
@@ -114,74 +124,77 @@
   text-align: center;
   font-weight: bold;
 }</strong></code></pre>
-</blockquote>
-</li>
-</ol>
-
-<h3>Les mer</h3>
-
-<ul>
-<li><cite>Tony Bowden</cite>: <a href="http://www.tmtm.com/insanity/2002/07/03.html#a180">Changing the Calendar in Radio</a>.</li>
-</ul>
-
-<p></p>
-<span class="divider">&nbsp;</span>
-</div> <!--entry-->
-
-<div class="pageturn"><div class="inner">
-<a href="dag_17_definere_bokstavord.html">&lt;&lt; Dag 17: Definere bokstavord</a> |
-<a href="innholdsfortegnelse.html">Innholdsfortegnelse</a>
-| <a href="dag_19_bruke_ekte_tabelltitler.html">Dag 19: Bruke ekte tabelltitler &gt;&gt;</a>
-<span class="divider">&nbsp;</span>
-</div></div> <!--pageturn-->
-
-</div></div> <!--main-->
-
-<div id="menu">
-<a class="skip" name="startnavigation" id="startnavigation"></a>
-<form method="get" action="/sok" id="searchbox_005108012550997225989:cf_v5g16xmu">
-<p id="searchlabel"><label for="sok" accesskey="4">Søk i dette nettstedet:</label></p>
-<p><input type="hidden" name="cx" value="005108012550997225989:cf_v5g16xmu" />
-<input type="hidden" name="cof" value="FORID:11" />
-<input type="text" id="sok" name="q" size="18" />
-<input type="submit" name="sa" value="Søk" /></p>
-</form>
-
-<div class="menusection"><div class="inner">
-<h2 class="invisibletitle">Nettstedets lenker</h2>
-
-<a class="skip" href="#endinternal">Hopp over nettstedets lenker</a>
-<ul>
-<li><a title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" accesskey="0">Tilgjengelighetsrapport</a></li>
-<li><a href="innholdsfortegnelse.html" accesskey="3">Innholdsfortegnelse</a></li>
-<li><a href="tips_om_personer.html">Tips om personer</a></li>
-<li><a href="tips_om_funksjonshemninger.html">Tips om funksjonshemninger</a></li>
-<li><a href="tips_om_prinsipper_for_design.html">Tips om prinsipper for design</a></li>
-<li><a href="tips_om_nettlesere.html">Tips om nettlesere</a></li>
-<li><a href="tips_om_publiseringsverktoy.html">Tips om publiseringsverktøy</a></li>
-<li><a href="mailto:kontakt@kastdegutitilgjengelighet.no" accesskey="9">Tilbakemelding (e-post)</a></li>
-<li><a title="Informasjon om copyright- og lisensiering (engelsk)" href="betingelser_for_bruk.html" accesskey="8">Betingelser for bruk</a></li>
-</ul>
-
-<a class="skip" id="endinternal"></a>
-</div>
-</div>
-<!--.menusection-->
-<div id="footer"><div class="inner">
-
-<address>Copyright &copy; 2002 <a title="Dive Into Mark, forfatterens blogg" href="http://diveintomark.org/">Mark Pilgrim</a></address>
-
-</div></div> <!--footer-->
-
-<div id="ads"></div>
-</div> <!--menu-->
-<div id="navigation">
-<p class="breadcrumb">Du er her:
-<a href="/">Forsiden</a> >
-<a href="innholdsfortegnelse.html">Innholdsfortegnelse</a> >
-<span class="currentpage">Dag 18: Gi din kalender en ekte overskrift</span></p>
-</div><!--navigation-->
-
-
+          </blockquote>
+        </li>
+      </ol>
+      <h3>Les mer</h3>
+      <ul>
+        <li>
+          <cite>Tony Bowden</cite>: <a href="http://www.tmtm.com/insanity/2002/07/03.html#a180">Changing the Calendar
+          in Radio</a>.
+        </li>
+      </ul><span class="divider">&nbsp;</span>
+    </div><!--entry-->
+    <div class="pageturn inner">
+      <a href="dag_17_definere_bokstavord.html">&lt;&lt; Dag 17: Definere bokstavord</a> | <a href=
+      "innholdsfortegnelse.html">Innholdsfortegnelse</a> | <a href="dag_19_bruke_ekte_tabelltitler.html">Dag 19: Bruke
+      ekte tabelltitler &gt;&gt;</a> <span class="divider">&nbsp;</span>
+    </div><!--pageturn-->
+  </div><!--main-->
+  <div id="menu">
+    <a class="skip" id="startnavigation"></a>
+    <form method="get" action="/sok" id="searchbox_005108012550997225989:cf_v5g16xmu" name=
+    "searchbox_005108012550997225989:cf_v5g16xmu">
+      <p id="searchlabel"><label for="sok" accesskey="4">Søk i dette nettstedet:</label></p>
+      <p><input type="hidden" name="cx" value="005108012550997225989:cf_v5g16xmu"> <input type="hidden" name="cof"
+      value="FORID:11"> <input type="text" id="sok" name="q" size="18"> <input type="submit" name="sa" value="Søk"></p>
+    </form>
+    <div class="menusection inner">
+      <h2 class="invisibletitle">Nettstedets lenker</h2><a class="skip" href="#endinternal">Hopp over nettstedets
+      lenker</a>
+      <ul>
+        <li>
+          <a title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" accesskey=
+          "0">Tilgjengelighetsrapport</a>
+        </li>
+        <li>
+          <a href="innholdsfortegnelse.html" accesskey="3">Innholdsfortegnelse</a>
+        </li>
+        <li>
+          <a href="tips_om_personer.html">Tips om personer</a>
+        </li>
+        <li>
+          <a href="tips_om_funksjonshemninger.html">Tips om funksjonshemninger</a>
+        </li>
+        <li>
+          <a href="tips_om_prinsipper_for_design.html">Tips om prinsipper for design</a>
+        </li>
+        <li>
+          <a href="tips_om_nettlesere.html">Tips om nettlesere</a>
+        </li>
+        <li>
+          <a href="tips_om_publiseringsverktoy.html">Tips om publiseringsverktøy</a>
+        </li>
+        <li>
+          <a href="mailto:kontakt@kastdegutitilgjengelighet.no" accesskey="9">Tilbakemelding (e-post)</a>
+        </li>
+        <li>
+          <a title="Informasjon om copyright- og lisensiering (engelsk)" href="betingelser_for_bruk.html" accesskey=
+          "8">Betingelser for bruk</a>
+        </li>
+      </ul><a class="skip" id="endinternal"></a>
+    </div><!--.menusection-->
+    <div class="inner" id="footer">
+      <address>
+        Copyright © 2002 <a title="Dive Into Mark, forfatterens blogg" href="http://diveintomark.org/">Mark Pilgrim</a>
+      </address>
+    </div><!--footer-->
+    <div id="ads"></div>
+  </div><!--menu-->
+  <div id="navigation">
+    <p class="breadcrumb">Du er her: <a href="/">Forsiden</a> &gt; <a href=
+    "innholdsfortegnelse.html">Innholdsfortegnelse</a> &gt; <span class="currentpage">Dag 18: Gi din kalender en ekte
+    overskrift</span></p>
+  </div><!--navigation-->
 </body>
 </html>

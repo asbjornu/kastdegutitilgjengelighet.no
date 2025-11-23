@@ -1,176 +1,200 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nb" lang="nb">
+<!DOCTYPE html>
+<html lang="nb">
 <head>
-<title>Dag 15: Definere tastatursnarveier - Kast deg ut i tilgjengelighet</title>
-
-<link rel="start" title="Forsiden" href="/" />
-<link rel="contents" title="Innholdsfortegnelse" href="innholdsfortegnelse.html" />
-<link rel="help" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" />
-<link rel="author" title="Send tilbakemelding" href="mailto:kontakt@kastdegutitilgjengelighet.no" />
-<link rel="copyright" title="Betingelser for bruk (engelsk)" href="betingelser_for_bruk.html" />
-<link rel="up" title="Innholdsfortegnelse" href="innholdsfortegnelse.html" />
-<link rel="first" title="Dag 1: Anne" href="dag_1_anne.html" />
-<link rel="last" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="css/common.css" type="text/css" />
-<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="css/screen.css" type="text/css" media="projection" />
-<link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
-<link rel="stylesheet" href="css/aural.css" type="text/css" media="aural" />
-<link rel="prev" href="dag_14_legge_titler_pa_lenker.html" title="Dag 14: Legge titler på lenker" />
-<link rel="next" href="dag_16_ikke_apne_nye_vinduer.html" title="Dag 16: Ikke åpne nye vinduer" />
+  <meta charset="utf-8">
+  <title>Dag 15: Definere tastatursnarveier - Kast deg ut i tilgjengelighet</title>
+  <link rel="start" title="Forsiden" href="/">
+  <link rel="contents" title="Innholdsfortegnelse" href="innholdsfortegnelse.html">
+  <link rel="help" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html">
+  <link rel="author" title="Send tilbakemelding" href="mailto:kontakt@kastdegutitilgjengelighet.no">
+  <link rel="copyright" title="Betingelser for bruk (engelsk)" href="betingelser_for_bruk.html">
+  <link rel="up" title="Innholdsfortegnelse" href="innholdsfortegnelse.html">
+  <link rel="first" title="Dag 1: Anne" href="dag_1_anne.html">
+  <link rel="last" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html">
+  <link rel="stylesheet" href="css/common.css" type="text/css">
+  <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="css/screen.css" type="text/css" media="projection">
+  <link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+  <link rel="stylesheet" href="css/aural.css" type="text/css" media="aural">
+  <link rel="prev" href="dag_14_legge_titler_pa_lenker.html" title="Dag 14: Legge titler på lenker">
+  <link rel="next" href="dag_16_ikke_apne_nye_vinduer.html" title="Dag 16: Ikke åpne nye vinduer">
 </head>
 <body>
-
-<div id="logo">
-<div class="inner">
-<h1 class="title"><a href="/" accesskey="1">Kast deg ut i tilgjengelighet</a></h1>
-<p>Et mer tilgjengelig nettsted på 30 dager</p>
-<a class="skip" href="#startnavigation">Hopp til navigasjonen</a>
-<span class="divider">&nbsp;</span>
-</div>
-</div>
-<p></p>
-
-<div id="main"><div class="inner">
-<div class="entry">
-<h2 class="entrysubject">Dag 15: Definere tastatursnarveier</h2>
-<p class="firstparagraph">En av de minst kjente egenskapene til <acronym title="hypertext markup language">HTML</acronym> er accesskey-atributtet for lenker og skjemaer, som lar webdesigneren definere tastatursnarveier for ofte brukte lenker eller skjemafelter. På Windows, kan du trykke ALT + en aksesstast; på Macintosh, kan du trykke Control + en aksesstast. Hvis aksesstasten er definert på en lenke, vil din nettleser følge lenken; hvis definert på et skjemafelt, vil nettleseren din sette fokus på det feltet. Internet Explorer har støttet aksesstaster siden versjon 4, Netscape siden versjon 6. Eldre nettlesere overser dem enkelt og greit, uten noen skadelig effekt.</p>
-
-<p>Selv om det ikke er noen standarder for hvilke taster som skal bli tildelt hvilke egenskaper, er det her noen ofte brukte tastatursnarveier:</p>
-
-<dl>
-<dt>Aksesstast 1</dt>
-<dd>Hjem (forsiden)</dd>
-<dt>Aksesstast 2</dt>
-<dd>Hopp til det viktigste innholdet (<a title="Dag 11: Hoppe over navigasjonslenker" href="dag_11_hoppe_over_navigasjonslenker.html">hopp over navigasjonsliste-lenken</a>)</dd>
-<dt>Aksesstast 9</dt>
-<dd>Tilbakemelding (kontakt oss)</dd>
-</dl>
-
-<h3>Hvem har nytte av det?</h3>
-
-<ol>
-<li><a href="dag_1_anne.html">Anne</a> har nytte av det. Når <a href="http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a> leser en lenke som definerer en aksesstast, melder den også fra om aksesstasten. For eksempel, lenken <code class="sgmltag">&lt;a href="/" accesskey="1"&gt;Hjem page&lt;/a&gt;</code> vil bli lest av JAWS som «link: Hjem, ALT + 1». Anne kan fokusere på lenken ved å trykke <kbd>ALT+1</kbd>, deretter gå til den ved å trykke <kbd>ENTER</kbd>.</li>
-<li><a href="dag_3_knut.html">Knut</a> har nytte av det. Fordi Knut ikke kan bruke musen effektivt etter han fikk slag, stoler han på tastaturnavigasjon og tastatursnarveier til å bevege seg rundt på siden. Aksesstaster er en flott måte for ham til å hoppe til vanlige eller ofte brukte lenker. Knut kan skrive <kbd>ALT+1</kbd>, og <a href="http://www.mozilla.com/">Mozilla</a> følger øyeblikkelig lenken som definerer <code>accesskey="1"</code>. (Merk: Mozilla melder ikke fra om aksesstaster, noe som bringer frem spørsmålet om hvordan Knut kan oppdage hva de er. Vi vil diskutere dette i et fremtidig tips.)</li>
-</ol>
-
-<h3>Hvordan gjøre det: Hjem-lenken</h3>
-
-<ul>
-<li><p><strong>Movable Type</strong>: Standardmalen har ikke en lenke til hjem-siden, så du burde lage sidenavnet til en lenke, og gi den en aksesstast. Søk i malen din etter <code>&lt;$MTBlogName$&gt;</code>, og endre den til dette:</p>
-
-<blockquote>
-<p><code class="sgmltag">&lt;a href="&lt;$MTBlogURL$&gt;" style="color:black; text-decoration:none" accesskey="1"&gt;&lt;$MTBlogName$&gt;&lt;/a&gt;</code></p>
-</blockquote>
-</li>
-
-<li><p><strong>Radio</strong>: Søk i malen din etter <code>{siteName}</code>. Den vil sannsynligvis være i en lenke, slik som dette:</p>
-
-<blockquote>
-<p><code class="sgmltag">&lt;a href="&lt;%radio.macros.weblogUrl ()%&gt;" style="color:black; text-decoration:none"&gt;&lt;%siteName%&gt;&lt;/a&gt;</code></p>
-</blockquote>
-
-<p>Legg enkelt og greit et <code>accesskey</code>-atributt på lenken, slik:</p>
-
-<blockquote>
-<p><code class="sgmltag">&lt;a href="&lt;%radio.macros.weblogUrl ()%&gt;" style="color:black; text-decoration:none" <strong>accesskey="1"</strong>&gt;&lt;%siteName%&gt;&lt;/a&gt;</code></p>
-</blockquote>
-</li>
-
-<li><p><strong>Blogger</strong>: Søk i malen din etter <code>&lt;$BlogTitle$&gt;</code>. Hvis den er pakket inn i en <code>&lt;a&gt;</code>-tagg, legg <code>accesskey="1"</code> atributtet til <code>&lt;a&gt;</code>-taggen, slik som i det ovenstående Radio-eksempelet. Hvis din <code>&lt;$BlogTitle$&gt;</code> <em>not</em> er pakket inn i en <code>&lt;a&gt;</code>-tagg, pakk den inn i en slik som dette (sett inn adressen til din egen side):</p>
-
-<blockquote>
-<p><code class="sgmltag">&lt;a href="http://addressen/til/din/hjem/side" style="color:black; text-decoration:none" accesskey="1"&gt;&lt;$BlogTitle$&gt;&lt;/a&gt;</code></p>
-</blockquote>
-</li>
-</ul>
-
-<h3>Hvordan gjøre det: Hopp over navigasjon-lenken</h3>
-
-<p>Har du en <a href="dag_11_hoppe_over_navigasjonslenker.html">lenke til å hoppe over navigasjonslisten</a>? I så fall, gi den <code>accesskey="2"</code>.</p>
-
-<blockquote>
-<p><code class="sgmltag">&lt;a class="skiplink" href="#startcontent" <strong>accesskey="2"</strong>&gt;Hopp over navigasjonen&lt;/a&gt;</code></p>
-</blockquote>
-
-<h3>Hvordan gjøre det: Tilbakemeldingslenken</h3>
-
-<p>Har du en lenke til et tilbakemeldingsskjema, eller en lenke til din e-postadresse? I så fall, gi den <code>accesskey="9"</code>.</p>
-
-<blockquote>
-<p><code class="sgmltag">&lt;a href="mailto:meg@mittdomene.com" accesskey="9"&gt;Send meg epost&lt;/a&gt;</code></p>
-</blockquote>
-
-<p>Merk: Radios weblogger har vanligvis en lenke til et tilbakemeldingsskjema (det lille ikonet av en konvolutt), men lenken er laget av en makro, så du er ikke i stand til å legge til en <code>accesskey</code> til den.</p>
-
-<p>Sørg for å inkludere hver <code>accesskey</code> på hver side av nettstedet ditt, gjør disse forandringene i alle dine relevante maler.</p>
-
-<h3>Les mer</h3>
-
-<ul>
-<li><cite>Jukka Korpela</cite>: <a href="http://www.cs.tut.fi/~jkorpela/forms/accesskey.html">Improving accessibility with <code>accesskey</code> in <acronym title="hypertext markup language">HTML</acronym> forms and links</a>. Forklarer hvorfor alle mine foreslåtte <code>accesskey</code>-koder er nummere, i stedet for bokstaver.</li>
-<li><cite>Paul Bohman</cite>: <a href="http://www.webaim.org/discussion/mail_message.php?id=800">Access keys, <acronym title="Internet Explorer">IE</acronym>6</a>. En del av diskusjonen om <code>accesskey</code>-taster på <a href="http://www.webaim.org/discussion/">Web Accessibility Forum Mailing List</a>.</li>
-</ul>
-
-<p></p>
-<span class="divider">&nbsp;</span>
-</div> <!--entry-->
-
-<div class="pageturn"><div class="inner">
-<a href="dag_14_legge_titler_pa_lenker.html">&lt;&lt; Dag 14: Legge titler på lenker</a> |
-<a href="innholdsfortegnelse.html">Innholdsfortegnelse</a>
-| <a href="dag_16_ikke_apne_nye_vinduer.html">Dag 16: Ikke åpne nye vinduer &gt;&gt;</a>
-<span class="divider">&nbsp;</span>
-</div></div> <!--pageturn-->
-
-</div></div> <!--main-->
-
-<div id="menu">
-<a class="skip" name="startnavigation" id="startnavigation"></a>
-<form method="get" action="/sok" id="searchbox_005108012550997225989:cf_v5g16xmu">
-<p id="searchlabel"><label for="sok" accesskey="4">Søk i dette nettstedet:</label></p>
-<p><input type="hidden" name="cx" value="005108012550997225989:cf_v5g16xmu" />
-<input type="hidden" name="cof" value="FORID:11" />
-<input type="text" id="sok" name="q" size="18" />
-<input type="submit" name="sa" value="Søk" /></p>
-</form>
-
-<div class="menusection"><div class="inner">
-<h2 class="invisibletitle">Nettstedets lenker</h2>
-
-<a class="skip" href="#endinternal">Hopp over nettstedets lenker</a>
-<ul>
-<li><a title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" accesskey="0">Tilgjengelighetsrapport</a></li>
-<li><a href="innholdsfortegnelse.html" accesskey="3">Innholdsfortegnelse</a></li>
-<li><a href="tips_om_personer.html">Tips om personer</a></li>
-<li><a href="tips_om_funksjonshemninger.html">Tips om funksjonshemninger</a></li>
-<li><a href="tips_om_prinsipper_for_design.html">Tips om prinsipper for design</a></li>
-<li><a href="tips_om_nettlesere.html">Tips om nettlesere</a></li>
-<li><a href="tips_om_publiseringsverktoy.html">Tips om publiseringsverktøy</a></li>
-<li><a href="mailto:kontakt@kastdegutitilgjengelighet.no" accesskey="9">Tilbakemelding (e-post)</a></li>
-<li><a title="Informasjon om copyright- og lisensiering (engelsk)" href="betingelser_for_bruk.html" accesskey="8">Betingelser for bruk</a></li>
-</ul>
-
-<a class="skip" id="endinternal"></a>
-</div>
-</div>
-<!--.menusection-->
-<div id="footer"><div class="inner">
-
-<address>Copyright &copy; 2002 <a title="Dive Into Mark, forfatterens blogg" href="http://diveintomark.org/">Mark Pilgrim</a></address>
-
-</div></div> <!--footer-->
-
-<div id="ads"></div>
-</div> <!--menu-->
-<div id="navigation">
-<p class="breadcrumb">Du er her:
-<a href="/">Forsiden</a> >
-<a href="innholdsfortegnelse.html">Innholdsfortegnelse</a> >
-<span class="currentpage">Dag 15: Definere tastatursnarveier</span></p>
-</div><!--navigation-->
-
-
+  <div class="inner" id="logo">
+    <h1 class="title"><a href="/" accesskey="1">Kast deg ut i tilgjengelighet</a></h1>
+    <p>Et mer tilgjengelig nettsted på 30 dager</p><a class="skip" href="#startnavigation">Hopp til navigasjonen</a>
+    <span class="divider">&nbsp;</span>
+  </div>
+  <div class="inner" id="main">
+    <div class="entry">
+      <h2 class="entrysubject">Dag 15: Definere tastatursnarveier</h2>
+      <p class="firstparagraph">En av de minst kjente egenskapene til <abbr title=
+      "hypertext markup language">HTML</abbr> er accesskey-atributtet for lenker og skjemaer, som lar webdesigneren
+      definere tastatursnarveier for ofte brukte lenker eller skjemafelter. På Windows, kan du trykke ALT + en
+      aksesstast; på Macintosh, kan du trykke Control + en aksesstast. Hvis aksesstasten er definert på en lenke, vil
+      din nettleser følge lenken; hvis definert på et skjemafelt, vil nettleseren din sette fokus på det feltet.
+      Internet Explorer har støttet aksesstaster siden versjon 4, Netscape siden versjon 6. Eldre nettlesere overser
+      dem enkelt og greit, uten noen skadelig effekt.</p>
+      <p>Selv om det ikke er noen standarder for hvilke taster som skal bli tildelt hvilke egenskaper, er det her noen
+      ofte brukte tastatursnarveier:</p>
+      <dl>
+        <dt>Aksesstast 1</dt>
+        <dd>Hjem (forsiden)</dd>
+        <dt>Aksesstast 2</dt>
+        <dd>
+          Hopp til det viktigste innholdet (<a title="Dag 11: Hoppe over navigasjonslenker" href=
+          "dag_11_hoppe_over_navigasjonslenker.html">hopp over navigasjonsliste-lenken</a>)
+        </dd>
+        <dt>Aksesstast 9</dt>
+        <dd>Tilbakemelding (kontakt oss)</dd>
+      </dl>
+      <h3>Hvem har nytte av det?</h3>
+      <ol>
+        <li>
+          <a href="dag_1_anne.html">Anne</a> har nytte av det. Når <a href=
+          "http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a> leser en lenke som definerer en
+          aksesstast, melder den også fra om aksesstasten. For eksempel, lenken <code class="sgmltag">&lt;a href="/"
+          accesskey="1"&gt;Hjem page&lt;/a&gt;</code> vil bli lest av JAWS som «link: Hjem, ALT + 1». Anne kan fokusere
+          på lenken ved å trykke <kbd>ALT+1</kbd>, deretter gå til den ved å trykke <kbd>ENTER</kbd>.
+        </li>
+        <li>
+          <a href="dag_3_knut.html">Knut</a> har nytte av det. Fordi Knut ikke kan bruke musen effektivt etter han fikk
+          slag, stoler han på tastaturnavigasjon og tastatursnarveier til å bevege seg rundt på siden. Aksesstaster er
+          en flott måte for ham til å hoppe til vanlige eller ofte brukte lenker. Knut kan skrive <kbd>ALT+1</kbd>, og
+          <a href="http://www.mozilla.com/">Mozilla</a> følger øyeblikkelig lenken som definerer
+          <code>accesskey="1"</code>. (Merk: Mozilla melder ikke fra om aksesstaster, noe som bringer frem spørsmålet
+          om hvordan Knut kan oppdage hva de er. Vi vil diskutere dette i et fremtidig tips.)
+        </li>
+      </ol>
+      <h3>Hvordan gjøre det: Hjem-lenken</h3>
+      <ul>
+        <li>
+          <p><strong>Movable Type</strong>: Standardmalen har ikke en lenke til hjem-siden, så du burde lage sidenavnet
+          til en lenke, og gi den en aksesstast. Søk i malen din etter <code>&lt;$MTBlogName$&gt;</code>, og endre den
+          til dette:</p>
+          <blockquote>
+            <p><code class="sgmltag">&lt;a href="&lt;$MTBlogURL$&gt;" style="color:black; text-decoration:none"
+            accesskey="1"&gt;&lt;$MTBlogName$&gt;&lt;/a&gt;</code></p>
+          </blockquote>
+        </li>
+        <li>
+          <p><strong>Radio</strong>: Søk i malen din etter <code>{siteName}</code>. Den vil sannsynligvis være i en
+          lenke, slik som dette:</p>
+          <blockquote>
+            <p><code class="sgmltag">&lt;a href="&lt;%radio.macros.weblogUrl ()%&gt;" style="color:black;
+            text-decoration:none"&gt;&lt;%siteName%&gt;&lt;/a&gt;</code></p>
+          </blockquote>
+          <p>Legg enkelt og greit et <code>accesskey</code>-atributt på lenken, slik:</p>
+          <blockquote>
+            <p><code class="sgmltag">&lt;a href="&lt;%radio.macros.weblogUrl ()%&gt;" style="color:black;
+            text-decoration:none" <strong>accesskey="1"</strong>&gt;&lt;%siteName%&gt;&lt;/a&gt;</code></p>
+          </blockquote>
+        </li>
+        <li>
+          <p><strong>Blogger</strong>: Søk i malen din etter <code>&lt;$BlogTitle$&gt;</code>. Hvis den er pakket inn i
+          en <code>&lt;a&gt;</code>-tagg, legg <code>accesskey="1"</code> atributtet til <code>&lt;a&gt;</code>-taggen,
+          slik som i det ovenstående Radio-eksempelet. Hvis din <code>&lt;$BlogTitle$&gt;</code> <em>not</em> er pakket
+          inn i en <code>&lt;a&gt;</code>-tagg, pakk den inn i en slik som dette (sett inn adressen til din egen
+          side):</p>
+          <blockquote>
+            <p><code class="sgmltag">&lt;a href="http://addressen/til/din/hjem/side" style="color:black;
+            text-decoration:none" accesskey="1"&gt;&lt;$BlogTitle$&gt;&lt;/a&gt;</code></p>
+          </blockquote>
+        </li>
+      </ul>
+      <h3>Hvordan gjøre det: Hopp over navigasjon-lenken</h3>
+      <p>Har du en <a href="dag_11_hoppe_over_navigasjonslenker.html">lenke til å hoppe over navigasjonslisten</a>? I
+      så fall, gi den <code>accesskey="2"</code>.</p>
+      <blockquote>
+        <p><code class="sgmltag">&lt;a class="skiplink" href="#startcontent" <strong>accesskey="2"</strong>&gt;Hopp
+        over navigasjonen&lt;/a&gt;</code></p>
+      </blockquote>
+      <h3>Hvordan gjøre det: Tilbakemeldingslenken</h3>
+      <p>Har du en lenke til et tilbakemeldingsskjema, eller en lenke til din e-postadresse? I så fall, gi den
+      <code>accesskey="9"</code>.</p>
+      <blockquote>
+        <p><code class="sgmltag">&lt;a href="mailto:meg@mittdomene.com" accesskey="9"&gt;Send meg
+        epost&lt;/a&gt;</code></p>
+      </blockquote>
+      <p>Merk: Radios weblogger har vanligvis en lenke til et tilbakemeldingsskjema (det lille ikonet av en konvolutt),
+      men lenken er laget av en makro, så du er ikke i stand til å legge til en <code>accesskey</code> til den.</p>
+      <p>Sørg for å inkludere hver <code>accesskey</code> på hver side av nettstedet ditt, gjør disse forandringene i
+      alle dine relevante maler.</p>
+      <h3>Les mer</h3>
+      <ul>
+        <li>
+          <cite>Jukka Korpela</cite>: <a href="http://www.cs.tut.fi/~jkorpela/forms/accesskey.html">Improving
+          accessibility with <code>accesskey</code> in <abbr title="hypertext markup language">HTML</abbr> forms and
+          links</a>. Forklarer hvorfor alle mine foreslåtte <code>accesskey</code>-koder er nummere, i stedet for
+          bokstaver.
+        </li>
+        <li>
+          <cite>Paul Bohman</cite>: <a href="http://www.webaim.org/discussion/mail_message.php?id=800">Access keys,
+          <abbr title="Internet Explorer">IE</abbr>6</a>. En del av diskusjonen om <code>accesskey</code>-taster på
+          <a href="http://www.webaim.org/discussion/">Web Accessibility Forum Mailing List</a>.
+        </li>
+      </ul><span class="divider">&nbsp;</span>
+    </div><!--entry-->
+    <div class="pageturn inner">
+      <a href="dag_14_legge_titler_pa_lenker.html">&lt;&lt; Dag 14: Legge titler på lenker</a> | <a href=
+      "innholdsfortegnelse.html">Innholdsfortegnelse</a> | <a href="dag_16_ikke_apne_nye_vinduer.html">Dag 16: Ikke
+      åpne nye vinduer &gt;&gt;</a> <span class="divider">&nbsp;</span>
+    </div><!--pageturn-->
+  </div><!--main-->
+  <div id="menu">
+    <a class="skip" id="startnavigation"></a>
+    <form method="get" action="/sok" id="searchbox_005108012550997225989:cf_v5g16xmu" name=
+    "searchbox_005108012550997225989:cf_v5g16xmu">
+      <p id="searchlabel"><label for="sok" accesskey="4">Søk i dette nettstedet:</label></p>
+      <p><input type="hidden" name="cx" value="005108012550997225989:cf_v5g16xmu"> <input type="hidden" name="cof"
+      value="FORID:11"> <input type="text" id="sok" name="q" size="18"> <input type="submit" name="sa" value="Søk"></p>
+    </form>
+    <div class="menusection inner">
+      <h2 class="invisibletitle">Nettstedets lenker</h2><a class="skip" href="#endinternal">Hopp over nettstedets
+      lenker</a>
+      <ul>
+        <li>
+          <a title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" accesskey=
+          "0">Tilgjengelighetsrapport</a>
+        </li>
+        <li>
+          <a href="innholdsfortegnelse.html" accesskey="3">Innholdsfortegnelse</a>
+        </li>
+        <li>
+          <a href="tips_om_personer.html">Tips om personer</a>
+        </li>
+        <li>
+          <a href="tips_om_funksjonshemninger.html">Tips om funksjonshemninger</a>
+        </li>
+        <li>
+          <a href="tips_om_prinsipper_for_design.html">Tips om prinsipper for design</a>
+        </li>
+        <li>
+          <a href="tips_om_nettlesere.html">Tips om nettlesere</a>
+        </li>
+        <li>
+          <a href="tips_om_publiseringsverktoy.html">Tips om publiseringsverktøy</a>
+        </li>
+        <li>
+          <a href="mailto:kontakt@kastdegutitilgjengelighet.no" accesskey="9">Tilbakemelding (e-post)</a>
+        </li>
+        <li>
+          <a title="Informasjon om copyright- og lisensiering (engelsk)" href="betingelser_for_bruk.html" accesskey=
+          "8">Betingelser for bruk</a>
+        </li>
+      </ul><a class="skip" id="endinternal"></a>
+    </div><!--.menusection-->
+    <div class="inner" id="footer">
+      <address>
+        Copyright © 2002 <a title="Dive Into Mark, forfatterens blogg" href="http://diveintomark.org/">Mark Pilgrim</a>
+      </address>
+    </div><!--footer-->
+    <div id="ads"></div>
+  </div><!--menu-->
+  <div id="navigation">
+    <p class="breadcrumb">Du er her: <a href="/">Forsiden</a> &gt; <a href=
+    "innholdsfortegnelse.html">Innholdsfortegnelse</a> &gt; <span class="currentpage">Dag 15: Definere
+    tastatursnarveier</span></p>
+  </div><!--navigation-->
 </body>
 </html>
