@@ -1,19 +1,35 @@
-<?php include("global.php"); ?>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nb" lang="nb">
 <head>
 <title>Dag 16: Ikke åpne nye vinduer - Kast deg ut i tilgjengelighet</title>
 
-<?php include("linkrel.php"); ?>
-
-<?php include("stilcharset.php"); ?>
-
-<link rel="prev" href="dag_15_definere_tastatursnarveier" title="Dag 15: Definere tastatursnarveier" />
-<link rel="next" href="dag_17_definere_bokstavord" title="Dag 17: Definere bokstavord" />
+<link rel="start" title="Forsiden" href="index.html" />
+<link rel="contents" title="Innholdsfortegnelse" href="innholdsfortegnelse.html" />
+<link rel="help" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" />
+<link rel="author" title="Send tilbakemelding" href="mailto:kontakt@kastdegutitilgjengelighet.no" />
+<link rel="copyright" title="Betingelser for bruk (engelsk)" href="betingelser_for_bruk.html" />
+<link rel="up" title="Innholdsfortegnelse" href="innholdsfortegnelse.html" />
+<link rel="first" title="Dag 1: Anne" href="dag_1_anne.html" />
+<link rel="last" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/screen.css" type="text/css" media="projection" />
+<link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
+<link rel="stylesheet" href="css/aural.css" type="text/css" media="aural" />
+<link rel="prev" href="dag_15_definere_tastatursnarveier.html" title="Dag 15: Definere tastatursnarveier" />
+<link rel="next" href="dag_17_definere_bokstavord.html" title="Dag 17: Definere bokstavord" />
 </head>
 <body>
 
-<?php include("logo.php"); ?>
-
+<div id="logo">
+<div class="inner">
+<h1 class="title"><a href="index.html" accesskey="1">Kast deg ut i tilgjengelighet</a></h1>
+<p>Et mer tilgjengelig nettsted på 30 dager</p>
+<a class="skip" href="#startnavigation">Hopp til navigasjonen</a>
+<span class="divider">&nbsp;</span>
+</div>
+</div>
 <p></p>
 
 <div id="main"><div class="inner">
@@ -26,11 +42,11 @@
 <h3>Hvem har nytte av det?</h3>
 
 <ol>
-<li><p><a href="dag_1_anne">Anne</a> har nytte av det. Skjønt <a href="http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a> melder fra om «Nytt nettleservindu» når en lenke åpner et nytt vindu, er dette lett å overse, fordi den blir lest opp sammenklemt mellom lesingen av lenketeksten og lesingen av den nye siden. <a href="http://www-3.ibm.com/able/hpr.html">Home Page Reader</a> har en bedre løsning; den spiller av en spesiell lyd hver gang et nytt vindu åpnes. Og <a href="http://www.gwmicro.com/products/">Window Eyes</a>, en annen populær skjermleser, gir ingen indikasjon på nye vinduer i det hele tatt.</p>
+<li><p><a href="dag_1_anne.html">Anne</a> har nytte av det. Skjønt <a href="http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a> melder fra om «Nytt nettleservindu» når en lenke åpner et nytt vindu, er dette lett å overse, fordi den blir lest opp sammenklemt mellom lesingen av lenketeksten og lesingen av den nye siden. <a href="http://www-3.ibm.com/able/hpr.html">Home Page Reader</a> har en bedre løsning; den spiller av en spesiell lyd hver gang et nytt vindu åpnes. Og <a href="http://www.gwmicro.com/products/">Window Eyes</a>, en annen populær skjermleser, gir ingen indikasjon på nye vinduer i det hele tatt.</p>
 <p>Og uansett, «Tilbake»-knappen er fortsatt ødelagt. Hvis Anne overser meldingen om «nytt nettleservindu», så kan hun ikke enkelt kaste et blikk på sin verktøylinje og se at to vinduer er åpne. Hun vil måtte lese gjennom hele sin liste med åpne vinduer, enten ved å bruke den JAWS-spesifikke snarveien <kbd>INSERT+F10</kbd> for å få opp vindulisten, eller ved standarden <kbd>ALT+TAB</kbd>.</p>
 </li>
-<li><a href="dag_4_lillian">Lillian</a> har nytte av det. Hennes vindu i Internet Explorer er alltid maksimert (så hun kan se det), og nye vinduer åpner seg også maksimert som standard. Dessuten, Windows XP grupperer flere vinduer fra samme program i verktøylinjen, så visuelt er det ingen synlig indikasjon på at et nytt vindu i det hele tatt er blitt åpnet. Plutselig, er «Tilbake»-knappen utkoplet tilsynelatende uten noen grunn, og Lillian aner ikke hvorfor. Hvis du forventet at hun skulle lese resten av nettstedet ditt etter å ha fulgt den lenken, kan du glemme dét.</li>
-<li><a href="dag_3_knut">Knut</a> har nytte av det. Hans søster har satt Mozilla til å bruke faner til surfing, slik at Knut kan se på arkfanene og raskt bli påminnet om hvilke vinduer han har åpnet, og han kan også enkelt bytte mellom dem (ved å bruke <kbd><acronym title="control">CTRL</acronym>+<acronym title="page up">PAGEUP</acronym></kbd> og <kbd><acronym title="control">CTRL</acronym>+<acronym title="page down">PAGEDOWN</acronym></kbd> på sitt tastatur som har slike hendige utvidelser). Lenker som tvinges til å åpnes i nye vinduer vil åpne et helt nytt Mozilla-vindu. Ikke bare vil dette forbigå hans preferanser for surfing med faner, men det vil forårsake at alle hans åpne vinduer forsvinner, fordi det nye nettleservinduet ikke viser arkfaner som er åpnet i det forrige vinduet.</li>
+<li><a href="dag_4_lillian.html">Lillian</a> har nytte av det. Hennes vindu i Internet Explorer er alltid maksimert (så hun kan se det), og nye vinduer åpner seg også maksimert som standard. Dessuten, Windows XP grupperer flere vinduer fra samme program i verktøylinjen, så visuelt er det ingen synlig indikasjon på at et nytt vindu i det hele tatt er blitt åpnet. Plutselig, er «Tilbake»-knappen utkoplet tilsynelatende uten noen grunn, og Lillian aner ikke hvorfor. Hvis du forventet at hun skulle lese resten av nettstedet ditt etter å ha fulgt den lenken, kan du glemme dét.</li>
+<li><a href="dag_3_knut.html">Knut</a> har nytte av det. Hans søster har satt Mozilla til å bruke faner til surfing, slik at Knut kan se på arkfanene og raskt bli påminnet om hvilke vinduer han har åpnet, og han kan også enkelt bytte mellom dem (ved å bruke <kbd><acronym title="control">CTRL</acronym>+<acronym title="page up">PAGEUP</acronym></kbd> og <kbd><acronym title="control">CTRL</acronym>+<acronym title="page down">PAGEDOWN</acronym></kbd> på sitt tastatur som har slike hendige utvidelser). Lenker som tvinges til å åpnes i nye vinduer vil åpne et helt nytt Mozilla-vindu. Ikke bare vil dette forbigå hans preferanser for surfing med faner, men det vil forårsake at alle hans åpne vinduer forsvinner, fordi det nye nettleservinduet ikke viser arkfaner som er åpnet i det forrige vinduet.</li>
 </ol>
 
 <h3>Hvordan gjøre det</h3>
@@ -55,27 +71,59 @@
 </div> <!--entry-->
 
 <div class="pageturn"><div class="inner">
-<a href="dag_15_definere_tastatursnarveier">&lt;&lt; Dag 15: Definere tastatursnarveier</a> |
-<a href="innholdsfortegnelse">Innholdsfortegnelse</a>
-| <a href="dag_17_definere_bokstavord">Dag 17: Definere bokstavord &gt;&gt;</a>
+<a href="dag_15_definere_tastatursnarveier.html">&lt;&lt; Dag 15: Definere tastatursnarveier</a> |
+<a href="innholdsfortegnelse.html">Innholdsfortegnelse</a>
+| <a href="dag_17_definere_bokstavord.html">Dag 17: Definere bokstavord &gt;&gt;</a>
 <span class="divider">&nbsp;</span>
 </div></div> <!--pageturn-->
 
 </div></div> <!--main-->
 
-<?php include("meny.php"); ?>
+<div id="menu">
+<a class="skip" name="startnavigation" id="startnavigation"></a>
+<form method="get" action="http://kastdegutitilgjengelighet.no/sok" id="searchbox_005108012550997225989:cf_v5g16xmu">
+<p id="searchlabel"><label for="sok" accesskey="4">Søk i dette nettstedet:</label></p>
+<p><input type="hidden" name="cx" value="005108012550997225989:cf_v5g16xmu" />
+<input type="hidden" name="cof" value="FORID:11" />
+<input type="text" id="sok" name="q" size="18" />
+<input type="submit" name="sa" value="Søk" /></p>
+</form>
 
-<?php include("menyfot.php"); ?>
+<div class="menusection"><div class="inner">
+<h2 class="invisibletitle">Nettstedets lenker</h2>
 
-</div><!--menu-->
+<a class="skip" href="#endinternal">Hopp over nettstedets lenker</a>
+<ul>
+<li><a title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" accesskey="0">Tilgjengelighetsrapport</a></li>
+<li><a href="innholdsfortegnelse.html" accesskey="3">Innholdsfortegnelse</a></li>
+<li><a href="tips_om_personer.html">Tips om personer</a></li>
+<li><a href="tips_om_funksjonshemninger.html">Tips om funksjonshemninger</a></li>
+<li><a href="tips_om_prinsipper_for_design.html">Tips om prinsipper for design</a></li>
+<li><a href="tips_om_nettlesere.html">Tips om nettlesere</a></li>
+<li><a href="tips_om_publiseringsverktoy.html">Tips om publiseringsverktøy</a></li>
+<li><a href="mailto:kontakt@kastdegutitilgjengelighet.no" accesskey="9">Tilbakemelding (e-post)</a></li>
+<li><a title="Informasjon om copyright- og lisensiering (engelsk)" href="betingelser_for_bruk.html" accesskey="8">Betingelser for bruk</a></li>
+</ul>
 
+<a class="skip" id="endinternal"></a>
+</div>
+</div>
+<!--.menusection-->
+<div id="footer"><div class="inner">
+
+<address>Copyright &copy; 2002 <a title="Dive Into Mark, forfatterens blogg" href="http://diveintomark.org/">Mark Pilgrim</a></address>
+
+</div></div> <!--footer-->
+
+<div id="ads"></div>
+</div> <!--menu-->
 <div id="navigation">
 <p class="breadcrumb">Du er her:
-<a href="/">Forsiden</a> >
-<a href="innholdsfortegnelse">Innholdsfortegnelse</a> >
+<a href="index.html">Forsiden</a> >
+<a href="innholdsfortegnelse.html">Innholdsfortegnelse</a> >
 <span class="currentpage">Dag 16: Ikke åpne nye vinduer</span></p>
 </div><!--navigation-->
 
-<?php include("stats.php"); ?>
+
 </body>
 </html>

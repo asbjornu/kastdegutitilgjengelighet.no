@@ -1,19 +1,35 @@
-<?php include("global.php"); ?>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="nb" lang="nb">
 <head>
 <title>Dag 23: Tilby alternativ tekst til bilder - Kast deg ut i tilgjengelighet</title>
 
-<?php include("linkrel.php"); ?>
-
-<?php include("stilcharset.php"); ?>
-
-<link rel="prev" href="dag_22_bruke_ekte_lister" title="Dag 22: Bruke ekte lister (eller etterlikne dem skikkelig)" />
-<link rel="next" href="dag_24_tilby_alternativ_tekst_til_bildekart" title="Dag 24: Tilby alternativ tekst til bildekart" />
+<link rel="start" title="Forsiden" href="index.html" />
+<link rel="contents" title="Innholdsfortegnelse" href="innholdsfortegnelse.html" />
+<link rel="help" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" />
+<link rel="author" title="Send tilbakemelding" href="mailto:kontakt@kastdegutitilgjengelighet.no" />
+<link rel="copyright" title="Betingelser for bruk (engelsk)" href="betingelser_for_bruk.html" />
+<link rel="up" title="Innholdsfortegnelse" href="innholdsfortegnelse.html" />
+<link rel="first" title="Dag 1: Anne" href="dag_1_anne.html" />
+<link rel="last" title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/screen.css" type="text/css" media="projection" />
+<link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
+<link rel="stylesheet" href="css/aural.css" type="text/css" media="aural" />
+<link rel="prev" href="dag_22_bruke_ekte_lister.html" title="Dag 22: Bruke ekte lister (eller etterlikne dem skikkelig)" />
+<link rel="next" href="dag_24_tilby_alternativ_tekst_til_bildekart.html" title="Dag 24: Tilby alternativ tekst til bildekart" />
 </head>
 <body>
 
-<?php include("logo.php"); ?>
-
+<div id="logo">
+<div class="inner">
+<h1 class="title"><a href="index.html" accesskey="1">Kast deg ut i tilgjengelighet</a></h1>
+<p>Et mer tilgjengelig nettsted på 30 dager</p>
+<a class="skip" href="#startnavigation">Hopp til navigasjonen</a>
+<span class="divider">&nbsp;</span>
+</div>
+</div>
 <p></p>
 
 <div id="main"><div class="inner">
@@ -25,7 +41,7 @@
 <p>Hvert eneste bilde på hver eneste side av nettstedet ditt burde ha en alternativ tekst, en såkalt «<code>alt</code>-tekst», spesifisert i <code>alt</code>-attributtet til <code class="sgmltag">&lt;img&gt;</code>-taggen.</p>
 </blockquote>
 
-<p>Skjermlesere leser den, tekstbasert nettlesere viser den, Google indekserer den, og visuelle nettlesere kan vise den som et verktøytips eller på statuslinjen (selv om du som designer kan overstyre dette). Vi har allerede sett hvordan man spesifiserer en <a href="dag_21_ignorere_avstandsbilder">tom <code>alt</code>-tekst for avstandsbilder</a>, og flere måter å lage tilgjengelige lister med bilde-kuler. Hva gjenstår?</p>
+<p>Skjermlesere leser den, tekstbasert nettlesere viser den, Google indekserer den, og visuelle nettlesere kan vise den som et verktøytips eller på statuslinjen (selv om du som designer kan overstyre dette). Vi har allerede sett hvordan man spesifiserer en <a href="dag_21_ignorere_avstandsbilder.html">tom <code>alt</code>-tekst for avstandsbilder</a>, og flere måter å lage tilgjengelige lister med bilde-kuler. Hva gjenstår?</p>
 
 <ul>
 <li>Permalenke-ikoner</li>
@@ -41,10 +57,10 @@
 <h3>Hvem har nytte av det?</h3>
 
 <ol>
-<li><a href="dag_1_anne">Anne</a> har nytte av det. <a href="http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a> leser <code>alt</code>-teksten. Uten en gyldig <code>alt</code>-tekst, hører Anne filnavnene i stedet, noe <a href="dag_21_ignorere_avstandsbilder">som høres forferdelig ut</a>.</li>
-<li><a href="dag_5_marius">Marius</a> har nytte av det. Som en tekstbasert nettleser viser ikke <a href="http://www.fdisk.com/doslynx/lynxport.htm">Lynx</a> noen bilder, bare alt-tekst. Uten <code>alt</code>-teksten viser Lynx filnavnene, noe som ser like ille ut som det i JAWS høres.</li>
-<li><a href="dag_2_jorgen">Jørgen</a> har nytte av det. Som en tekstbasert nettleser viser ikke <a href="http://links.sourceforge.net/">Links</a> noen bilder, bare <code>alt</code>-tekst. Uten noen <code>alt</code>-tekst, viser ikke Links noe for et bilde (medmindre bilde er en lenke, som da Links enkelt viser «<samp>[IMG]</samp>» for). Når han surfer med <a href="http://opera.com/">Opera</a> med bilder avslått, ser Jørgen <code>alt</code>-teksten i plassen til bildet.</li>
-<li><a href="dag_4_lillian">Lillian</a> tjener på det. Internet Explorer viser <code>alt</code>-teksten som et verktøytips (selv om du som designer kan overstyre dette).</li>
+<li><a href="dag_1_anne.html">Anne</a> har nytte av det. <a href="http://www.freedomscientific.com/fs_products/software_jaws.asp">JAWS</a> leser <code>alt</code>-teksten. Uten en gyldig <code>alt</code>-tekst, hører Anne filnavnene i stedet, noe <a href="dag_21_ignorere_avstandsbilder.html">som høres forferdelig ut</a>.</li>
+<li><a href="dag_5_marius.html">Marius</a> har nytte av det. Som en tekstbasert nettleser viser ikke <a href="http://www.fdisk.com/doslynx/lynxport.htm">Lynx</a> noen bilder, bare alt-tekst. Uten <code>alt</code>-teksten viser Lynx filnavnene, noe som ser like ille ut som det i JAWS høres.</li>
+<li><a href="dag_2_jorgen.html">Jørgen</a> har nytte av det. Som en tekstbasert nettleser viser ikke <a href="http://links.sourceforge.net/">Links</a> noen bilder, bare <code>alt</code>-tekst. Uten noen <code>alt</code>-tekst, viser ikke Links noe for et bilde (medmindre bilde er en lenke, som da Links enkelt viser «<samp>[IMG]</samp>» for). Når han surfer med <a href="http://opera.com/">Opera</a> med bilder avslått, ser Jørgen <code>alt</code>-teksten i plassen til bildet.</li>
+<li><a href="dag_4_lillian.html">Lillian</a> tjener på det. Internet Explorer viser <code>alt</code>-teksten som et verktøytips (selv om du som designer kan overstyre dette).</li>
 <li><a href="http://google.no/">Google</a> har nytte av det. Googlebot indekserer <code>alt</code>-tekster, noe som ikke bare brukes til sammenligning av nøkkelord i normale søk, men også i bildesøkene. (Hvordan trodde du det virket?)</li>
 </ol>
 
@@ -114,27 +130,59 @@
 </div> <!--entry-->
 
 <div class="pageturn"><div class="inner">
-<a href="dag_22_bruke_ekte_lister">&lt;&lt; Dag 22: Bruke ekte lister (eller etterlikne dem skikkelig)</a> |
-<a href="innholdsfortegnelse">Innholdsfortegnelse</a>
-| <a href="dag_24_tilby_alternativ_tekst_til_bildekart">Dag 24: Tilby alternativ tekst til bildekart &gt;&gt;</a>
+<a href="dag_22_bruke_ekte_lister.html">&lt;&lt; Dag 22: Bruke ekte lister (eller etterlikne dem skikkelig)</a> |
+<a href="innholdsfortegnelse.html">Innholdsfortegnelse</a>
+| <a href="dag_24_tilby_alternativ_tekst_til_bildekart.html">Dag 24: Tilby alternativ tekst til bildekart &gt;&gt;</a>
 <span class="divider">&nbsp;</span>
 </div></div> <!--pageturn-->
 
 </div></div> <!--main-->
 
-<?php include("meny.php"); ?>
+<div id="menu">
+<a class="skip" name="startnavigation" id="startnavigation"></a>
+<form method="get" action="http://kastdegutitilgjengelighet.no/sok" id="searchbox_005108012550997225989:cf_v5g16xmu">
+<p id="searchlabel"><label for="sok" accesskey="4">Søk i dette nettstedet:</label></p>
+<p><input type="hidden" name="cx" value="005108012550997225989:cf_v5g16xmu" />
+<input type="hidden" name="cof" value="FORID:11" />
+<input type="text" id="sok" name="q" size="18" />
+<input type="submit" name="sa" value="Søk" /></p>
+</form>
 
-<?php include("menyfot.php"); ?>
+<div class="menusection"><div class="inner">
+<h2 class="invisibletitle">Nettstedets lenker</h2>
 
-</div><!--menu-->
+<a class="skip" href="#endinternal">Hopp over nettstedets lenker</a>
+<ul>
+<li><a title="Nettstedets egenskaper for tilgjengelighet" href="tilgjengelighetsrapport.html" accesskey="0">Tilgjengelighetsrapport</a></li>
+<li><a href="innholdsfortegnelse.html" accesskey="3">Innholdsfortegnelse</a></li>
+<li><a href="tips_om_personer.html">Tips om personer</a></li>
+<li><a href="tips_om_funksjonshemninger.html">Tips om funksjonshemninger</a></li>
+<li><a href="tips_om_prinsipper_for_design.html">Tips om prinsipper for design</a></li>
+<li><a href="tips_om_nettlesere.html">Tips om nettlesere</a></li>
+<li><a href="tips_om_publiseringsverktoy.html">Tips om publiseringsverktøy</a></li>
+<li><a href="mailto:kontakt@kastdegutitilgjengelighet.no" accesskey="9">Tilbakemelding (e-post)</a></li>
+<li><a title="Informasjon om copyright- og lisensiering (engelsk)" href="betingelser_for_bruk.html" accesskey="8">Betingelser for bruk</a></li>
+</ul>
 
+<a class="skip" id="endinternal"></a>
+</div>
+</div>
+<!--.menusection-->
+<div id="footer"><div class="inner">
+
+<address>Copyright &copy; 2002 <a title="Dive Into Mark, forfatterens blogg" href="http://diveintomark.org/">Mark Pilgrim</a></address>
+
+</div></div> <!--footer-->
+
+<div id="ads"></div>
+</div> <!--menu-->
 <div id="navigation">
 <p class="breadcrumb">Du er her:
-<a href="/">Forsiden</a> >
-<a href="innholdsfortegnelse">Innholdsfortegnelse</a> >
+<a href="index.html">Forsiden</a> >
+<a href="innholdsfortegnelse.html">Innholdsfortegnelse</a> >
 <span class="currentpage">Dag 23: Tilby alternativ tekst til bilder</span></p>
 </div><!--navigation-->
 
-<?php include("stats.php"); ?>
+
 </body>
 </html>
